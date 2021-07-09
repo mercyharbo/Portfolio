@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Web Designer/Developer </title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="Navbar">
+            <div class=" Navbar__Link-brand">
+                <a href="#">
+                    Mercy Ajani
+                </a>
+            </div>
+
+            <div class="Navbar__Link Navbar__Link-toggle">
+                <img src="./images/hamburger.svg" alt="hamburger" class="icons">
+            </div>
+
+            <nav class="Navbar__Items">
+                <div class="Navbar__Link">
+                    <a href="#about">About</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a href="#blog">Blog</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a class="Nav-links" href="#skill">Skills</a>
+                </div>
+
+                <div class="Navbar__Link">
+                    <a class="Nav-links" href="#projects">Projects</a>
+                </div>
+
+                <div class="Navbar__Link">
+                    <a class="Nav-links" href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Hero section grid -->
+        <div class="hero">
+            <div class="hero_content">
+                <p class="grettings"> HELLO! </p>
+                <h1> I'm Mercy Damilare </h1>
+                <P>
+                    I'm a mid-level Web Developer from Nigeria with 2 years experience in building different projects.
+                    I'm passionate about building an amazing, unique,
+                    and responsive websites that suit your businesses and companies.
+                </P>
+                <a href="mailto:damilare791@gmail.com" class="btn"><button> Hire Me </button></a>
+            </div>
+
+            <!-- Hero svg file-->
+            <div class="hero_svg">
+                <img src="./images/gamer.svg" alt="avatar" class="hero_svg">
+            </div>
+        </div>
+
+        <!-- About section -->
+        <section id="about">
+            <div class="img-grid">
+                <!-- Design on myAvatar-->
+                <div class="design"></div>
+                <img src="./images/avatar.jpg" alt="Mercy Ajani" class="myAvatar">
+            </div>
+
+            <div class="about-details">
+                <h1 class="heading">Mercy Damilare</h1>
+                <small> Web Developer & WordPress Designer </small>
+                <p>
+                    I'm Mercy Damilare, a Web Developer & WordPress from Nigeria seeking a remote Web Developer job. I
+                    enjoyed designing, movies, music, pets, and debugging because solving problems makes me a better
+                    programmer.
+                    The languages I speak comfortably are Html, CSS, Bootstrap, JavaScript and I'm currently learning
+                    Node JS, MonogoDB, and API. 
+                </p>
+                <a href="#" class="btn"><button> Download CV </button></a>
+            </div>
+        </section>
+
+        <section id="skill">
+            <h1 class="heading"> My Skills </h1>
+            <p class="skill_paragraph">
+                Here are a set of tools I work with and how much I am comfortable with each of them:
+            </p>
+            <br>
+            <div id="skill-container">
+                <div class="skill-flexbox">
+                    <div class="html progressbar">
+                        <p> HTML </p>
+                        <div id="progress"></div>
+                    </div>
+
+                    <div class="css progressbar">
+                        <p> CSS </p>
+                        <div id="progress"></div>
+                    </div>
+
+                    <div class="jquery progressbar">
+                        <p> JQuery </p>
+                        <div id="progress"></div>
+                    </div>
+
+                    <div class="javascript progressbar">
+                        <p> JavaScript </p>
+                        <div id="progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-flexbox">
+                    <div class="bootstrap progressbar">
+                        <p> Bootstrap </p>
+                        <div id="progress"></div>
+                    </div>
+
+                    <div class="node progressbar">
+                        <p> Node JS </p>
+                        <div id="progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="service-wrapper">
+            <h1 class="heading"> My Services </h1>
+            <p class="paragraph">
+                I have years of experience working with these stacks by building different kinds of projects which you
+                can see some of them below and see more on my Github.
+            </p>
+            <section class="services">
+                <div class="service-grid">
+                    <img src="./images/wordpress.svg" alt="WordPress" class="service_icons">
+                    <h3>WordPress</h3>
+                    <p>
+                        WordPress is a free and open-source content management system written in PHP and paired with a
+                        MySQL
+                        or MariaDB database. Features include a plugin architecture and a template system, referred to
+                        within WordPress as Themes.
+                    </p>
+                </div>
+
+                <div class="service-grid">
+                    <img src="./images/responsive-design.svg" alt="Responsive Design" class="service_icons">
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Responsive web design is an approach to web design that makes web pages render well on a variety
+                        of
+                        devices and window or screen sizes from minimum to maximum display size. Recent work also
+                        considers
+                        the viewer proximity as part of the viewing context as an extension for RWD.
+                    </p>
+                </div>
+
+                <div class="service-grid">
+                    <img src="./images/web-programming.svg" alt="Web Development" class="service_icons">
+                    <h3> Web Development </h3>
+                    <p>
+                        Web development is the work involved in developing a Web site for the Internet or an intranet.
+                        Web
+                        development can range from developing a simple single static page of plain text to complex web
+                        applications, electronic businesses, and social network services.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div id="projects">
+            <h1 class="heading"> Projects </h1>
+            <!-- The projects CSS grid wrapper -->
+            <div class="gallery">
+                <div class="gallery_items gallery-1">
+                    <img src="./images/chatsapp.png" alt="Chat App" class="project_images">
+                    <div class="project-details">
+                        <!-- This is project details header that contain h4 and icons -->
+                        <div class="inner-project-header">
+                            <h4> Chat app CSS illustration </h4>
+                            <!-- The project github and external link icon wrapper -->
+                            <div class="links_icons">
+                                <a href="https://github.com/mercyharbo/chatapp" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/github-logo.svg" alt="Github"
+                                        class="project-links"></a>
+
+                                <a href="http://mercyharbo.github.io/chatapp/" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/foreign.svg" alt="Github"
+                                        class="project-links"></a>
+                            </div>
+                        </div>
+                        <p>
+                            This is a solution to the Chat app CSS illustration challenge on Frontend Mentor.
+                            Frontend Mentor challenges help you improve your coding skills by building realistic
+                            projects.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery_items gallery-2">
+                    <img src="./images/google.png" alt="Google" class="project_images">
+                    <div class="project-details">
+                        <!-- This is project details header that contain h4 and icons -->
+                        <div class="inner-project-header">
+                            <h4> Google Homepage </h4>
+                            <!-- The project github and external link icon wrapper -->
+                            <div class="links_icons">
+                                <a href="https://github.com/mercyharbo/Google" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/github-logo.svg" alt="Github"
+                                        class="project-links"></a>
+
+                                <a href="https://mercyharbo.github.io/Google/" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/foreign.svg" alt="Github"
+                                        class="project-links"></a>
+                            </div>
+                        </div>
+                        <p>
+                            This is a solution to the Google Homapage challenge. This challenge perform all the
+                            basic google homepage task, the apps functionality, by using HTML, CSS, and JavaScript
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery_items gallery-5">
+                    <img src="./images/pricing.png" alt="Pricing Component With Toggle" class="project_images">
+                    <div class="project-details">
+                        <!-- This is project details header that contain h4 and icons -->
+                        <div class="inner-project-header">
+                            <h4> Pricing component </h4>
+                            <!-- The project github and external link icon wrapper -->
+                            <div class="links_icons">
+                                <a href="https://github.com/mercyharbo/pricing" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/github-logo.svg" alt="Github"
+                                        class="project-links"></a>
+
+                                <a href="https://mercyharbo.github.io/pricing/" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/foreign.svg" alt="Github"
+                                        class="project-links"></a>
+                            </div>
+                        </div>
+                        <p>
+                            This is a solution to the Pricing component with toggle challenge on Frontend Mentor.
+                            Frontend Mentor challenges help you improve your coding skills by building realistic
+                            projects.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery_items gallery-3">
+                    <img src="./images/loop.png" alt="Loopstudio Landing Page" class="project_images">
+                    <div class="project-details">
+                        <!-- This is project details header that contain h4 and icons -->
+                        <div class="inner-project-header">
+                            <h4> Loopstudios landing page </h4>
+                            <!-- The project github and external link icon wrapper -->
+                            <div class="links_icons">
+                                <a href="https://github.com/mercyharbo/Loopstudio" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/github-logo.svg" alt="Github"
+                                        class="project-links"></a>
+
+                                <a href="https://mercyharbo.github.io/Loopstudio/" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/foreign.svg" alt="Github"
+                                        class="project-links"></a>
+                            </div>
+                        </div>
+                        <p>
+                            This is a solution to the Loopstudios landing page challenge on Frontend Mentor. Frontend
+                            Mentor challenges help you
+                            improve your coding skills by building real projects.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery_items gallery-4">
+                    <img src="./images/easy.png" alt="Easybank Landing Page" class="project_images">
+                    <div class="project-details">
+                        <!-- This is project details header that contain h4 and icons -->
+                        <div class="inner-project-header">
+                            <h4> Easybank landing page </h4>
+                            <!-- The project github and external link icon wrapper -->
+                            <div class="links_icons">
+                                <a href="https://github.com/mercyharbo/Easybank" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/github-logo.svg" alt="Github"
+                                        class="project-links"></a>
+
+                                <a href="https://mercyharbo.github.io/Easybank/" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/foreign.svg" alt="Github"
+                                        class="project-links"></a>
+                            </div>
+                        </div>
+                        <p>
+                            This is a solution to the Easy bank landing page challenge on Frontend Mentor. Frontend
+                            Mentor challenges help you improve your coding skills by building real projects.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery_items gallery-6">
+                    <img src="./images/dicegame.png" alt="Dice Game" class="project_images">
+                    <div class="project-details">
+                        <!-- This is project details header that contain h4 and icons -->
+                        <div class="inner-project-header">
+                            <h4> Dice Game </h4>
+                            <!-- The project github and external link icon wrapper -->
+                            <div class="links_icons">
+                                <a href="https://github.com/mercyharbo/dicegame" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/github-logo.svg" alt="Github"
+                                        class="project-links"></a>
+
+                                <a href="https://mercyharbo.github.io/dicegame/" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/foreign.svg" alt="Github"
+                                        class="project-links"></a>
+                            </div>
+                        </div>
+                        <p>
+                            This is a solution to the Dice Game challenge on Angela Yu course.
+                            Full stack web development course help you improve your coding skills by building
+                            realistic
+                            projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/mercyharbo" target="_blank" rel="noopener noreferrer" class="project_btn">
+                <button> SEE MORE </button>
+            </a>
+        </div>
+
+        <div class="get_in_touch">
+            <p> Want to collab or chat with me? </p>
+            <a href="mailto:damilare791@gmail.com" target="_blank" rel="noopener noreferrer" class="git_btn">
+                <button> Get In Touch </button>
+            </a>
+        </div>
+
+        <footer>
+            <!-- Social links divs -->
+            <div class="social_links">
+                <a href="https://twitter.com/codewithmercy" class="Nav_links" target="_blank">
+                    <img src="images/006-twitter.svg" alt="Twitter" class="social_icons">
+                </a>
+                <a href="https://www.linkedin.com/in/afolabi-ridwan-damilare-0a8618170/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BEozDu1FDQNS9cokn%2Fgy5EA%3D%3D"
+                    class="Nav_links" target="_blank">
+                    <img src="./images/005-linkedin.svg" alt="Linkedin" class="social_icons">
+                </a>
+                <a href="https://www.instagram.com/codewithmercy/" class="Nav_links" target="_blank">
+                    <img src="./images/001-instagram.svg" alt="Instagram" class="social_icons">
+                </a>
+                <a href="https://www.facebook.com/Mercyoluwap/" class="Nav_links" target="_blank">
+                    <img src="./images/002-facebook.svg" alt="Facebook" class="social_icons">
+                </a>
+            </div>
+            <p> &copy; 2021 Code With Mercy | All Right Reserved. </p>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
