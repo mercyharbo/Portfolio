@@ -6,8 +6,9 @@
 
 ### Links 
 
-Live site - https://codewithmercy.netlify.app
-My code - https://github.com/mercyharbo/Portfolio
+- Live site - https://codewithmercy.netlify.app
+- My code - https://github.com/mercyharbo/Portfolio
+
 ## My build process
 
 - HTML 5
