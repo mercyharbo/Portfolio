@@ -1,0 +1,600 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Roboto:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 2;
+  background-color: #0a1d37;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+small,
+.grettings {
+  color: grey;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.btn button {
+  border-radius: 5px;
+  color: white;
+  margin-top: 3%;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 2% 5%;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.git_btn button {
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  border: 2px solid black;
+  background-color: transparent;
+}
+
+.project_btn button {
+  padding: 2% 7%;
+  margin-top: 10%;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+}
+
+.btn button:hover,
+.project_btn button:hover {
+  background-color: #ffc93c;
+  color: black;
+}
+
+.git_btn button:hover {
+  background-color: white;
+}
+
+img {
+  width: 100%;
+}
+
+.hero_svg {
+  width: 400px;
+  margin-left: auto;
+}
+
+.myAvatar {
+  border: 5px solid #ffc93c;
+  border-radius: 15px;
+}
+
+.Navbar__Link-toggle {
+  display: none;
+  width: 60px;
+}
+
+.Navbar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  padding: 1% 5%;
+  font-weight: 700;
+  width: 100%;
+  z-index: 2;
+}
+
+.Navbar__Link-brand {
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.Navbar__Link {
+  padding: 0 3%;
+}
+
+.Navbar__Link a {
+  position: relative;
+  font-size: 15px;
+}
+
+.Navbar__Link a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 3px solid #ffc93c;
+  transition: 0.3s ease-in;
+  height: 23px;
+  width: 0;
+}
+
+.Navbar__Link a:hover::after {
+  width: 100%;
+}
+
+.Navbar__Items {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* Hero sectiong styling */
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 5%;
+  padding: 15% 5%;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  line-height: 80px;
+}
+
+/* About section styling */
+#about {
+  display: flex;
+  justify-content: space-between;
+  gap: 8%;
+  padding: 5%;
+}
+
+#about p {
+  padding: 20px 0;
+}
+
+.about-details h1 {
+  position: relative;
+  text-transform: uppercase;
+  padding: 0 0 2% 3%;
+}
+
+.about-details h1::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 45px;
+  top: 10px;
+  left: 0;
+  border-left: 3px solid #ffc93c;
+}
+
+#projects {
+  padding: 5%;
+  text-align: center;
+}
+
+#projects h1 {
+  padding-bottom: 20px;
+  text-align: left;
+  position: relative;
+  padding: 0 0 2% 3%;
+}
+
+#projects h1::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 45px;
+  top: 9px;
+  left: 0;
+  border-left: 3px solid #ffc93c;
+}
+
+.project-links {
+  width: 20px;
+}
+
+.project-details {
+  padding: 10px 15px;
+}
+
+.project_images {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.inner-project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.links_icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+  text-align: left;
+  padding: 1% 0;
+}
+
+.gallery_items {
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+/* Skill section styling */
+#skill {
+  padding: 5%;
+  text-align: left;
+}
+
+#skill h1 {
+  padding: 0 0 2% 2%;
+  position: relative;
+}
+
+#skill h1::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 45px;
+  top: 9px;
+  left: 0;
+  border-left: 3px solid #ffc93c;
+}
+
+#skill-container {
+  display: flex;
+  gap: 5%;
+  padding: 2% 0;
+}
+
+#progress {
+  background-color: grey;
+  border-radius: 13px;
+  height: 10px;
+  width: 550px;
+  padding: 0;
+}
+
+#progress::after {
+  content: '';
+  display: block;
+  background-color: #ffc93c;
+  width: 99%;
+  height: 100%;
+  border-radius: 9px;
+}
+
+.progressbar {
+  padding: 10px 0;
+}
+
+.progressbar p {
+  color: grey;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.css #progress::after {
+  width: 80%;
+}
+
+.jquery #progress::after {
+  width: 50%;
+}
+
+.javascript #progress::after {
+  width: 55%;
+}
+
+.bootstrap #progress::after {
+  width: 90%;
+}
+
+.node #progress::after {
+  width: 50%;
+}
+
+.responsive-website::after {
+  width: 80%;
+}
+
+/* Services styling 
+#service-wrapper {
+    padding: 5%;
+    text-align: center;
+
+    .paragraph {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    padding: 5% 0;
+
+    img {
+        width: 60px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        color: $secondaryColor;
+        padding: 20px 0;
+    }
+}
+
+.service-grid {
+    border: 1px solid $primaryColor;
+    border-radius: 10px;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+
+.service-grid:hover {
+    background-color: $primaryColor;
+    color: black;
+}
+ */
+#contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #ffc93c;
+  padding: 5%;
+  color: black;
+}
+
+#contact .details {
+  padding: 0 5%;
+}
+
+#contact .details p {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 10px 0;
+}
+
+#contact .details .email,
+#contact .details .phone {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#contact .details .contact_icons {
+  width: 20px;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  padding-bottom: 20px;
+}
+
+#contact .form {
+  padding: 0 5%;
+}
+
+#contact .form label {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+
+#contact .form #name,
+#contact .form #email,
+#contact .form textarea {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-bottom: 1px solid grey;
+  outline: 0;
+  background-color: transparent;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+#contact .form textarea {
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+}
+
+#contact .form .container {
+  padding: 10px 0;
+}
+
+#contact .form #submit {
+  width: 100%;
+  padding: 15px 0;
+  border: 0;
+  border-radius: 10px;
+  background-color: white;
+  outline: 0;
+  cursor: pointer;
+}
+
+#contact .form #submit:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Footer styling */
+footer {
+  padding: 3% 0;
+  text-align: center;
+}
+
+/* Footer social links icons */
+.social_links {
+  display: flex;
+  padding: 5% 0;
+  gap: 20px;
+}
+
+.social_icons {
+  width: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    max-width: 100%;
+  }
+  .Navbar__Items,
+  .Navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .Navbar__Items {
+    display: none;
+    background-color: white;
+    width: 100%;
+    margin-top: 5%;
+    padding: 5% 0;
+    border-radius: 10px;
+  }
+  .Navbar__Link-brand {
+    font-size: 1.5rem;
+    margin-top: 1%;
+  }
+  .Navbar__Link a {
+    color: black;
+    padding: 5% 0;
+  }
+  .Navbar__ToggleShow {
+    display: flex;
+  }
+  .Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    padding: 35% 5% 5% 5%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .hero_svg {
+    max-width: 70%;
+    margin: auto;
+  }
+  .hero_content {
+    padding: 10% 0 0 0;
+  }
+  p,
+  .stack {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 5%;
+  }
+  .about-details {
+    padding: 20% 5% 5% 5%;
+  }
+  .btn button {
+    padding: 5% 10%;
+  }
+  #skill-container {
+    flex-direction: column;
+    padding: 5% 0;
+  }
+  .skill_paragraph {
+    text-align: left;
+  }
+  #progress {
+    width: 100%;
+  }
+  /*
+    #service-wrapper .paragraph {
+        width: 100%;
+    }
+
+    .services {
+        flex-direction: column;
+        padding: 3% 0;
+    }
+
+    .service-grid {
+        margin: 5% 0;
+    }
+*/
+  .gallery {
+    grid-template-columns: auto;
+    gap: 2%;
+    padding: 3%;
+  }
+  .get_in_touch {
+    flex-direction: column;
+    margin: 15% 0 5% 0;
+  }
+  .git_btn button {
+    font-weight: 900;
+    margin: 10px 0;
+  }
+  .project_btn button {
+    margin-top: 80%;
+    padding: 5% 10%;
+  }
+  #contact {
+    grid-template-columns: auto;
+    width: 100%;
+    padding: 10% 5%;
+  }
+  #contact .details,
+  #contact .form {
+    padding: 5% 0;
+  }
+  .social_icons {
+    width: 30px;
+  }
+  footer {
+    padding: 5%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
