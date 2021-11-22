@@ -1,5 +1,5 @@
 // using ES6 modules
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import About from "./component/About";
 import GetInTouch from "./component/contact";
 import Footer from "./component/footer";
