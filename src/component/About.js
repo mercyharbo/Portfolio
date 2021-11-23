@@ -29,7 +29,7 @@ const About = () => {
                         <ul>
                             <li> JavaScript [ ES6 ] </li>
                             <li> React JS </li>
-                            <li> Node JS [ Express JS ] </li>
+                            <li> Node JS [Express JS] </li>
                             <li> SCSS/Sass </li>
                             <li> CSS 3</li>
                         </ul>
