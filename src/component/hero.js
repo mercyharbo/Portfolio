@@ -11,7 +11,7 @@ const Hero = () => {
                     I'm a software Developer in Osun, Nigeria passionate about creating beautiful mobile and web apps users will love.
                 </p>
 
-                <button> <a href="https://www.canva.com/design/DAEjtNKrL8A/mtCHd7S5h4atx1b4imUIHA/view?utm_content=DAEjtNKrL8A&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" target="_blank" rel="noopener noreferrer"> Resume </a></button>
+                <button> <a href="https://www.canva.com/design/DAEwT-L1NA4/_lMIBcEalE-_7oFWail_-Q/view?utm_content=DAEwT-L1NA4&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" target="_blank" rel="noopener noreferrer"> Resume </a></button>
             </div>
         </div>
      );
