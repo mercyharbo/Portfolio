@@ -13,9 +13,9 @@ $secondaryFont: 'Josefin Sans',
 sans-serif;
 
 // Color
-$bgColor: #0a1d37;
+$bgColor: #011925;
 $primaryColor: white;
-$bgColor2: #ffc93c;
+$textColor: #E2E4E5;
 
 
 body {
@@ -56,7 +56,7 @@ a {
         position: relative;
 
         &:hover {
-            color: orangered;
+            color: black;
         }
     }
 }
@@ -80,17 +80,19 @@ a {
 
     p {
         width: 50%;
+        color: $primaryColor;
     }
 
     button {
-        border: 1px solid grey;
+        border: 1px solid $textColor;
         background-color: transparent;
         padding: 15px 40px;
         margin-top: 3%;
         cursor: pointer;
 
         &:hover {
-            background-color: grey;
+            background-color: $textColor;
+            color: black;
         }
     }
 }
@@ -111,7 +113,7 @@ a {
             left: 13%;
             width: 15%;
             height: 40px;
-            border-bottom: 1px solid grey;
+            border-bottom: 1px solid $textColor;
         }
     }
 
@@ -124,6 +126,7 @@ a {
 
             p {
                 padding: 10px 0;
+                color: $primaryColor;
             }
 
             .stack {
@@ -146,7 +149,7 @@ a {
                 right: 18%;
                 top: 7%;
                 position: absolute;
-                border: 2px solid grey;
+                border: 2px solid $textColor;
                 z-index: -2;
             }
         }
@@ -169,7 +172,7 @@ a {
             left: 8%;
             width: 15%;
             height: 40px;
-            border-bottom: 1px solid grey;
+            border-bottom: 1px solid $textColor;
         }
     }
 
@@ -179,11 +182,12 @@ a {
         width: 200px;
         font-size: 17px;
         padding: 10px 20px;
-        border: 1px solid grey;
+        border: 1px solid $textColor;
         background-color: transparent;
 
         &:hover {
-            background-color: grey;
+            background-color: $textColor;
+            color: black;
         }
     }
 
@@ -207,9 +211,9 @@ a {
                 padding: 15px 10px;
                 position: relative;
                 top: -15px;
-                border-left: 1px solid grey;
-                border-right: 1px solid grey;
-                border-bottom: 1px solid grey;
+                border-left: 1px solid $textColor;
+                border-right: 1px solid $textColor;
+                border-bottom: 1px solid $textColor;
 
                 p {
                     padding: 5% 0;
@@ -260,6 +264,7 @@ a {
 
     p {
         font-size: 17px;
+        color: $primaryColor
     }
 
     button {
@@ -267,10 +272,11 @@ a {
         padding: 10px 30px;
         font-size: 18px;
         background-color: transparent;
-        border: 1px solid grey;
+        border: 1px solid $textColor;
 
         &:hover {
-            background-color: grey;
+            background-color: $textColor;
+            color: black;
         }
     }
 }
@@ -365,7 +371,7 @@ a {
     .about_wrapper {
         h1 {
             &::after {
-                left: 40%;
+                left: 50%;
                 width: 20%;
             }
         }
@@ -415,7 +421,7 @@ a {
 
         h1 {
             &::after {
-                left: 20%;
+                left: 30%;
                 width: 20%;
             }
         }

@@ -9,7 +9,7 @@
 body {
   font-family: "Roboto", sans-serif;
   line-height: 2;
-  background-color: #0a1d37;
+  background-color: #011925;
   scroll-behavior: smooth;
   padding: 2% 5%;
   color: white;
@@ -46,7 +46,7 @@ a {
   position: relative;
 }
 .Navbar .Navbar_items a:hover {
-  color: orangered;
+  color: black;
 }
 
 .hero {
@@ -65,16 +65,18 @@ a {
 }
 .hero p {
   width: 50%;
+  color: white;
 }
 .hero button {
-  border: 1px solid grey;
+  border: 1px solid #E2E4E5;
   background-color: transparent;
   padding: 15px 40px;
   margin-top: 3%;
   cursor: pointer;
 }
 .hero button:hover {
-  background-color: grey;
+  background-color: #E2E4E5;
+  color: black;
 }
 
 .about_wrapper {
@@ -92,7 +94,7 @@ a {
   left: 13%;
   width: 15%;
   height: 40px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #E2E4E5;
 }
 .about_wrapper .about {
   display: -ms-grid;
@@ -105,6 +107,7 @@ a {
 }
 .about_wrapper .about .details p {
   padding: 10px 0;
+  color: white;
 }
 .about_wrapper .about .details .stack {
   display: -webkit-box;
@@ -125,7 +128,7 @@ a {
   right: 18%;
   top: 7%;
   position: absolute;
-  border: 2px solid grey;
+  border: 2px solid #E2E4E5;
   z-index: -2;
 }
 
@@ -144,7 +147,7 @@ a {
   left: 8%;
   width: 15%;
   height: 40px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #E2E4E5;
 }
 .Work button {
   cursor: pointer;
@@ -152,11 +155,12 @@ a {
   width: 200px;
   font-size: 17px;
   padding: 10px 20px;
-  border: 1px solid grey;
+  border: 1px solid #E2E4E5;
   background-color: transparent;
 }
 .Work button:hover {
-  background-color: grey;
+  background-color: #E2E4E5;
+  color: black;
 }
 .Work .work_grid {
   display: -webkit-box;
@@ -185,9 +189,9 @@ a {
   padding: 15px 10px;
   position: relative;
   top: -15px;
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border-left: 1px solid #E2E4E5;
+  border-right: 1px solid #E2E4E5;
+  border-bottom: 1px solid #E2E4E5;
 }
 .Work .work_grid .items .work_details p {
   padding: 5% 0;
@@ -245,16 +249,18 @@ a {
 }
 .contact p {
   font-size: 17px;
+  color: white;
 }
 .contact button {
   margin: 5% 0;
   padding: 10px 30px;
   font-size: 18px;
   background-color: transparent;
-  border: 1px solid grey;
+  border: 1px solid #E2E4E5;
 }
 .contact button:hover {
-  background-color: grey;
+  background-color: #E2E4E5;
+  color: black;
 }
 
 .footer .grid {
@@ -344,7 +350,7 @@ a {
   }
 
   .about_wrapper h1::after {
-    left: 40%;
+    left: 50%;
     width: 20%;
   }
   .about_wrapper .about {
@@ -395,7 +401,7 @@ a {
     margin-left: 27%;
   }
   .Work h1::after {
-    left: 20%;
+    left: 30%;
     width: 20%;
   }
   .Work .work_grid {
