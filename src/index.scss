@@ -80,7 +80,7 @@ a {
 
     p {
         width: 50%;
-        color: $primaryColor;
+        color: $textColor;
     }
 
     button {
@@ -126,7 +126,7 @@ a {
 
             p {
                 padding: 10px 0;
-                color: $primaryColor;
+                color: $textColor;
             }
 
             .stack {
@@ -217,7 +217,7 @@ a {
 
                 p {
                     padding: 5% 0;
-        
+                    color: $textColor;
                 }
 
                 .work_header {
@@ -264,7 +264,7 @@ a {
 
     p {
         font-size: 17px;
-        color: $primaryColor
+        color: $textColor;
     }
 
     button {
@@ -289,7 +289,7 @@ a {
         align-items: center;
 
         p a {
-
+            color: $textColor;
 
             &:hover {
                 opacity: 100%;

@@ -65,7 +65,7 @@ a {
 }
 .hero p {
   width: 50%;
-  color: white;
+  color: #E2E4E5;
 }
 .hero button {
   border: 1px solid #E2E4E5;
@@ -107,7 +107,7 @@ a {
 }
 .about_wrapper .about .details p {
   padding: 10px 0;
-  color: white;
+  color: #E2E4E5;
 }
 .about_wrapper .about .details .stack {
   display: -webkit-box;
@@ -195,6 +195,7 @@ a {
 }
 .Work .work_grid .items .work_details p {
   padding: 5% 0;
+  color: #E2E4E5;
 }
 .Work .work_grid .items .work_details .work_header {
   display: -webkit-box;
@@ -249,7 +250,7 @@ a {
 }
 .contact p {
   font-size: 17px;
-  color: white;
+  color: #E2E4E5;
 }
 .contact button {
   margin: 5% 0;
@@ -273,6 +274,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.footer .grid p a {
+  color: #E2E4E5;
 }
 .footer .grid p a:hover {
   opacity: 100%;
