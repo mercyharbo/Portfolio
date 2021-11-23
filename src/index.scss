@@ -56,7 +56,7 @@ a {
         position: relative;
 
         &:hover {
-            color: black;
+            color: $textColor;
         }
     }
 }
@@ -135,6 +135,7 @@ a {
                 padding: 20px;
                 font-family: monospace;
                 font-size: 15px;
+                color: $textColor;
     
             }
 
@@ -358,7 +359,7 @@ a {
 
     .hero {
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             width: 100%;
             line-height: 55px;
         }

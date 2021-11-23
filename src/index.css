@@ -46,7 +46,7 @@ a {
   position: relative;
 }
 .Navbar .Navbar_items a:hover {
-  color: black;
+  color: #E2E4E5;
 }
 
 .hero {
@@ -117,6 +117,7 @@ a {
   padding: 20px;
   font-family: monospace;
   font-size: 15px;
+  color: #E2E4E5;
 }
 .about_wrapper .about .details img {
   max-width: 300px;
@@ -345,7 +346,7 @@ a {
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 100%;
     line-height: 55px;
   }
