@@ -3,7 +3,7 @@ const GetInTouch = () => {
         <div className="contact">
             <h1> Get In Touch </h1>
             <p>
-                I’m not currently looking for any new opportunities, my inbox is always open.
+                I’m currently looking for job opportunities with these skills, my inbox is always open.
                 Whether you have a question or just want to say hi, let's collaborate on project.
             </p>
 
