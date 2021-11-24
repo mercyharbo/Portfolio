@@ -14,7 +14,6 @@ sans-serif;
 
 // Color
 $bgColor: #011925;
-$primaryColor: white;
 $textColor: #E2E4E5;
 
 
@@ -22,7 +21,6 @@ body {
     font-family: $primaryFont;
     line-height: 2;
     background-color: $bgColor;
-    //color: $primaryColor;
     scroll-behavior: smooth;
     padding: 2% 5%;
     color: white;
@@ -84,15 +82,14 @@ a {
     }
 
     button {
+        background: transparent;
         border: 1px solid $textColor;
-        background-color: transparent;
         padding: 15px 40px;
         margin-top: 3%;
         cursor: pointer;
 
         &:hover {
-            background-color: $textColor;
-            color: black;
+            background-color: black;
         }
     }
 }
@@ -130,13 +127,10 @@ a {
             }
 
             .stack {
-                display: flex;
-                gap: 30%;
                 padding: 20px;
                 font-family: monospace;
                 font-size: 15px;
                 color: $textColor;
-    
             }
 
             img {
@@ -159,7 +153,7 @@ a {
 
 // Work 
 .Work {
-    padding: 5% 0;
+    padding: 2% 0 5% 0;
 
     h1 {
         position: relative;
@@ -180,42 +174,41 @@ a {
     button {
         cursor: pointer;
         margin-left: 40%;
+        margin-top: 8%;
         width: 200px;
         font-size: 17px;
         padding: 10px 20px;
         border: 1px solid $textColor;
-        background-color: transparent;
+        background: transparent;
 
         &:hover {
-            background-color: $textColor;
-            color: black;
+            background-color: black;
         }
     }
 
     .work_grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 5%;
         padding: 2% 0;
 
         .items {
             width: 380px;
             padding: 15px 0;
+            border: 1px solid $textColor;
 
             img {
                 max-width: 100%;
+                margin-top: -3%;
             }
 
             .work_details {
                 display: flex;
                 flex-direction: column;
-                padding: 15px 10px;
+                padding: 15px;
                 position: relative;
                 top: -15px;
-                border-left: 1px solid $textColor;
-                border-right: 1px solid $textColor;
-                border-bottom: 1px solid $textColor;
-
+                
                 p {
                     padding: 5% 0;
                     color: $textColor;
@@ -247,6 +240,42 @@ a {
     }
 }
 
+// Skills 
+.skills_wrapper {
+    h1 {
+        position: relative;
+        font-family: $secondaryFont;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -10%;
+            left: 8%;
+            width: 15%;
+            height: 40px;
+            border-bottom: 1px solid $textColor;
+        }
+    }
+
+    .skills {
+        padding: 2% 5%;
+
+        ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: 20px;
+            column-gap: 20px;
+            
+            li {
+                padding: 15px 10px;
+                border: 1px solid $textColor;
+                text-align: center;
+            }
+        }
+    }
+}
+
 //Work 
 .contact {
     display: flex;
@@ -272,14 +301,14 @@ a {
         margin: 5% 0;
         padding: 10px 30px;
         font-size: 18px;
-        background-color: transparent;
         border: 1px solid $textColor;
+        background: transparent;
 
         &:hover {
-            background-color: $textColor;
-            color: black;
+            background-color: black;
         }
     }
+
 }
 
 // Footer
@@ -350,6 +379,7 @@ a {
             top: 19px;
             right: 5%;
             cursor: pointer;
+            
         }
 
         .Navbar__ToggleShow {
@@ -373,7 +403,7 @@ a {
         h1 {
             &::after {
                 left: 50%;
-                width: 20%;
+                width: 30%;
             }
         }
 
@@ -416,30 +446,58 @@ a {
     }
 
     .Work {
+        
         button {
             margin-left: 27%;
+            margin-top: 200px;
         }
 
         h1 {
             &::after {
                 left: 30%;
-                width: 20%;
+                width: 40%;
             }
         }
 
         .work_grid {
-            align-items: center;
-            justify-content: center;
+            grid-template-columns: auto;
+            row-gap: 1%;
         }
     }
 
+    // Skills 
+    .skills_wrapper{
+        padding: 5% 0;
+
+        h1 {
+            padding-bottom: 20px;
+
+            &::after {
+                left: 30%;
+                width: 40%;
+            }
+        }
+
+        .skills {
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+
+                li {
+                    border: 1px solid $textColor;
+                }
+            }
+        }
+    }
     // Contact 
     .contact {
         width: 100%; 
+        padding: 5% 0;
     }
 
     // Footer
     .footer {
+        padding-top: 15px;
         .grid {
             flex-direction: column;
             padding: 10px 0;
