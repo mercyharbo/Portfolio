@@ -11,7 +11,7 @@ const Skills = () => {
                     <li> CSS 3 </li>
                     <li> Git & GitHub </li>
                     <li> HTML 5 </li>
-                    <li> Bootsrap </li>
+                    <li> Bootstrap </li>
                     <li> WordPress </li>
                 </ul>
             </div>
