@@ -21,7 +21,7 @@ const Footer = () => {
                    </a>
                 </div>
 
-                <p> Design & Coded by <a href="www.twitter.com/codewithmercy"> Code With Mercy </a> </p>
+                <p> Made With React by <a href="www.twitter.com/codewithmercy"> Code With Mercy </a> </p>
             </div>
             
         </div>

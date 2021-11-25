@@ -15,6 +15,7 @@ sans-serif;
 // Color
 $bgColor: #011925;
 $textColor: #E2E4E5;
+$linkColors: #0F2C67;
 
 
 body {
@@ -41,17 +42,25 @@ a {
         font-size: 1.5rem;
         font-family: $secondaryFont;
         font-weight: 700;
-        color: white;
+        
+        a {
+            color: white;
+        }
     }
 
     .Navbar_link_toggle {
         display: none;
+
+        img {
+            filter: brightness(0) invert(1);
+        }
     }
 
     .Navbar_items a{
         padding: 0 20px;
         font-weight: 700;
         position: relative;
+        color: white;
 
         &:hover {
             color: $textColor;
@@ -89,7 +98,7 @@ a {
         cursor: pointer;
 
         &:hover {
-            background-color: black;
+            background-color: $linkColors;
         }
     }
 }
@@ -127,10 +136,14 @@ a {
             }
 
             .stack {
-                padding: 20px;
+                padding: 0 20px;
                 font-family: monospace;
                 font-size: 15px;
                 color: $textColor;
+
+                ul {
+                    list-style-type: square;
+                }
             }
 
             img {
@@ -182,7 +195,7 @@ a {
         background: transparent;
 
         &:hover {
-            background-color: black;
+            background-color: $linkColors;
         }
     }
 
@@ -305,7 +318,7 @@ a {
         background: transparent;
 
         &:hover {
-            background-color: black;
+            background-color: $linkColors;
         }
     }
 
@@ -319,7 +332,7 @@ a {
         align-items: center;
 
         p a {
-            color: $textColor;
+            color: $linkColors;
 
             &:hover {
                 opacity: 100%;
@@ -344,7 +357,7 @@ a {
 }
 
 // Mobile Responsive 
-@media screen and (max-width: 769px) {
+@media only screen and (min-width:321px) and (max-width:768px) {
     .Navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -370,6 +383,7 @@ a {
 
         .Navbar_link_brand {
             font-size: 1.3rem;
+            margin-top: 10px;
         }
 
         .Navbar_link_toggle {
@@ -378,8 +392,7 @@ a {
             position: absolute;
             top: 19px;
             right: 5%;
-            cursor: pointer;
-            
+            cursor: pointer;            
         }
 
         .Navbar__ToggleShow {
@@ -402,7 +415,7 @@ a {
     .about_wrapper {
         h1 {
             &::after {
-                left: 50%;
+                left: 40%;
                 width: 30%;
             }
         }
@@ -432,7 +445,6 @@ a {
 
                 .stack {
                     font-size: 14px;
-                    gap: 20%;
                 }
             }
 
@@ -446,15 +458,14 @@ a {
     }
 
     .Work {
-        
         button {
-            margin-left: 27%;
+            margin-left: 23%;
             margin-top: 200px;
         }
 
         h1 {
             &::after {
-                left: 30%;
+                left: 25%;
                 width: 40%;
             }
         }
@@ -462,6 +473,12 @@ a {
         .work_grid {
             grid-template-columns: auto;
             row-gap: 1%;
+            align-items: center;
+            justify-content: center;
+
+            .items {
+                width: 100%;
+            }
         }
     }
 
@@ -473,7 +490,7 @@ a {
             padding-bottom: 20px;
 
             &::after {
-                left: 30%;
+                left: 25%;
                 width: 40%;
             }
         }
@@ -489,10 +506,15 @@ a {
             }
         }
     }
+
     // Contact 
     .contact {
         width: 100%; 
-        padding: 5% 0;
+        padding: 8% 0;
+
+        button {
+            margin-top: 10%;
+        }
     }
 
     // Footer

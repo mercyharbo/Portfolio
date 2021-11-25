@@ -35,15 +35,22 @@ a {
   font-size: 1.5rem;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
+}
+.Navbar .Navbar_link_brand a {
   color: white;
 }
 .Navbar .Navbar_link_toggle {
   display: none;
 }
+.Navbar .Navbar_link_toggle img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
 .Navbar .Navbar_items a {
   padding: 0 20px;
   font-weight: 700;
   position: relative;
+  color: white;
 }
 .Navbar .Navbar_items a:hover {
   color: #E2E4E5;
@@ -75,7 +82,7 @@ a {
   cursor: pointer;
 }
 .hero button:hover {
-  background-color: black;
+  background-color: #0F2C67;
 }
 
 .about_wrapper {
@@ -109,10 +116,13 @@ a {
   color: #E2E4E5;
 }
 .about_wrapper .about .details .stack {
-  padding: 20px;
+  padding: 0 20px;
   font-family: monospace;
   font-size: 15px;
   color: #E2E4E5;
+}
+.about_wrapper .about .details .stack ul {
+  list-style-type: square;
 }
 .about_wrapper .about .details img {
   max-width: 300px;
@@ -156,7 +166,7 @@ a {
   background: transparent;
 }
 .Work button:hover {
-  background-color: black;
+  background-color: #0F2C67;
 }
 .Work .work_grid {
   display: -ms-grid;
@@ -287,7 +297,7 @@ a {
   background: transparent;
 }
 .contact button:hover {
-  background-color: black;
+  background-color: #0F2C67;
 }
 
 .footer .grid {
@@ -302,7 +312,7 @@ a {
           align-items: center;
 }
 .footer .grid p a {
-  color: #E2E4E5;
+  color: #0F2C67;
 }
 .footer .grid p a:hover {
   opacity: 100%;
@@ -321,7 +331,7 @@ a {
           filter: grayscale(100%);
 }
 
-@media screen and (max-width: 769px) {
+@media only screen and (min-width: 321px) and (max-width: 768px) {
   .Navbar {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -353,6 +363,7 @@ a {
   }
   .Navbar .Navbar_link_brand {
     font-size: 1.3rem;
+    margin-top: 10px;
   }
   .Navbar .Navbar_link_toggle {
     display: initial;
@@ -380,7 +391,7 @@ a {
   }
 
   .about_wrapper h1::after {
-    left: 50%;
+    left: 40%;
     width: 30%;
   }
   .about_wrapper .about {
@@ -412,7 +423,6 @@ a {
   }
   .about_wrapper .about .details .stack {
     font-size: 14px;
-    gap: 20%;
   }
   .about_wrapper .about .image_cont {
     display: -webkit-box;
@@ -428,17 +438,26 @@ a {
   }
 
   .Work button {
-    margin-left: 27%;
+    margin-left: 23%;
     margin-top: 200px;
   }
   .Work h1::after {
-    left: 30%;
+    left: 25%;
     width: 40%;
   }
   .Work .work_grid {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     row-gap: 1%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .Work .work_grid .items {
+    width: 100%;
   }
 
   .skills_wrapper {
@@ -448,7 +467,7 @@ a {
     padding-bottom: 20px;
   }
   .skills_wrapper h1::after {
-    left: 30%;
+    left: 25%;
     width: 40%;
   }
   .skills_wrapper .skills ul {
@@ -462,7 +481,10 @@ a {
 
   .contact {
     width: 100%;
-    padding: 5% 0;
+    padding: 8% 0;
+  }
+  .contact button {
+    margin-top: 10%;
   }
 
   .footer {
