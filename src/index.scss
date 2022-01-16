@@ -16,6 +16,7 @@ sans-serif;
 $bgColor: #011925;
 $textColor: #E2E4E5;
 $linkColors: #0F2C67;
+$spanColor: #FFC600;
 
 
 body {
@@ -57,13 +58,13 @@ a {
     }
 
     .Navbar_items a{
-        padding: 0 20px;
-        font-weight: 700;
-        position: relative;
-        color: white;
+        font-size: 18px;
+        text-transform: capitalize;
+        
 
         &:hover {
-            color: $textColor;
+            color: $spanColor;
+            transition: 0.5s ease-in-out;
         }
     }
 }
@@ -79,10 +80,14 @@ a {
 
     h1 {
         width: 60%;
-        font-size: 5rem;
-        line-height: 80px;
+        font-size: 3.5rem;
+        line-height: 70px;
         padding: 1% 0;
         color: white;
+    }
+
+    span {
+        color: $spanColor;
     }
 
     p {
@@ -96,9 +101,11 @@ a {
         padding: 15px 40px;
         margin-top: 3%;
         cursor: pointer;
+        color: white;
 
         &:hover {
-            background-color: $linkColors;
+            background-color: $spanColor;
+            color: black;
         }
     }
 }
@@ -117,7 +124,7 @@ a {
             position: absolute;
             top: 2%;
             left: 13%;
-            width: 15%;
+            width: 10%;
             height: 40px;
             border-bottom: 1px solid $textColor;
         }
@@ -136,13 +143,23 @@ a {
             }
 
             .stack {
-                padding: 0 20px;
+                padding: 15px 0;
                 font-family: monospace;
                 font-size: 15px;
                 color: $textColor;
 
                 ul {
-                    list-style-type: square;
+                    list-style: none;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    row-gap: 20px;
+                    column-gap: 20px;
+
+                    li {
+                        padding: 10px;
+                        border: 1px solid $textColor;
+                        text-align: center;
+                    }
                 }
             }
 
@@ -178,7 +195,7 @@ a {
             position: absolute;
             top: 2%;
             left: 8%;
-            width: 15%;
+            width: 10%;
             height: 40px;
             border-bottom: 1px solid $textColor;
         }
@@ -193,97 +210,54 @@ a {
         padding: 10px 20px;
         border: 1px solid $textColor;
         background: transparent;
+        color: white;
 
         &:hover {
-            background-color: $linkColors;
+            background-color: $spanColor;
+            color: black;
         }
     }
 
     .work_grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 5%;
-        padding: 2% 0;
+        padding: 1% 0;
 
         .items {
-            width: 380px;
-            padding: 15px 0;
-            border: 1px solid $textColor;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            padding: 25px 0;
 
             img {
                 max-width: 100%;
-                margin-top: -3%;
+                border: 2px solid white;
+                border-radius: 10px;
             }
 
             .work_details {
                 display: flex;
                 flex-direction: column;
-                padding: 15px;
-                position: relative;
-                top: -15px;
+                padding: 0 15px;
                 
                 p {
-                    padding: 5% 0;
+                    padding: 1% 0;
                     color: $textColor;
                 }
 
-                .work_header {
+                h2 {
+                    font-family: $secondaryFont;
+                }
+
+                mark {
+                    background-color: transparent;
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    h4 {
-                        font-family: $secondaryFont;
-                        width: 70%;
-                    }
-                }
-
-                .links_icon {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
                     gap: 15px;
+                    padding: 3% 0;
 
-                    a img {
-                        max-width: 22px;
-                        filter: brightness(0) invert(1);
+                    a {
+                        color: $spanColor;
+                        text-decoration: underline;
                     }
                 }
-            }
-        }
-    }
-}
-
-// Skills 
-.skills_wrapper {
-    h1 {
-        position: relative;
-        font-family: $secondaryFont;
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: -10%;
-            left: 8%;
-            width: 15%;
-            height: 40px;
-            border-bottom: 1px solid $textColor;
-        }
-    }
-
-    .skills {
-        padding: 2% 5%;
-
-        ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            row-gap: 20px;
-            column-gap: 20px;
-            
-            li {
-                padding: 15px 10px;
-                border: 1px solid $textColor;
-                text-align: center;
             }
         }
     }
@@ -311,14 +285,17 @@ a {
     }
 
     button {
-        margin: 5% 0;
+        margin: 10% 0;
         padding: 10px 30px;
         font-size: 18px;
         border: 1px solid $textColor;
         background: transparent;
+        color: white;
+        cursor: pointer;
 
         &:hover {
-            background-color: $linkColors;
+            background-color: $spanColor;
+            color: black;
         }
     }
 
@@ -331,14 +308,17 @@ a {
         justify-content: space-between;
         align-items: center;
 
-        p a {
-            color: $linkColors;
+        p {
+            width: 300px;
 
-            &:hover {
-                opacity: 100%;
+            a {
+                color: $spanColor;
+
+                &:hover {
+                    opacity: 100%;
+                }
             }
         }
-
         .social_links {
             padding: 20px 0;
             a {
@@ -372,11 +352,11 @@ a {
                 padding: 2% 0;
 
                 &:hover {
-                    background-color: orangered;
-                    color: white;
+                    background-color: $spanColor;
+                    color: black;
                     width: 100%;
                     padding: 2%;
-                    transition: 0.3s ease-in-out;
+                    transition: 0.5s ease-in-out;
                 }
             }
         }
@@ -430,7 +410,7 @@ a {
 
                 img {
                     max-width: 200px;
-                    margin-left: 15%;
+                    margin-left: 14%;
                 }
 
                 .design {
@@ -445,6 +425,10 @@ a {
 
                 .stack {
                     font-size: 14px;
+
+                    ul {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
                 }
             }
 
@@ -470,6 +454,10 @@ a {
             }
         }
 
+        button {
+            margin-top: 0;
+        }
+
         .work_grid {
             grid-template-columns: auto;
             row-gap: 1%;
@@ -478,30 +466,11 @@ a {
 
             .items {
                 width: 100%;
-            }
-        }
-    }
+                grid-template-columns: auto;
+                margin: 5% 0;
 
-    // Skills 
-    .skills_wrapper{
-        padding: 5% 0;
-
-        h1 {
-            padding-bottom: 20px;
-
-            &::after {
-                left: 25%;
-                width: 40%;
-            }
-        }
-
-        .skills {
-            ul {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-
-                li {
-                    border: 1px solid $textColor;
+                .work_details {
+                    padding: 0;
                 }
             }
         }
@@ -520,12 +489,16 @@ a {
     // Footer
     .footer {
         padding-top: 15px;
+
         .grid {
             flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            text-align: center;
             padding: 10px 0;
 
             .social_links {
-                padding: 10px;
+                padding: 20px 0;
             }
         }
     }

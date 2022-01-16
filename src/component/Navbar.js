@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 const Navbar = () => {
     const navbarToggleShow = () => {
         const navs = document.querySelectorAll('.Navbar_items')
@@ -10,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="Navbar">
             <div className="Navbar_link_brand">
-                <Link to='/'> Code With Mercy </Link>
+                <a href='/'> Code With Mercy </a>
             </div>
 
             <div className="Navbar_link_toggle">
@@ -18,10 +16,7 @@ const Navbar = () => {
             </div>
 
             <div className="Navbar_items">
-                <Link to='/about'> About </Link>
-                <Link to='/project'> Projects </Link>
-                <Link to='/skills'> Skills </Link>
-                <Link to='/contact'> Contact </Link>
+                <a href="mailto:damilare791@gmail.com"> damilare791@gmail.com </a>
             </div>
         </div>
      );

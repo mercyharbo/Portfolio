@@ -1,29 +1,27 @@
-// using ES6 modules
-import { BrowserRouter as Router} from "react-router-dom";
+// using ES6 module
+import Navbar from "./component/Navbar";
+import Hero from "./component/hero";
 import About from "./component/About";
+import Work from "./component/work";
 import GetInTouch from "./component/contact";
 import Footer from "./component/footer";
-import Hero from "./component/hero";
-import Navbar from "./component/Navbar";
-import Skills from "./component/Skills";
-import Work from "./component/work";
-
 
 function App() {
   return (
-    <Router>
-      <div className="container">
+    <main className='container'>
         <Navbar />
-        <Hero />
-        <About />
-        <Work />
-        <Skills />
-        <GetInTouch />
-        <Footer />
-      </div>
-    </Router>
-
+        <main className='content'>
+          <Hero />
+          <About />
+          <Work />
+          <GetInTouch />
+          <Footer />
+        </main>
+    </main>   
   );
 }
 
-export default App;
+export default App; 
+
+      
+    

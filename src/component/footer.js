@@ -3,6 +3,8 @@ const Footer = () => {
         <div className="footer">
             <hr />
             <div className="grid">
+                <p> Coded & Design by <a href="www.twitter.com/codewithmercy"> Code With Mercy </a> using ReactJS </p>
+                
                 <div className="social_links">
                    <a href="https://instagram.com/codewithmercy" target="_blank" rel="noopener noreferrer">
                        <img src="001-instagram.svg" alt="" />
@@ -19,9 +21,7 @@ const Footer = () => {
                    <a href="https://www.facebook.com/Mercyoluwap" target="_blank" rel="noopener noreferrer">
                        <img src="002-facebook.svg" alt="" />
                    </a>
-                </div>
-
-                <p> Made With React by <a href="www.twitter.com/codewithmercy"> Code With Mercy </a> </p>
+                </div>  
             </div>
             
         </div>

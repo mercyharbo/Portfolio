@@ -3,11 +3,13 @@ const GetInTouch = () => {
         <div className="contact">
             <h1> Get In Touch </h1>
             <p>
-                I’m currently looking for job opportunities with these skills, my inbox is always open.
-                Whether you have a question or just want to say hi, let's collaborate on project.
+                I’m open to working full-time, contract, or freelance tech role. 
+                Feel free to send a mail let's talk business, or collaborate on project.
             </p>
 
-            <button> <a href="mailto:damilare791@gmail.com"> Say Hi </a> </button>
+            <a href="mailto:damilare791@gmail.com">
+                <button> Say Hi </button>
+            </a>
         </div>
      );
 }

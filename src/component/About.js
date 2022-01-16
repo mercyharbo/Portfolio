@@ -1,46 +1,47 @@
 const About = () => {
     return (
-        <div className="about_wrapper">
+        <main className="about_wrapper">
             <h1> About me </h1>
             
-            <div className="about">
-                <div className="details">
+            <article className="about">
+                <header className="details">
                     <p>
-                        Hello, I am Mercy from Osun, Nigeria, a Frontend Developer & WordPress Developer passionate
-                        about creating amazing stuff for the internet. My interest started in 2018 when I met someone
-                        studying computer science at University like me that put me through how and where to start
-                        learning to code, after doing research I find out about W3school, udemy, and YouTube which
-                        helped my journey as I was just getting to know about HTML, CSS, and JavaScript for the first
-                        time then. Since then I have improved my tech career through making research, learning new
-                        languages, networking, building and collaborating with other developers on projects.
+                        Hello again, I am Frontend Engineer passionate about using my skills to create amazing web and mobile
+                        apps that can solve existing problem. My interest in coding started in 2018 when someone I met studying
+                        Computer Science from another school introduce me into tech, she sent me couple of PDF files and after making
+                        my own research too from Google I find out about YouTube video tutorial that covers HTML and CSS, here I am 
+                        today writing this article for my portfolio website. As a Computer Science graduate, I have grown so well in
+                        the practical and theoretical aspect of web applications with the essential skills of multitasking, wide 
+                        knowledge in Microsoft, and ability to work under little or no supervision at all. 
                     </p>
 
                     <p>
-                        I'm skilled in JavaScript, React js, Node/express js, Git & Github, CSS, SCSS, and
-                        I'm a team person, working together with people has helped me develop because I tend
-                        to learn and challenge myself to do more. Over the years, I have learned to pick
-                        different projects beyond me just to improve my coding skill, which has helped me.
-                        I pick projects from Frontendmentor, Dribble and more.
+                        I'm skilled in JavaScript, ReactJS, NodeJS, ExpressJS, version control ( Git & Github ), CSS3, CSS preprocessor (Sass). 
+                        Learning all these skills I have been able to build several projects that add to my knowledge and how I tackle 
+                        each challenge I face during coding or real-life issues.
                     </p>
 
-                    <div className="stack">
+                    <details className="stack">
                         <ul>
-                            <li> Teamwork </li>
-                            <li> Problem Solving </li>
-                            <li> Programming languages </li>
-                            <li> Time management </li>
-                            <li> Attentions to details </li>
-                            <li> Self development </li>
+                            <li> JavaScript ( ES6 ) </li>
+                            <li> ReactJS </li>
+                            <li> NodeJS / ExpressJS </li>
+                            <li> Sass </li>
+                            <li> CSS3 </li>
+                            <li> Git & GitHub </li>
+                            <li> HTML5 </li>
+                            <li> Bootstrap </li>
+                            <li> WordPress </li>
                         </ul>
-                    </div>
-                </div>
+                    </details>
+                </header>
 
-                <div className="details image_cont">
+                <section className="details image_cont">
                     <div className="design"></div>
-                    <img src="IMG_3457.HEIC" alt="" />
-                </div>
-            </div>
-        </div>
+                    <img src="IMG_3457.HEIC" alt="" title="Code With Mercy"/>
+                </section>
+            </article>
+        </main>
         
      );
 }
