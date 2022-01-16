@@ -21,7 +21,7 @@ const About = () => {
                         each challenge I face during coding or real-life issues.
                     </p>
 
-                    <details className="stack">
+                    <section className="stack">
                         <ul>
                             <li> JavaScript ( ES6 ) </li>
                             <li> ReactJS </li>
@@ -33,7 +33,7 @@ const About = () => {
                             <li> Bootstrap </li>
                             <li> WordPress </li>
                         </ul>
-                    </details>
+                    </section>
                 </header>
 
                 <section className="details image_cont">

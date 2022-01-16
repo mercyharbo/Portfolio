@@ -359,6 +359,9 @@ a {
     display: flex;
   }
 
+  .hero {
+    margin-top: 5%;
+  }
   .hero h1 {
     font-size: 2.5rem;
     width: 100%;
