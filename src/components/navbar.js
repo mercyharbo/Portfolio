@@ -16,7 +16,7 @@ import { HiDocumentDownload } from 'react-icons/hi'
 
 export default function Navbar({ navRef }) {
   const router = useRouter()
-  console.log(router, 'as router')
+
   return (
     <nav
       ref={navRef}
@@ -39,8 +39,8 @@ export default function Navbar({ navRef }) {
         )}
       </Link>
 
-      <Link href='/work'>
-        {router.pathname === '/work' ? (
+      <Link href='/projects'>
+        {router.pathname === '/projects' ? (
           <MdWork size={30} color='#6245d7' />
         ) : (
           <MdWorkOutline size={30} color='#6245d7' />

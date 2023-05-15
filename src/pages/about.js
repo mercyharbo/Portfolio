@@ -7,16 +7,17 @@ export default function About() {
   return (
     <>
       <Head>
-        <title> About me | Code With Mercy </title>
+        <title>Code With Mercy - Frontend Developer | About me</title>
         <meta
           name='description'
-          content='I am a frontend developer from Nigeria with upto 3years of working experience in the tech space'
+          content=' Learn more about me and my journey as a frontend developer and WordPress expert. Find out what I do when I&#8217;m not coding, 
+          what I&#8217;m passionate about, and how to contact me.'
         />
         <link rel='icon' href='/' />
       </Head>
-      <main className='flex justify-center items-center lg:w-[80%] lg:py-14 '>
-        <section className='flex flex-col justify-start items-start gap-5 lg:w-[50%]'>
-          <h1 className='lg:text-7xl md:text-4xl sm:text-3xl'>About</h1>
+      <main className='flex justify-start items-start lg:flex-row lg:w-full lg:py-14 lg:gap-8 md:py-10 md:px-10 md:flex-col-reverse md:gap-5 sm:gap-8 sm:flex-col-reverse sm:py-10 sm:px-5 '>
+        <section className='flex flex-col justify-start items-start gap-5 lg:w-[50%] md:w-full sm:w-full'>
+          <h1 className='lg:text-7xl md:text-5xl sm:text-4xl'>About</h1>
           <p className=''>
             I am a frontend developer from Nigeria. I have upto 3 years of
             experience in creating responsive and user-friendly websites and web
@@ -24,7 +25,7 @@ export default function About() {
             Toolkit.
           </p>
 
-          <ul className='list-disc list-outside space-y-5 lg:pl-8 '>
+          <ul className='list-disc list-outside space-y-5 lg:pl-8 md:pl-8 sm:pl-8 '>
             <li>
               I helped develop a reservation platform for space owners, event
               organizers, and users who need various facilities using React and
@@ -69,7 +70,15 @@ export default function About() {
           <p className=''>
             If you&#8217;re interested in working with me or want to know more
             about me, feel free to contact me anytime. I&#8217;d love to hear
-            from you. You can reach me by email at damilare791@gmail.com or {''}
+            from you. You can reach me by email at{' '}
+            <Link
+              href={'mailto:damilare791@gmail.com'}
+              className='text-red-500 font-semibold'
+            >
+              {' '}
+              Email me
+            </Link>{' '}
+            or {''}
             <Link
               href={'tel:+234-907-847-2701'}
               className='text-red-500 font-semibold'
@@ -94,16 +103,15 @@ export default function About() {
             . Thank you for visiting my portfolio website.
           </p>
         </section>
-        <section className='lg:ml-auto'>
-          <Image
-            src='/avatar1.jpeg'
-            alt='Afolabi Ridwan Damilare'
-            width={500}
-            height={500}
-            quality={100}
-            className='rounded-xl xl:w-[600px] xl:h-[650px] lg:w-[500px] lg:h-[500px] shadow-lg shadow-[#6245d7]  '
-          />
-        </section>
+
+        <Image
+          src='/avatar1.jpeg'
+          alt='Afolabi Ridwan Damilare'
+          width={500}
+          height={500}
+          quality={100}
+          className='rounded-xl xl:w-[500px] xl:h-[550px] lg:ml-auto lg:w-[450px] lg:h-[450px] shadow-lg shadow-[#6245d7] md:mx-auto sm:mx-auto  '
+        />
       </main>
     </>
   )

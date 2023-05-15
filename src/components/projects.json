@@ -1,0 +1,42 @@
+[
+  {
+    "title": "REST Countries API with color theme switcher",
+    "description": "Rest-Countries-API is a web app that lets users explore and learn about different countries. Users can see various details about each country, such as its flag, capital, population, languages, and more. Users can also view the bordering countries and filter them by region. The app supports both dark and light modes and uses the REST Countries API to fetch the data. It is built with React.js and styled-components and has a responsive design.",
+    "imagePath": "/rest-countries.png",
+    "stack": ["Nextjs", "JavaScript", "Tailwind", "API"],
+    "github": "https://github.com/mercyharbo/frontendmentor-projects/tree/rest-countries-app",
+    "liveSite": "https://rest-countriessapp.netlify.app/"
+  },
+  {
+    "title": "Intro section with dropdown navigation",
+    "description": "Intro-section is a landing page that showcases your product or service in a simple and elegant way. Users can easily navigate through the different sections of the page using the dropdown menus on desktop and mobile. The page is responsive and adapts to any screen size, ensuring a smooth and pleasant user experience. Users can also enjoy the subtle hover effects on all the interactive elements on the page, such as buttons, links, and icons.",
+    "imagePath": "/intro-section.png",
+    "stack": ["CSS", "JavaScript", "Next.js", "Tailwind"],
+    "github": "https://github.com/johndoe/landing-pages",
+    "liveSite": "https://landing-pages.com"
+  },
+  {
+    "title": "Portfolio website",
+    "description": "A website that I created for XYZ Security, a company that offers bodyguard, CCTV installation, vehicle with a driver, and other security services. I used Next.js and Tailwind to build a fast and responsive website that showcases the company's services, portfolio, and testimonials. I also integrated Contentful as a headless CMS to enable the company to post blog articles easily without any prior knowledge.",
+    "imagePath": "/portfolio.png",
+    "stack": ["Next.js", "Tailwind", "Contentful", "react-icons"],
+    "github": "https://github.com/portfolio",
+    "liveSite": "https://codewithmercy.netlify.app"
+  },
+  {
+    "title": "Sunnyside agency landing page",
+    "description": "Sunnyside is a creative agency that helps you transform your brand and grow your business. Users can browse through the stunning portfolio of Sunnyside’s work and see the testimonials of their satisfied clients. The landing page is responsive and works well on any device. Users can also interact with the page elements and see the hover states for buttons, links, and images.",
+    "imagePath": "/sunnyside.png",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/mercyharbo/sunnyside",
+    "liveSite": "https://mercyharbo.github.io/sunnyside/"
+  },
+  {
+    "title": "Time Tracking Dashboard",
+    "description": "A website that I created for XYZ Security, a company that offers bodyguard, CCTV installation, vehicle with a driver, and other security services. I used Next.js and Tailwind to build a fast and responsive website that showcases the company's services, portfolio, and testimonials. I also integrated Contentful as a headless CMS to enable the company to post blog articles easily without any prior knowledge.",
+    "imagePath": "/portfolio.png",
+    "stack": ["Next.js", "Tailwind", "Contentful", "react-icons"],
+    "github": "https://github.com/mercyharbo/frontendmentor-projects/tree/time-tracking-dashboard",
+    "liveSite": "https://timetrackindashboard.netlify.app/"
+  }
+]
