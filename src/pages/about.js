@@ -1,7 +1,8 @@
+import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function About() {
   return (
@@ -16,7 +17,13 @@ export default function About() {
         <link rel='icon' href='/' />
       </Head>
       <main className='flex justify-center items-start xl:w-[90%] lg:flex-row lg:w-full lg:py-14 lg:gap-8 md:py-10 md:px-10 md:flex-col-reverse md:gap-5 sm:gap-8 sm:flex-col-reverse sm:py-10 sm:px-5 '>
-        <section className='flex flex-col justify-start items-start gap-5 lg:w-[50%] md:w-full sm:w-full'>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 2, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.8 }}
+          className='flex flex-col justify-start items-start gap-5 lg:w-[50%] md:w-full sm:w-full'
+        >
           <h1 className='lg:text-7xl md:text-5xl sm:text-4xl'>About</h1>
           <p className=''>
             I am a frontend developer from Nigeria. I have upto 3 years of
@@ -45,16 +52,17 @@ export default function About() {
             </li>
 
             <li>
-              I created a website for XYZ Security, a company that offers
-              bodyguard, CCTV installation, vehicle with a driver, and other
-              security services. I used Next.js and Tailwind to build a fast and
-              responsive website that showcases the company&#8217;s services,
-              portfolio, and testimonials. I also integrated Contentful as a
-              headless CMS to enable the company to post blog articles easily
-              without any prior knowledge. The blog model contains title, image,
-              and rich text fields. I used Framer Motion to add animations to
-              the website to make it more engaging and interactive. The website
-              is optimized for performance, accessibility, and SEO.
+              I gave Aseda Security website a new look from the old one they
+              were using, a company that offers bodyguard, CCTV installation,
+              vehicle with a driver, and other security services. I used Next.js
+              and Tailwind to build a fast and responsive website that showcases
+              the company&#8217;s services, portfolio, and testimonials. I also
+              integrated Contentful as a headless CMS to enable the company to
+              post blog articles easily without any prior knowledge. The blog
+              model contains title, image, and rich text fields. I used Framer
+              Motion to add animations to the website to make it more engaging
+              and interactive. The website is optimized for performance,
+              accessibility, and SEO.
             </li>
           </ul>
 
@@ -102,16 +110,24 @@ export default function About() {
             </Link>
             . Thank you for visiting my portfolio website.
           </p>
-        </section>
+        </motion.div>
 
-        <Image
-          src='/avatar1.jpeg'
-          alt='Afolabi Ridwan Damilare'
-          width={500}
-          height={500}
-          quality={100}
-          className='rounded-xl xl:w-[500px] xl:h-[550px] lg:ml-auto lg:w-[450px] lg:h-[450px] shadow-lg shadow-[#6245d7] md:mx-auto sm:mx-auto  '
-        />
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 2, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.8 }}
+          className='lg:ml-auto md:mx-auto sm:mx-auto'
+        >
+          <Image
+            src='/avatar1.jpeg'
+            alt='Afolabi Ridwan Damilare'
+            width={500}
+            height={500}
+            quality={100}
+            className='rounded-xl xl:w-[500px] xl:h-[550px] lg:w-[450px] lg:h-[450px] md:w-[450px] md:h-[500px] sm:h-[350px] sm:w-full shadow-lg shadow-[#6245d7] md:mx-auto sm:mx-auto  '
+          />
+        </motion.div>
       </main>
     </>
   )

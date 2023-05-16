@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
+import { motion } from 'framer-motion'
 import { useForm, ValidationError } from '@formspree/react'
 
 import {
@@ -12,10 +13,6 @@ import { RiMailSendFill } from 'react-icons/ri'
 import { MdPhonelinkRing } from 'react-icons/md'
 
 const ContactForm = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-
   const [state, handleSubmit] = useForm('mgebqlnb')
 
   if (state.succeeded) {
@@ -40,7 +37,13 @@ const ContactForm = () => {
       className='grid lg:mt-14 lg:grid-cols-2 place-items-start lg:gap-8 lg:px-10 lg:w-[80%] md:w-full md:grid-cols-1 md:px-10 md:gap-8 md:mt-[5rem] sm:w-full 
     sm:px-5 sm:grid-cols-1 sm:gap-10 sm:py-10 '
     >
-      <section className='flex flex-col justify-start items-start gap-8'>
+      <motion.section
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 2, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.3 }}
+        className='flex flex-col justify-start items-start gap-8'
+      >
         <h1 className='lg:text-6xl md:text-5xl sm:text-3xl '>
           Ridwan Damilare
         </h1>
@@ -74,8 +77,14 @@ const ContactForm = () => {
             <MdPhonelinkRing size={30} color='#6245d7' />{' '}
           </Link>
         </div>
-      </section>
-      <section className='w-full'>
+      </motion.section>
+      <motion.section
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 2, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.8 }}
+        className='w-full'
+      >
         <form onSubmit={handleSubmit} className='py-5 '>
           <div className='flex flex-col justify-start items-start gap-2'>
             <label htmlFor='name' className='font-semibold'>
@@ -140,7 +149,7 @@ const ContactForm = () => {
             Send
           </button>
         </form>
-      </section>
+      </motion.section>
     </main>
   )
 }

@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
@@ -21,7 +21,13 @@ export default function Home() {
           className='grid lg:grid-cols-2 lg:content-center lg:place-items-center lg:w-[80%] lg:my-20 md:grid-cols-2 md:place-items-center md:my-20 md:gap-8 
         sm:grid-cols-1 sm:gap-8 sm:place-items-start sm:my-16 '
         >
-          <article className='flex flex-col justify-start items-start lg:gap-6 md:gap-5 sm:gap-5'>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 2, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.8 }}
+            className='flex flex-col justify-start items-start lg:gap-6 md:gap-5 sm:gap-5'
+          >
             <h3 className='lg:text-xl md:text-xl sm:text-lg '>
               I am <span className='font-semibold'>Ridwan Damilare</span>
             </h3>
@@ -40,16 +46,24 @@ export default function Home() {
             >
               Let&#8217;s connect
             </Link>
-          </article>
+          </motion.div>
 
-          <Image
-            src='/avatar2.jpeg'
-            alt='Afolabi Ridwan Damilare'
-            width={500}
-            height={500}
-            quality={100}
-            className='rounded-xl lg:w-[600px] lg:h-[650px] shadow-lg shadow-[#6245d7] ml-auto  '
-          />
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 2, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.8 }}
+            className='lg:ml-auto md:ml-auto sm:mx-auto'
+          >
+            <Image
+              src='/avatar2.jpeg'
+              alt='Afolabi Ridwan Damilare'
+              width={500}
+              height={500}
+              quality={100}
+              className='rounded-xl lg:w-[600px] lg:h-[650px] md:w-full md:h-[500px] sm:h-[350px] sm:w-full shadow-lg shadow-[#6245d7] '
+            />
+          </motion.div>
         </section>
       </main>
     </>
