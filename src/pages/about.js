@@ -15,7 +15,7 @@ export default function About() {
         />
         <link rel='icon' href='/' />
       </Head>
-      <main className='flex justify-start items-start lg:flex-row lg:w-full lg:py-14 lg:gap-8 md:py-10 md:px-10 md:flex-col-reverse md:gap-5 sm:gap-8 sm:flex-col-reverse sm:py-10 sm:px-5 '>
+      <main className='flex justify-center items-start xl:w-[90%] lg:flex-row lg:w-full lg:py-14 lg:gap-8 md:py-10 md:px-10 md:flex-col-reverse md:gap-5 sm:gap-8 sm:flex-col-reverse sm:py-10 sm:px-5 '>
         <section className='flex flex-col justify-start items-start gap-5 lg:w-[50%] md:w-full sm:w-full'>
           <h1 className='lg:text-7xl md:text-5xl sm:text-4xl'>About</h1>
           <p className=''>
