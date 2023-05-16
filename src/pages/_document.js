@@ -1,13 +1,25 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+export default class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang='en'>
+        <Head>
+          <title>
+            Code With Mercy - Frontend Developer | Portfolio Website
+          </title>
+          <meta
+            name='description'
+            content='Welcome to my portfolio website, where you can see some of the websites I have created for various clients and purposes. 
+            I&#8217;m a frontend developer and WordPress expert based in New York. I love creating beautiful and functional websites that meet the 
+            needs and expectations of my clients.'
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
 }

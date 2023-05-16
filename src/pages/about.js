@@ -14,7 +14,6 @@ export default function About() {
           content=' Learn more about me and my journey as a frontend developer and WordPress expert. Find out what I do when I&#8217;m not coding, 
           what I&#8217;m passionate about, and how to contact me.'
         />
-        <link rel='icon' href='/' />
       </Head>
       <main className='flex justify-center items-start xl:w-[90%] lg:flex-row lg:w-full lg:py-14 lg:gap-8 md:py-10 md:px-10 md:flex-col-reverse md:gap-5 sm:gap-8 sm:flex-col-reverse sm:py-10 sm:px-5 '>
         <motion.div

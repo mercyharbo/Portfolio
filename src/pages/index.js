@@ -14,7 +14,6 @@ export default function Home() {
           I&#8217;m a frontend developer and WordPress expert based in New York. I love creating beautiful and functional websites that meet the 
           needs and expectations of my clients.'
         />
-        <link rel='icon' href='/' />
       </Head>
       <main className={`relative flex flex-col items-center sm:p-5 w-full`}>
         <section

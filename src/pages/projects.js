@@ -17,7 +17,6 @@ const Project = () => {
           content='Check out some of the amazing websites I have created using Next.js, React, Tailwind, WordPress, and other web technologies. 
           These projects demonstrate my skills and experience in frontend development and WordPress development.'
         />
-        <link rel='icon' href='/' />
       </Head>
       <main className='flex flex-col justify-start items-start w-full lg:gap-5 lg:p-10 md:p-10 md:gap-8 sm:gap-5 sm:p-5'>
         <motion.div

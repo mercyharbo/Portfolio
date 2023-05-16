@@ -17,6 +17,12 @@ import { HiDocumentDownload } from 'react-icons/hi'
 export default function Navbar({ navRef }) {
   const router = useRouter()
 
+  const handleDownloadCV = () => {
+    // Replace 'path/to/your/cv.pdf' with the actual path to your CV file
+    window.location.href =
+      'https://www.canva.com/design/DAFjGdjVPAE/U4GzJe554UHZyrhx3inYKQ/edit?utm_content=DAFjGdjVPAE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
+  }
+
   return (
     <nav
       ref={navRef}
@@ -55,7 +61,11 @@ export default function Navbar({ navRef }) {
         )}{' '}
       </Link>
 
-      <Link href='/cv'>
+      <Link
+        href={
+          'https://drive.google.com/uc?export=download&id=1w9J-FhfjkBTiSCNbN-iHCSZkuqe4buDu'
+        }
+      >
         <HiDocumentDownload size={30} color='#6245d7' />
       </Link>
     </nav>
