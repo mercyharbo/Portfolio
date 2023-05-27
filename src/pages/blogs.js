@@ -73,7 +73,7 @@ export default function BlogPosts() {
       </Head>
 
       <main className='flex flex-col justify-start items-start gap-8 xl:px-10 lg:px-10 md:px-10 sm:px-5 py-5 '>
-        <h1 className='xl:text-5xl'>My blogs </h1>
+        <h1 className='lg:text-5xl md:text-4xl sm:text-3xl'>My blogs </h1>
 
         {loading && <div>Loading...</div>}
 

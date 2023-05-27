@@ -3,9 +3,9 @@ import { useRouter } from 'next/router'
 import {
   RiHome4Fill,
   RiHome4Line,
+  RiRssFill,
   RiRssLine,
   RiStarSFill,
-  RiStarSLine,
   RiUser3Fill,
   RiUser3Line,
 } from 'react-icons/ri'
@@ -51,8 +51,8 @@ export default function Navbar({ navRef }) {
       </Link>
 
       <Link href='/blogs'>
-        {router.pathname === '/projects' ? (
-          <RiStarSFill size={30} color='#6245d7' />
+        {router.pathname === '/blogs' ? (
+          <RiRssFill size={30} color='#6245d7' />
         ) : (
           <RiRssLine size={30} color='#6245d7' />
         )}
@@ -67,9 +67,8 @@ export default function Navbar({ navRef }) {
       </Link>
 
       <Link
-        href={
-          'https://drive.google.com/uc?export=download&id=1w9J-FhfjkBTiSCNbN-iHCSZkuqe4buDu'
-        }
+        href={'/ridwan-afolabi-resume.pdf'}
+        download={'/ridwan-afolabi-resume.pdf'}
       >
         <HiDocumentDownload size={30} color='#6245d7' />
       </Link>

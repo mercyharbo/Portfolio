@@ -22,21 +22,5 @@
     "stack": ["Next.js", "Tailwind", "Contentful", "react-icons"],
     "github": "https://github.com/portfolio",
     "liveSite": "https://codewithmercy.netlify.app"
-  },
-  {
-    "title": "Sunnyside agency landing page",
-    "description": "Sunnyside is a creative agency that helps you transform your brand and grow your business. Users can browse through the stunning portfolio of Sunnyside’s work and see the testimonials of their satisfied clients. The landing page is responsive and works well on any device. Users can also interact with the page elements and see the hover states for buttons, links, and images.",
-    "imagePath": "/sunnyside.png",
-    "stack": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/mercyharbo/sunnyside",
-    "liveSite": "https://mercyharbo.github.io/sunnyside/"
-  },
-  {
-    "title": "Time Tracking Dashboard",
-    "description": "A website that I created for XYZ Security, a company that offers bodyguard, CCTV installation, vehicle with a driver, and other security services. I used Next.js and Tailwind to build a fast and responsive website that showcases the company's services, portfolio, and testimonials. I also integrated Contentful as a headless CMS to enable the company to post blog articles easily without any prior knowledge.",
-    "imagePath": "/portfolio.png",
-    "stack": ["Next.js", "Tailwind", "Contentful", "react-icons"],
-    "github": "https://github.com/mercyharbo/frontendmentor-projects/tree/time-tracking-dashboard",
-    "liveSite": "https://timetrackindashboard.netlify.app/"
   }
 ]
