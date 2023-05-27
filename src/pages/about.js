@@ -25,7 +25,7 @@ export default function About() {
         >
           <h1 className='lg:text-7xl md:text-5xl sm:text-4xl'>About</h1>
           <p className=''>
-            I am a frontend developer from Nigeria. I have upto 3 years of
+            I am a frontend developer from Nigeria. I have up-to 3 years of
             experience in creating responsive and user-friendly websites and web
             applications using HTML, CSS, JavaScript, React, Nextjs, and Redux
             Toolkit.

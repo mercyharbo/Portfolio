@@ -5,9 +5,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <title>
-            Code With Mercy - Frontend Developer | Portfolio Website
-          </title>
           <meta
             name='description'
             content='Welcome to my portfolio website, where you can see some of the websites I have created for various clients and purposes. 

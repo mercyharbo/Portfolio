@@ -11,7 +11,7 @@ export default function Home() {
         <meta
           name='description'
           content='Welcome to my portfolio website, where you can see some of the websites I have created for various clients and purposes. 
-          I&#8217;m a frontend developer and WordPress expert based in New York. I love creating beautiful and functional websites that meet the 
+          I&#8217;m a frontend developer and WordPress expert based in Nigeria. I love creating beautiful and functional websites that meet the 
           needs and expectations of my clients.'
         />
       </Head>
@@ -34,7 +34,7 @@ export default function Home() {
               a Frontend Developer{' '}
             </h1>
             <p className=' lg:leading-7 lg:text-xl md:w-full md:text-lg md:leading-8 sm:leading-8 sm:text-lg  '>
-              from Nigeria. I have upto 3 years of experience in creating
+              from Nigeria. I have up-to 3 years of experience in creating
               responsive and user-friendly websites and web applications using
               HTML, CSS, JavaScript, React, Nextjs, and Redux Toolkit.
             </p>

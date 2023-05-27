@@ -3,6 +3,9 @@ import { useRouter } from 'next/router'
 import {
   RiHome4Fill,
   RiHome4Line,
+  RiRssLine,
+  RiStarSFill,
+  RiStarSLine,
   RiUser3Fill,
   RiUser3Line,
 } from 'react-icons/ri'
@@ -16,12 +19,6 @@ import { HiDocumentDownload } from 'react-icons/hi'
 
 export default function Navbar({ navRef }) {
   const router = useRouter()
-
-  const handleDownloadCV = () => {
-    // Replace 'path/to/your/cv.pdf' with the actual path to your CV file
-    window.location.href =
-      'https://www.canva.com/design/DAFjGdjVPAE/U4GzJe554UHZyrhx3inYKQ/edit?utm_content=DAFjGdjVPAE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
-  }
 
   return (
     <nav
@@ -50,6 +47,14 @@ export default function Navbar({ navRef }) {
           <MdWork size={30} color='#6245d7' />
         ) : (
           <MdWorkOutline size={30} color='#6245d7' />
+        )}
+      </Link>
+
+      <Link href='/blogs'>
+        {router.pathname === '/projects' ? (
+          <RiStarSFill size={30} color='#6245d7' />
+        ) : (
+          <RiRssLine size={30} color='#6245d7' />
         )}
       </Link>
 
