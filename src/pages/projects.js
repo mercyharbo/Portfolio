@@ -60,7 +60,7 @@ const Project = () => {
                   {project.title}
                 </h3>
 
-                {/* <div className='flex flex-wrap justify-start items-center gap-2 list-disc capitalize'>
+                <div className='flex flex-wrap justify-start items-center gap-2 list-disc capitalize'>
                   {' '}
                   {project.stack.map((x, i) => {
                     return (
@@ -99,7 +99,7 @@ const Project = () => {
                     {' '}
                     <RxExternalLink size={30} color='#6245d7' />{' '}
                   </Link>
-                </div> */}
+                </div>
               </div>
             </article>
           ))}
