@@ -43,7 +43,7 @@ const Project = () => {
           transition={{ duration: 0.7 }}
           className='grid content-center place-items-center lg:grid-cols-3 lg:gap-10 md:grid-cols-1 md:gap-10 sm:grid-cols-1 sm:gap-10 lg:py-5   '
         >
-          {Projects.map((project) => (
+          {/* {Projects.map((project) => (
             <article
               key={project.title}
               className='flex flex-col bg-white shadow-2xl rounded-lg h-full w-full lg:gap-3 md:gap-5 sm:gap-3 '
@@ -102,7 +102,7 @@ const Project = () => {
                 </div>
               </div>
             </article>
-          ))}
+          ))} */}
         </motion.div>
       </main>
     </>
