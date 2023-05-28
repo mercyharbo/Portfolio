@@ -1,25 +1,39 @@
 [
   {
     "title": "REST Countries API with color theme switcher",
-    "description": "Rest-Countries-API is a web app that lets users explore and learn about different countries. Users can see various details about each country, such as its flag, capital, population, languages, and more. Users can also view the bordering countries and filter them by region. The app supports both dark and light modes and uses the REST Countries API to fetch the data. It is built with React.js and styled-components and has a responsive design.",
+    "description": [
+      "User is able to toggle between light & dark mode.",
+      "Users is able to filter view by regions.",
+      "Users are able to search by countries ",
+      "Users are able to view countries details and also have access to border countries for the country viewed."
+    ],
     "imagePath": "/rest-countries.png",
     "stack": ["Nextjs", "JavaScript", "Tailwind", "API"],
     "github": "https://github.com/mercyharbo/frontendmentor-projects/tree/rest-countries-app",
     "liveSite": "https://rest-countriessapp.netlify.app/"
   },
   {
-    "title": "Intro section with dropdown navigation",
-    "description": "Intro-section is a landing page that showcases your product or service in a simple and elegant way. Users can easily navigate through the different sections of the page using the dropdown menus on desktop and mobile. The page is responsive and adapts to any screen size, ensuring a smooth and pleasant user experience. Users can also enjoy the subtle hover effects on all the interactive elements on the page, such as buttons, links, and icons.",
-    "imagePath": "/intro-section.png",
-    "stack": ["CSS", "JavaScript", "Next.js", "Tailwind"],
-    "github": "https://github.com/johndoe/landing-pages",
-    "liveSite": "https://landing-pages.com"
+    "title": "Unsplash Clone",
+    "description": [
+      "Users can also fetch photos by category selected.",
+      "Users can also search for photos.",
+      "Users have ability to load more photos after reaching the last.",
+      "Users have ability to load more photos after reaching the last."
+    ],
+    "imagePath": "/unsplash.png",
+    "stack": ["CSS", "JavaScript", "Next.js", "Tailwind", "API", "Redux toolkit"],
+    "github": "https://github.com/mercyharbo/frontendmentor-projects/tree/unsplash",
+    "liveSite": "https://mercyunsplashphotos.netlify.app/"
   },
   {
-    "title": "Portfolio website",
-    "description": "A website that I created for XYZ Security, a company that offers bodyguard, CCTV installation, vehicle with a driver, and other security services. I used Next.js and Tailwind to build a fast and responsive website that showcases the company's services, portfolio, and testimonials. I also integrated Contentful as a headless CMS to enable the company to post blog articles easily without any prior knowledge.",
+    "title": "Code With Mercy | Portfolio website",
+    "description": [
+      "I added features that loads my blog posts from Hashnode and access to read brief of the content before linking to Hashnode the full post.",
+      "I used Formspree for form sunmission for visitors that want to contact me by email through my portfolio instead of having to open that mailing app.",
+      "I also make use of framer motion for animation and page transition on my portfolio pages so visitors don't have that boring navigation."
+    ],
     "imagePath": "/portfolio.png",
-    "stack": ["Next.js", "Tailwind", "Contentful", "react-icons"],
+    "stack": ["Next.js", "Tailwind", "API", "react-icons"],
     "github": "https://github.com/portfolio",
     "liveSite": "https://codewithmercy.netlify.app"
   }

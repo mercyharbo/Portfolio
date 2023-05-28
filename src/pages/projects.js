@@ -46,7 +46,7 @@ const Project = () => {
           {Projects.map((project) => (
             <article
               key={project.title}
-              className='flex flex-col bg-white shadow-2xl rounded-lg w-full lg:gap-3 md:gap-5 sm:gap-3 '
+              className='flex flex-col bg-white shadow-2xl rounded-lg h-full w-full lg:gap-3 md:gap-5 sm:gap-3 '
             >
               <Image
                 src={project.imagePath}
@@ -55,7 +55,7 @@ const Project = () => {
                 height={500}
                 className='w-full lg:h-[300px] rounded-t-lg'
               />
-              <div className='p-4 flex flex-col justify-start items-start gap-3'>
+              <div className='p-4 flex flex-col justify-between items-start gap-3'>
                 <h3 className='lg:text-2xl md:text-2xl sm:text-xl font-semibold'>
                   {project.title}
                 </h3>
@@ -84,9 +84,13 @@ const Project = () => {
                 </div>
 
                 <div className='border-[1px] w-[25%] border-[#6245d7] '></div>
-                <p className='py-2 lg:text-base md:text-lg sm:text-base '>
-                  {project.description}
-                </p>
+                <ul className='py-2 px-4 flex flex-col gap-3 lg:text-base md:text-lg sm:text-base list-disc '>
+                  {project.description.map((item) => {
+                    return (
+                      <li>{item }</li>
+                    )
+                  })}
+                </ul>
 
                 <div className='flex justify-start items-center gap-5 mt-auto'>
                   <Link href={project.github}>
