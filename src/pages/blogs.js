@@ -51,11 +51,11 @@ export default function BlogPosts() {
 
   const memoedFunction = useCallback(() => {
     return fetchData()
-  }, [fetchData])
+  }, [])
 
   useEffect(() => {
     memoedFunction()
-  }, [memoedFunction])
+  }, [])
 
   const handleLoadMore = () => {
     setCurrentPage(currentPage + 1)
