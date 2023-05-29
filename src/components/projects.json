@@ -15,10 +15,10 @@
   {
     "title": "Unsplash Clone",
     "description": [
-      "Users can also fetch photos by category selected.",
-      "Users can also search for photos.",
-      "Users have ability to load more photos after reaching the last.",
-      "Users have ability to load more photos after reaching the last."
+      "Users can also fetch photos by category selected and the hero header image change based on category selected.",
+      "Users can also search for photos by name.",
+      "Users have ability to load more photos by triggering the load more button",
+      "Users have ability to view photo details, which also gives users the ability to view related collection photos and tags too"
     ],
     "imagePath": "/unsplash.png",
     "stack": ["CSS", "JavaScript", "Next.js", "Tailwind", "API", "Redux toolkit"],

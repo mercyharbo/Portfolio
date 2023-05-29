@@ -84,7 +84,7 @@ const Project = () => {
                 </div>
 
                 <div className='border-[1px] w-[25%] border-[#6245d7] '></div>
-                <ul className='py-2 px-4 flex flex-col gap-3 lg:text-base md:text-lg sm:text-base list-disc '>
+                <ul className='py-1 px-4 flex flex-col gap-2 lg:text-base md:text-lg sm:text-base list-disc '>
                   {project.description.map((item, index) => {
                     return <li key={index}>{item}</li>
                   })}
