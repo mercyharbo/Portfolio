@@ -18,7 +18,8 @@
       "Users can also fetch photos by category selected and the hero header image change based on category selected.",
       "Users can also search for photos by name.",
       "Users have ability to load more photos by triggering the load more button",
-      "Users have ability to view photo details, which also gives users the ability to view related collection photos and tags too"
+      "Users have ability to view photo details, which also gives users the ability to view related collection photos and tags too",
+      "Added overlay features to the images which includes details of the photo owners, and buttons to save, like, and download."
     ],
     "imagePath": "/unsplash.png",
     "stack": ["CSS", "JavaScript", "Next.js", "Tailwind", "API", "Redux toolkit"],
