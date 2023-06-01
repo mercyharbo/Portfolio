@@ -19,7 +19,7 @@
       "Users can search for photos by name.",
       "Users can download photos by triggering the arrow down onMouseOver or when viewing photo full details",
       "Users can see more photos by triggering the load more button",
-      "Users can view photo full details by click on the desire photo",
+      "Users can view photo full details by click on the desire photo"
     ],
     "imagePath": "/unsplash.png",
     "stack": ["CSS", "JavaScript", "Next.js", "Tailwind", "API", "Redux toolkit"],
