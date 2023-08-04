@@ -1,45 +1,17 @@
-# Portfolio Website
+# Code With Mercy
 
-This is my portfolio website built using Next.js and Formspree for form validation and submission.
+I am a Frontend Developer with 2+ years of experience in developing and maintaining web applications. I am proficient in React, JavaScript, Tailwind, Next.js, CSS, HTML, and Redux Toolkit. I am also a team player that is always willing to learn new things. I am passionate about creating user-friendly and visually appealing web applications.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Installing
-- Clone the repository to your local machine.
-- Install the necessary dependencies by running the command npm install in the directory of the cloned repository.
-- Start the development server by running `npm run dev`.
-You can find more detailed instructions on how to push your Next.js app to GitHub and deploy it in this tutorial by Next.js.
-
-### Deploying to Netlify
-- Put your Next.js site code in a Git repo.
-- Create a new Netlify site from your Next.js site repo.
-- Add the Next on Netlify plugin.
-- Deploy your site.
-
-You can find more detailed instructions on how to deploy your Next.js app to Netlify in this 5-minute tutorial by Netlify.
-
-### Deploying to Vercel
-- Install the Vercel CLI.
-- Navigate to your project directory.
-- Run vercel login and follow the prompts to log in.
-- Run vercel and follow the prompts to deploy your app.
-
-You can find more detailed instructions on how to deploy your Next.js app to Vercel in the official documentation.
+I am currently looking for a Frontend Developer position in a fast-paced and innovative environment. I am confident that I can make a significant contribution to your team.
 
 ## Built With
 
-* [Next.js](https://nextjs.org/) - The web framework used
-* [Formspree](https://formspree.io/) - The form backend used for form validation and submission.
+* [Next.js](https://nextjs.org/) - The web framework used in building this portfolio for its amazing features that solve some bug in Reactjs
+* [Formspree](https://formspree.io/) - The form backend is used for form validation and submission.
 
 ## Authors
 
 * **Afolabi Ridwan Damilare** - *Frontend Developer* - [Portfolio Website Link](https://www.codewithmercy.codes/)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
