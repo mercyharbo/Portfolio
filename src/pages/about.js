@@ -50,7 +50,7 @@ export default function About() {
               style the web pages with a modern and consistent look and feel.
             </li>
 
-            <li>
+            {/* <li>
               I gave Aseda Security website a new look from the old one they
               were using, a company that offers bodyguard, CCTV installation,
               vehicle with a driver, and other security services. I used Next.js
@@ -62,7 +62,7 @@ export default function About() {
               Motion to add animations to the website to make it more engaging
               and interactive. The website is optimized for performance,
               accessibility, and SEO.
-            </li>
+            </li> */}
           </ul>
 
           <p className=''>

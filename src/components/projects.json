@@ -3,9 +3,8 @@
     "title": "REST Countries API with color theme switcher",
     "description": [
       "User is able to toggle between light & dark mode.",
-      "Users is able to filter view by regions.",
-      "Users are able to search by countries ",
-      "Users are able to view countries details and also have access to border countries for the country viewed."
+      "Users is able to filter view by regions and also search by country names.",
+      "Users are able to view countries details and also have access to border countries while on the country details."
     ],
     "imagePath": "/rest-countries.png",
     "stack": ["Nextjs", "JavaScript", "Tailwind", "API"],
@@ -13,29 +12,29 @@
     "liveSite": "https://rest-countriessapp.netlify.app/"
   },
   {
-    "title": "Unsplash Clone",
+    "title": "Untitled Realty",
     "description": [
-      "Users can fetch photos by category.",
-      "Users can search for photos by name.",
-      "Users can download photos by triggering the arrow down onMouseOver or when viewing photo full details",
-      "Users can see more photos by triggering the load more button",
-      "Users can view photo full details by click on the desire photo"
+      "Users can add, delete, edit a listing and also mark a listing as sold.",
+      "Users get notified when their listings recieve a review, added as favorite by other users.",
+      "Users can update their profile informations, and other users can search for a realtor on the site.",
+      "Users can add other users listing to their favorites listings, and can leave a review under a listing. "
     ],
-    "imagePath": "/unsplash.png",
-    "stack": ["CSS", "JavaScript", "Next.js", "Tailwind", "API", "Redux toolkit"],
-    "github": "https://github.com/mercyharbo/frontendmentor-projects/tree/unsplash",
-    "liveSite": "https://mercyunsplashphotos.netlify.app/"
+    "imagePath": "/untitled.png",
+    "stack": ["Nextjs", "JavaScript", "Tailwind", "Node.js/Express.js"],
+    "github": "https://github.com/mercyharbo/untitled-frontend",
+    "liveSite": "https://untitled-frontend-peach.vercel.app/"
   },
   {
-    "title": "Code With Mercy | Portfolio website",
+    "title": "Unsplash Clone",
     "description": [
-      "I added features that loads my blog posts from Hashnode and access to read brief of the content before linking to Hashnode the full post.",
-      "I used Formspree for form sunmission for visitors that want to contact me by email through my portfolio instead of having to open that mailing app.",
-      "I also make use of framer motion for animation and page transition on my portfolio pages so visitors don't have that boring navigation."
+      "Users is able to download the photos of their choice right on the home or when they view the photo details in full size.",
+      "Users is able to load more photos once they reach the end of the photos automatically or by clicking on the load more button.",
+      "Users can view photos details and see other related suggestions of that photoor by the owner of the photo.",
+      "Users is able to search for the type of photo they are looking for or fetch the photos by selecting the category."
     ],
-    "imagePath": "/portfolio.png",
-    "stack": ["Next.js", "Tailwind", "API", "react-icons"],
-    "github": "https://github.com/portfolio",
-    "liveSite": "https://codewithmercy.netlify.app"
+    "imagePath": "/unsplashImage.png",
+    "stack": ["CSS", "JavaScript", "Next.js", "Tailwind", "Unsplash API", "Redux toolkit"],
+    "github": "https://github.com/mercyharbo/frontendmentor-projects/tree/unsplash",
+    "liveSite": "https://mercyunsplashphotos.netlify.app/"
   }
 ]

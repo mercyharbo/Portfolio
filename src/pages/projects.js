@@ -41,19 +41,19 @@ const Project = () => {
           animate={{ opacity: 2, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.7 }}
-          className='grid lg:grid-cols-3 lg:gap-10 lg:py-5 md:py-5 md:grid-cols-1 md:gap-10 sm:grid-cols-1 sm:gap-10 sm:py-5   '
+          className='flex flex-col gap-5 '
         >
           {Projects.map((project) => (
             <article
               key={project.title}
-              className='flex flex-col bg-white shadow-2xl rounded-lg h-full w-full lg:gap-3 md:gap-5 sm:gap-3 '
+              className='flex xl:flex-row md:flex-col sm:flex-col bg-white shadow-2xl rounded-lg h-full w-full lg:gap-3 md:gap-5 sm:gap-3 '
             >
               <Image
                 src={project.imagePath}
                 alt={project.title}
                 width={500}
                 height={500}
-                className='w-full lg:h-[300px] rounded-t-lg'
+                className='xl:w-[30rem] xl:h-[300px] md:w-full sm:w-full rounded-t-lg'
               />
               <div className='p-4 flex flex-col justify-between items-start gap-3'>
                 <h3 className='lg:text-2xl md:text-2xl sm:text-xl font-semibold'>
@@ -91,11 +91,11 @@ const Project = () => {
                 </ul>
 
                 <div className='flex justify-start items-center gap-5 mt-auto'>
-                  <Link href={project.github}>
+                  <Link href={project.github} target='_blank'>
                     {' '}
                     <RxGithubLogo size={30} color='#6245d7' />{' '}
                   </Link>
-                  <Link href={project.liveSite}>
+                  <Link href={project.liveSite} target='_blank'>
                     {' '}
                     <RxExternalLink size={30} color='#6245d7' />{' '}
                   </Link>
