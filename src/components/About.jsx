@@ -30,7 +30,7 @@ export default function About() {
         At this juncture, I am fervently seeking a Frontend Developer role that
         aligns with my aspirations in a high-octane, forward-looking setting. I
         hold the firm belief that I can bring a transformative influence to your
-        team, elevating your projects to new heights. Let's embark on this
+        team, elevating your projects to new heights. Let&apos;s embark on this
         exciting journey together.
       </p>
 
