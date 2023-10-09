@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "gsap": "^3.12.2",
     "next": "latest",
     "next-themes": "^0.2.1",

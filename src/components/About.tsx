@@ -4,7 +4,7 @@ import experience from './workExperience.json'
 export default function About() {
   return (
     <main className='flex flex-col justify-start items-start gap-5 3xl:py-[5rem] xl:py-[5rem] xl:px-0 md:py-[2rem] md:px-10 sm:py-[5rem] sm:px-5 '>
-      <h1 className='xl:text-5xl md:text-4xl sm:text-3xl dark:text-white text-[#42446E] capitalize '>
+      <h1 className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize '>
         about me
       </h1>
       <p className=''>
@@ -35,7 +35,7 @@ export default function About() {
       </p>
 
       <div className='flex flex-col justify-start items-start gap-5 3xl:w-[50%] 2xl:w-[50%] xl:w-[50%] md:w-full md:pt-10 sm:w-full sm:pt-10 '>
-        <h1 className='xl:text-5xl md:text-4xl sm:text-3xl dark:text-white text-[#42446E] capitalize'>
+        <h1 className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'>
           work experience{' '}
         </h1>
         {experience.map((item) => {
@@ -65,6 +65,35 @@ export default function About() {
             </section>
           )
         })}
+      </div>
+
+      <div className='flex flex-col justify-start items-start gap-5 3xl:w-[50%] 2xl:w-[50%] xl:w-[50%] md:w-full md:pt-10 sm:w-full sm:pt-10 '>
+        <h1 className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'>
+          education
+        </h1>
+
+        <section
+          className='flex w-full relative after:absolute after:border-b-[1px] after:w-full after:bottom-0 after:left-0 after:h-5 after:border-[#EBEAED] 
+            after:dark:border-[#A7A7A7] xl:flex-row xl:justify-between xl:items-center xl:py-5 md:justify-between md:items-center md:py-5 sm:justify-between
+            sm:items-center sm:py-2'
+        >
+          <div className='flex flex-col justify-start items-start gap-2'>
+            <h3 className='xl:text-xl md:text-lg sm:text-base'>
+              Bachelor in Computer Science
+            </h3>
+            <li className='text-[#A7A7A7] list-[square] xl:text-sm md:text-sm sm:text-xs'>
+              National Open University Of Nigeria
+            </li>
+          </div>
+          <div className='flex flex-col justify-end items-end gap-2'>
+            <span className='bg-[#D7FFE0] text-[#018C0F] xl:text-sm md:text-sm sm:text-xs px-2 py-1 rounded-full '>
+              Full Time
+            </span>
+            <p className='text-[#A7A7A7] xl:text-sm md:text-sm sm:text-xs '>
+              2014 - 2020
+            </p>
+          </div>
+        </section>
       </div>
     </main>
   )

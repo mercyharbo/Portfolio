@@ -26,7 +26,7 @@ function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleModalOpen = () => {
-    setIsModalOpen((prev) => !prev)
+    setIsModalOpen((prev: boolean) => !prev)
   }
 
   useEffect(() => {
@@ -150,7 +150,7 @@ function Navbar() {
               <Link href='https://www.linkedin.com/in/codewithmercy'>
                 <BsLinkedin />
               </Link>
-              <Link href=''>
+              <Link href='https://www.instagram.com/codewithmercy/'>
                 <BsInstagram />
               </Link>
             </div>

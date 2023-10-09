@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "title": "Shop.co E-commerce Store",
+        "description": [
+            "I'm thrilled to present my latest project, an e-commerce website in development. Leveraging the capabilities of Next.js and Express.js, powered by JavaScript, this platform is designed to redefine online shopping. It empowers users with essential features, including the ability to effortlessly make orders, add products to their cart, create wishlists, and complete seamless checkouts. With this project, I'm crafting a user-centric e-commerce solution that aims to provide an exceptional online shopping experience. Stay tuned for updates as this project continues to evolve and bring shopping convenience to the forefront"
+        ],
+        "imagePath": "/shopco.png",
+        "stack": [
+            "Nextjs",
+            "TypeScript",
+            "Tailwind",
+            "GSAP"
+        ],
+        "github": "https://github.com/mercyharbo/iFashion",
+        "liveSite": "https://i-fashion.vercel.app/"
+    },
+    {
+        "id": 2,
+        "title": "Untitled Realty",
+        "description": [
+            "I'm excited to showcase a dynamic project that I crafted using Next.js and Express.js, powered by JavaScript. This innovative platform reimagines the real estate experience, offering users the ability to seamlessly manage property listings, receive instant notifications for reviews and favorites, customize their profiles, and easily find realtors. With this project, I've harnessed the power of web technologies to create a user-friendly, feature-rich solution that transforms the way we interact with real estate online."
+        ],
+        "imagePath": "/untitled.png",
+        "stack": [
+            "Nextjs",
+            "JavaScript",
+            "Tailwind CSS",
+            "Express.js - Backend"
+        ],
+        "github": "https://github.com/mercyharbo/untitled-frontend",
+        "liveSite": "https://untitled-frontend-peach.vercel.app/"
+    },
+    {
+        "id": 3,
+        "title": "Unsplash Clone",
+        "description": [
+            "The Unsplash website clone is built using Next.js and enhanced with the sleek design of Tailwind CSS. Leveraging the Unsplash API for stunning visuals and Redux Toolkit for seamless state management, this project offers a captivating browsing experience, various features included too."
+        ],
+        "imagePath": "/unsplash.png",
+        "stack": [
+            "CSS",
+            "JavaScript",
+            "Next.js",
+            "Tailwind",
+            "Unsplash API",
+            "Redux toolkit"
+        ],
+        "github": "https://github.com/mercyharbo/frontendmentor-projects/tree/unsplash",
+        "liveSite": "https://mercyunsplashphotos.netlify.app/"
+    },
+    {
+        "id": 4,
+        "title": "Custom UI Design for a multi-page website",
+        "description": [
+            "I had the pleasure of working on a freelance project that involved crafting a custom user interface (UI) design for a multi-page website. The project encompassed the creation of an engaging homepage and subpages routing to their various page, each meticulously designed to meet the client's unique vision and requirements. From layout and color schemes to typography and interactive elements, I focused on creating a seamless and visually captivating user experience. This project allowed me to showcase my UI design skills and deliver a tailor-made web presence that perfectly suited the client's needs."
+        ],
+        "imagePath": "/multi-page.png",
+        "stack": [
+            "CSS",
+            "JavaScript",
+            "Next.js",
+            "Tailwind",
+            "Unsplash API",
+            "Redux toolkit"
+        ],
+        "github": "https://github.com/mercyharbo/frontendmentor-projects/tree/unsplash",
+        "liveSite": "https://mercyunsplashphotos.netlify.app/"
+    }
+]

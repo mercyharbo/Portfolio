@@ -2,11 +2,12 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 
-import Navbar from '@/components/Navbar'
 import { ThemeProvider } from './theme-context'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 
-const poppins = Poppins({ weight: '500', subsets: ['latin'] })
+const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Code With Mercy | Portfolio ',
@@ -25,6 +26,7 @@ export default function RootLayout({
           <ThemeSwitcher />
           <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
