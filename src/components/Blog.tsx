@@ -49,7 +49,7 @@ const Blog: React.FC = () => {
     const post: Post[] = result.data.user.publication.posts
     setPosts(post)
     setLoading(false)
-  }, [])
+  }, [query, variables])
 
   useEffect(() => {
     fetchData()

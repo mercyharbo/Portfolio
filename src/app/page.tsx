@@ -120,18 +120,18 @@ export default function Home() {
             Blog
           </h1>
           <p className=''>
-            I'm actively working on improving my writing and blogging skills to
-            share my journey. I aim to create content that can benefit newcomers
-            and anyone seeking guidance, similar to the valuable resources I
-            stumbled upon during my early days as a self-taught developer. Back
-            then, I faced challenges due to limited physical resources and a
-            lack of a strong tech community in my region.
+            I&apos;m actively working on improving my writing and blogging
+            skills to share my journey. I aim to create content that can benefit
+            newcomers and anyone seeking guidance, similar to the valuable
+            resources I stumbled upon during my early days as a self-taught
+            developer. Back then, I faced challenges due to limited physical
+            resources and a lack of a strong tech community in my region.
           </p>
           <p className=' '>
             This section highlights some of my blog posts on Hashnode. While
-            they may not be flawless, I'm dedicated to continuous improvement
-            and plan to produce more content, just like many other tech
-            enthusiasts out there.
+            they may not be flawless, I&apos;m dedicated to continuous
+            improvement and plan to produce more content, just like many other
+            tech enthusiasts out there.
           </p>
         </div>
 
