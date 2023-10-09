@@ -2,6 +2,7 @@ import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 
 import { DiSass } from 'react-icons/di'
+import Link from 'next/link'
 import {
   SiBootstrap,
   SiCss3,
@@ -13,13 +14,12 @@ import {
   SiTailwindcss,
 } from 'react-icons/si'
 import { BsGit } from 'react-icons/bs'
+import { AiOutlineDownload } from 'react-icons/ai'
 
 import About from '@/components/About'
 import Project from '@/components/Project'
 import Blog from '@/components/Blog'
 import ContactForm from '@/components/ContactForm'
-import Link from 'next/link'
-import { AiOutlineDownload } from 'react-icons/ai'
 
 const poppins = Poppins({ weight: '900', subsets: ['latin'] })
 
@@ -37,13 +37,14 @@ const TechStacks = [
 ]
 
 export default function Home() {
+ 
   return (
     <main className='flex flex-col gap-5 mx-auto xl:w-[90%] '>
       <div
-        className='flex 3xl:py-[10rem] xl:flex-row xl:justify-center xl:items-center xl:gap-14 xl:px-0 md:flex-col md:justify-start md:items-start md:gap-10 md:px-10
+        className='container flex 3xl:py-[10rem] xl:flex-row xl:justify-center xl:items-center xl:gap-14 xl:px-0 md:flex-col md:justify-start md:items-start md:gap-10 md:px-10
         md:py-[5rem] sm:flex-col sm:justify-center sm:items-center sm:gap-10 sm:px-5 sm:pt-[5rem] '
       >
-        <div className='flex flex-col justify-start items-start gap-5 3xl:w-[50%] 2xl:w-[50%] xl:w-[50%]  '>
+        <div className='content-container flex flex-col justify-start items-start gap-5 3xl:w-[50%] 2xl:w-[50%] xl:w-[50%]  '>
           <span className='text-lg '>Hi,</span>
           <h1
             className={`${poppins} 3xl:text-6xl 3xl:leading-[70px] 2xl:text-5xl 2xl:leading-[65px] 2xl:w-full xl:text-5xl md:text-5xl md:leading-[70px] md:w-[80%] 

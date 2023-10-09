@@ -1,10 +1,51 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useRef } from 'react'
 import experience from './workExperience.json'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function About() {
+  const revealRefs = useRef<any[]>([])
+  revealRefs.current = []
+
+  useEffect(() => {
+    revealRefs.current.forEach((el, index) => {
+      gsap.fromTo(
+        el,
+        {
+          autoAlpha: 0,
+          x: 0,
+        },
+        {
+          duration: 2,
+          autoAlpha: 1,
+          ease: 'back',
+          scrollTrigger: {
+            id: `section-${index + 1}`,
+            trigger: el,
+            start: 'top center+=100',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      )
+    })
+  }, [])
+
+  const addToRefs = (el: HTMLElement | null) => {
+    if (el && !revealRefs.current.includes(el)) {
+      revealRefs.current.push(el)
+    }
+  }
+
   return (
-    <main className='flex flex-col justify-start items-start gap-5 3xl:py-[5rem] xl:py-[5rem] xl:px-0 md:py-[2rem] md:px-10 sm:py-[5rem] sm:px-5 '>
-      <h1 className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize '>
+    <main
+      ref={addToRefs}
+      className=' flex flex-col justify-start items-start gap-5 3xl:py-[5rem] xl:py-[5rem] xl:px-0 md:py-[2rem] md:px-10 sm:py-[5rem] sm:px-5 '
+    >
+      <h1 className='brand-container text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize '>
         about me
       </h1>
       <p className=''>
