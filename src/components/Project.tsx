@@ -12,7 +12,7 @@ type ProjectProps = {
 
 export default function Project({ addToRefs }: ProjectProps) {
   return (
-    <main className='flex flex-col justify-center items-center xl:gap-5 xl:my-[5rem] xl:px-0 md:px-10 md:my-[5rem] md:gap-10 sm:gap-10 sm:px-5 sm:my-[5rem] '>
+    <main className='flex flex-col justify-center items-center xl:gap-5 xl:my-[5rem] xl:px-0 md:px-10 md:my-[3rem] md:gap-10 sm:gap-10 sm:px-5 sm:my-[2rem] '>
       <div className='flex flex-col justify-center items-center gap-5'>
         <h1
           ref={addToRefs}

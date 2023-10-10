@@ -15,7 +15,7 @@ export default function About({ addToRefs }: AboutProps) {
       >
         about me
       </h1>
-      <p ref={addToRefs} className=''>
+      {/* <p ref={addToRefs} className=''>
         I am a seasoned front-end developer with a rich background in crafting
         and nurturing web applications. My journey is marked by mastery of an
         array of cutting-edge technologies, including{' '}
@@ -26,7 +26,7 @@ export default function About({ addToRefs }: AboutProps) {
         My skills are not just a reflection of my experience; they are a
         testament to my unwavering commitment to staying at the forefront of web
         development.
-      </p>
+      </p> */}
       <p ref={addToRefs} className=''>
         Collaboration is my second nature, and my thirst for knowledge is
         unquenchable. I thrive in dynamic, forward-thinking environments, where
