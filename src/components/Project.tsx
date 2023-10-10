@@ -23,7 +23,7 @@ export default function Project({ addToRefs }: ProjectProps) {
 
         <div
           className='grid 3xl:grid-cols-4 2xl:grid-cols-3 2xl:gap-10 xl:grid-cols-3 xl:content-between xl:place-items-start xl:pt-[2rem] md:grid-cols-2 md:content-between
-        md:place-items-center md:gap-10 md:pt-[2rem] sm:grid-cols-1 sm:content-between sm:place-items-center sm:gap-10 sm:pt-[1rem]  '
+        md:place-items-center md:gap-10 md:pt-[2rem] sm:grid-cols-1 sm:content-center sm:place-items-center sm:gap-10 sm:pt-[1rem]  '
         >
           {projectJSON.map((item) => {
             return (
