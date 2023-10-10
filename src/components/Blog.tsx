@@ -91,13 +91,12 @@ const Blog: React.FC = () => {
   }
 
   return (
-    <div className='w-full'>
+    <main className='w-full'>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <div
-          className='flex flex-col justify-start items-start w-full 3xl:gap-10 3xl:py-[5rem] xl:py-[5rem] xl:px-0 md:py-[3rem] md:px-10 md:gap-5 sm:gap-5 
-        sm:px-5 sm:py-[3rem] '
+          className='w-full 3xl:py-[5rem] xl:py-[5rem] xl:px-0 md:py-[3rem] md:px-10 sm:px-5 sm:py-[3rem] '
         >
           <div className='flex flex-col gap-5'>
             <h1
@@ -124,7 +123,7 @@ const Blog: React.FC = () => {
           </div>
 
           <div
-            className='grid w-full 3xl:grid-cols-4 2xl:grid-cols-3 xl:grid-cols-3 xl:content-center xl:place-items-center xl:gap-10 md:grid-cols-2
+            className='grid w-full py-10 3xl:grid-cols-4 2xl:grid-cols-3 xl:grid-cols-3 xl:content-center xl:place-items-center xl:gap-10 md:grid-cols-2
             md:content-center md:place-items-center md:gap-10 sm:grid-cols-1 sm:content-center sm:gap-10 '
           >
             {posts?.slice(0, 4).map((blogPost) => {
@@ -133,7 +132,7 @@ const Blog: React.FC = () => {
                   key={blogPost.slug}
                   ref={addToRefs}
                   href={`https://codewithmercy.hashnode.dev/${blogPost.slug}`}
-                  className='grid grid-cols-1 content-between place-items-start gap-2 dark:bg-white dark:text-black text-white bg-[#363636] rounded-lg shadow-2xl h-full '
+                  className='grid grid-cols-1 content-between place-items-center gap-2 dark:bg-white dark:text-black text-white bg-[#363636] rounded-lg shadow-2xl h-full '
                 >
                   <Image
                     src={blogPost.coverImage}
@@ -152,7 +151,7 @@ const Blog: React.FC = () => {
           </div>
         </div>
       )}
-    </div>
+    </main>
   )
 }
 

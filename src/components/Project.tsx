@@ -39,7 +39,7 @@ export default function Project({ addToRefs }: ProjectProps) {
                 height={500}
                 className='rounded-t-lg w-full h-full object-cover'
               />
-              <div className='flex flex-col justify-between items-start gap-4 p-2 h-full'>
+              <div className='flex flex-col justify-between items-start gap-4 p-4 h-full'>
                 <h1 className='text-xl '>{item.title}</h1>
                 <p>
                   {item.description.join(' ').substring(0, 250)}
