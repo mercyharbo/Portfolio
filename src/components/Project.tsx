@@ -20,35 +20,8 @@ export default function Project({ addToRefs }: ProjectProps) {
         >
           Projects
         </h1>
-        <p ref={addToRefs} className=''>
-          Here are some of the projects I have worked on and you can find more
-          on my github:
-        </p>
-        <p ref={addToRefs}>
-          I am a seasoned front-end developer with a rich background in crafting
-          and nurturing web applications. My journey is marked by mastery of an
-          array of cutting-edge technologies, including{' '}
-          <strong>
-            React, JavaScript, BootStrap, SASS, TypeScript, VS Code, Git &
-            GitHub, Tailwind, Next.js, CSS, HTML, and Redux Toolkit.
-          </strong>{' '}
-          My skills are not just a reflection of my experience; they are a
-          testament to my unwavering commitment to staying at the forefront of
-          web development.
-        </p>
-        <p ref={addToRefs}>
-          I am a seasoned front-end developer with a rich background in crafting
-          and nurturing web applications. My journey is marked by mastery of an
-          array of cutting-edge technologies, including{' '}
-          <strong>
-            React, JavaScript, BootStrap, SASS, TypeScript, VS Code, Git &
-            GitHub, Tailwind, Next.js, CSS, HTML, and Redux Toolkit.
-          </strong>{' '}
-          My skills are not just a reflection of my experience; they are a
-          testament to my unwavering commitment to staying at the forefront of
-          web development.
-        </p>
-        {/* <div
+
+        <div
           className='grid 3xl:grid-cols-4 2xl:grid-cols-3 2xl:gap-10 xl:grid-cols-3 xl:content-start xl:place-items-start xl:pt-[3rem] md:grid-cols-2 md:content-center
         md:place-items-center md:gap-10 md:pt-[5rem] sm:grid-cols-1 sm:content-center sm:place-items-center sm:gap-10 sm:pt-[5rem]  '
         >
@@ -57,8 +30,8 @@ export default function Project({ addToRefs }: ProjectProps) {
               <div
                 key={item.id}
                 ref={addToRefs}
-                className='flex flex-col justify-start items-start gap-2 dark:bg-white dark:text-black text-white bg-[#363636] shadow-2xl 
-                rounded-lg w-full h-full cursor-pointer '
+                className='grid grid-cols-1 content-between dark:bg-white dark:text-black text-white bg-[#363636] shadow-2xl border-[1px]
+                rounded-lg cursor-pointer min-h-full '
               >
                 <Image
                   src={item.imagePath}
@@ -93,7 +66,7 @@ export default function Project({ addToRefs }: ProjectProps) {
               </div>
             )
           })}
-        </div> */}
+        </div>
       </div>
     </main>
   )
