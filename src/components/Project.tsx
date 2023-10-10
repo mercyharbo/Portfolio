@@ -22,13 +22,13 @@ export default function Project({ addToRefs }: ProjectProps) {
 
       <div
         className='grid md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-10 xl:content-center xl:place-items-start xl:pt-[2rem] md:content-center
-      md:place-items-center md:pt-[2rem] sm:grid-cols-1 sm:content-center sm:place-items-center sm:pt-[1rem]  '
+      md:place-items-center md:pt-[2rem] sm:grid-cols-1 sm:content-center sm:place-items-center sm:pt-[2rem]  '
       >
         {projectJSON.map((item) => {
           return (
             <div
               key={item.id}
-              // ref={addToRefs}
+              ref={addToRefs}
               className='grid grid-cols-1 content-between place-items-center gap-10 dark:bg-white dark:text-black text-white bg-[#363636] shadow-2xl border-[1px]
               rounded-lg cursor-pointer h-full '
             >
