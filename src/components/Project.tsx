@@ -24,7 +24,7 @@ export default function Project({ addToRefs }: ProjectProps) {
           Here are some of the projects I have worked on and you can find more
           on my github:
         </p>
-        <div
+        {/* <div
           className='grid 3xl:grid-cols-4 2xl:grid-cols-3 2xl:gap-10 xl:grid-cols-3 xl:content-start xl:place-items-start xl:mt-[3rem] md:grid-cols-2 md:content-center
         md:place-items-center md:gap-10 md:mt-[5rem] sm:grid-cols-1 sm:content-center sm:place-items-center sm:gap-10 sm:mt-[5rem]  '
         >
@@ -69,7 +69,7 @@ export default function Project({ addToRefs }: ProjectProps) {
               </div>
             )
           })}
-        </div>
+        </div> */}
       </div>
     </main>
   )
