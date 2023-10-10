@@ -46,7 +46,7 @@ export default function Home() {
   }
 
   return (
-    <main className='flex flex-col justify-center items-center gap-5 min-h-screen mx-auto overflow-hidden xl:w-[90%] md:w-full sm:w-full '>
+    <main className='flex flex-col justify-center items-center gap-5 mx-auto overflow-hidden xl:w-[90%] md:w-full sm:w-full '>
       <Hero />
       <About addToRefs={addToRefs} />
       <Project addToRefs={addToRefs} />
