@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "role": "Frontend Engineer",
+        "company": "TrySpacely",
+        "type_of_job": "Full-time",
+        "duration": "Feb 2022 - Present"
+    },
+    {
+        "id": 2,
+        "role": "Frontend Developer Intern",
+        "company": "Oluadepe Farms",
+        "type_of_job": "Internship",
+        "duration": "Jan 2022 - Feb 2022"
+    },
+    {
+        "id": 3,
+        "role": "Frontend Developer",
+        "company": "Side Hustle Internship",
+        "type_of_job": "Internship",
+        "duration": "Apr 2021 - Sep 2021"
+    }
+]
