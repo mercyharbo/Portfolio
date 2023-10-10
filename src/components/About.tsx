@@ -89,28 +89,30 @@ export default function About({ addToRefs }: AboutProps) {
           education
         </h1>
 
-        <section
-          ref={addToRefs}
-          className='flex w-full xl:flex-row xl:justify-between xl:items-center xl:py-5 md:justify-between md:items-center md:py-5 sm:justify-between
+        {/* <div className='flex flex-col justify-start items-start gap-5 w-full'>
+          <section
+            ref={addToRefs}
+            className='flex w-full xl:flex-row xl:justify-between xl:items-center xl:py-5 md:justify-between md:items-center md:py-5 sm:justify-between
             sm:items-center sm:py-2'
-        >
-          <div className='flex flex-col justify-start items-start gap-2'>
-            <h3 className='xl:text-xl md:text-lg sm:text-base'>
-              Bachelor in Computer Science
-            </h3>
-            <li className='text-[#A7A7A7] list-[square] xl:text-sm md:text-sm sm:text-xs'>
-              National Open University Of Nigeria
-            </li>
-          </div>
-          <div className='flex flex-col justify-end items-end gap-2'>
-            <span className='bg-[#D7FFE0] text-[#018C0F] xl:text-sm md:text-sm sm:text-xs px-2 py-1 rounded-full '>
-              Full Time
-            </span>
-            <p className='text-[#A7A7A7] xl:text-sm md:text-sm sm:text-xs '>
-              2014 - 2020
-            </p>
-          </div>
-        </section>
+          >
+            <div className='flex flex-col justify-start items-start gap-2'>
+              <h3 className='xl:text-xl md:text-lg sm:text-base'>
+                Bachelor in Computer Science
+              </h3>
+              <li className='text-[#A7A7A7] list-[square] xl:text-sm md:text-sm sm:text-xs'>
+                National Open University Of Nigeria
+              </li>
+            </div>
+            <div className='flex flex-col justify-end items-end gap-2'>
+              <span className='bg-[#D7FFE0] text-[#018C0F] xl:text-sm md:text-sm sm:text-xs px-2 py-1 rounded-full '>
+                Full Time
+              </span>
+              <p className='text-[#A7A7A7] xl:text-sm md:text-sm sm:text-xs '>
+                2014 - 2020
+              </p>
+            </div>
+          </section>
+        </div> */}
       </div>
     </main>
   )
