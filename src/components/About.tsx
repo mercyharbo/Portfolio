@@ -8,7 +8,7 @@ type AboutProps = {
 
 export default function About({ addToRefs }: AboutProps) {
   return (
-    <main className='flex flex-col justify-start items-start gap-5 min-h-screen 3xl:my-[7rem] xl:my-[5rem] xl:px-0 md:my-[2rem] md:px-10 sm:my-[5rem] sm:px-5 '>
+    <main className='flex flex-col justify-start items-start gap-5 3xl:my-[7rem] xl:my-[5rem] xl:px-0 md:my-[2rem] md:px-10 sm:my-[5rem] sm:px-5 '>
       <h1
         ref={addToRefs}
         className=' text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize '
@@ -54,8 +54,8 @@ export default function About({ addToRefs }: AboutProps) {
             return (
               <section
                 key={item.id}
-                ref={addToRefs}
-                className='flex w-full  after:absolute after:border-b-[1px] after:w-full after:bottom-0 after:left-0 after:h-5 after:border-[#EBEAED] 
+                // ref={addToRefs}
+                className='flex w-full after:absolute after:border-b-[1px] after:w-full after:bottom-0 after:left-0 after:h-5 after:border-[#EBEAED] 
             after:dark:border-[#A7A7A7] xl:flex-row xl:justify-between xl:items-center xl:py-5 md:justify-between md:items-center md:py-5 sm:justify-between
             sm:items-center sm:py-2'
               >
