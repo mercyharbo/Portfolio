@@ -50,7 +50,7 @@ export default function Home() {
       <Hero />
       <About addToRefs={addToRefs} />
       <Project addToRefs={addToRefs} />
-      <Blog />
+      {/* <Blog /> */}
       <ContactForm addToRefs={addToRefs} />
     </main>
   )
