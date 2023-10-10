@@ -12,7 +12,7 @@ type ProjectProps = {
 
 export default function Project({ addToRefs }: ProjectProps) {
   return (
-    <main className='flex flex-col justify-center items-center gap-5 xl:py-[5rem] xl:px-0 md:px-10 md:py-10 sm:px-5 sm:py-10 '>
+    <main className='flex flex-col justify-center items-center xl:gap-5 xl:my-[5rem] xl:px-0 md:px-10 md:my-[5rem] md:gap-10 sm:gap-10 sm:px-5 sm:my-[5rem] '>
       <div className='flex flex-col justify-center items-center gap-5'>
         <h1
           ref={addToRefs}
@@ -26,7 +26,7 @@ export default function Project({ addToRefs }: ProjectProps) {
         </p>
         <div
           className='grid 3xl:grid-cols-4 2xl:grid-cols-3 2xl:gap-10 xl:grid-cols-3 xl:content-start xl:place-items-start xl:mt-[3rem] md:grid-cols-2 md:content-center
-        md:place-items-center md:gap-10 md:mt-[4rem] sm:grid-cols-1 sm:content-center sm:place-items-center sm:gap-10 sm:mt-[3rem]  '
+        md:place-items-center md:gap-10 md:mt-[5rem] sm:grid-cols-1 sm:content-center sm:place-items-center sm:gap-10 sm:mt-[5rem]  '
         >
           {projectJSON.map((item) => {
             return (
