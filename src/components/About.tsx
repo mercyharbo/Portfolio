@@ -8,7 +8,7 @@ type AboutProps = {
 
 export default function About({ addToRefs }: AboutProps) {
   return (
-    <main className='flex flex-col justify-start items-start gap-5 3xl:my-[7rem] xl:my-[5rem] xl:px-0 md:my-[2rem] md:px-10 sm:my-[5rem] sm:px-5 '>
+    <main className='flex flex-col justify-start items-start gap-5 h-[30rem] 3xl:my-[7rem] xl:my-[5rem] xl:px-0 md:my-[2rem] md:px-10 sm:my-[5rem] sm:px-5 '>
       <h1
         ref={addToRefs}
         className=' text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize '
