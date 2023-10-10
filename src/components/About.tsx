@@ -49,13 +49,13 @@ export default function About({ addToRefs }: AboutProps) {
         >
           work experience{' '}
         </h1>
-        <div className='flex flex-col justify-start items-start gap-5 w-full relative'>
+        <div className='flex flex-col justify-start items-start gap-5 w-full '>
           {experience.map((item) => {
             return (
               <section
                 key={item.id}
-                // ref={addToRefs}
-                className='flex w-full after:absolute after:border-b-[1px] after:w-full after:bottom-0 after:left-0 after:h-5 after:border-[#EBEAED] 
+                ref={addToRefs}
+                className='flex w-full relative after:absolute after:border-b-[1px] after:w-full after:bottom-0 after:left-0 after:h-5 after:border-[#EBEAED] 
             after:dark:border-[#A7A7A7] xl:flex-row xl:justify-between xl:items-center xl:py-5 md:justify-between md:items-center md:py-5 sm:justify-between
             sm:items-center sm:py-2'
               >
