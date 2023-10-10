@@ -29,7 +29,7 @@ export default function Project({ addToRefs }: ProjectProps) {
             return (
               <div
                 key={item.id}
-                ref={addToRefs}
+                // ref={addToRefs}
                 className='grid grid-cols-1 content-between place-items-center gap-10 dark:bg-white dark:text-black text-white bg-[#363636] shadow-2xl border-[1px]
                 rounded-lg cursor-pointer min-h-full '
               >
