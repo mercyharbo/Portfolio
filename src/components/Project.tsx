@@ -22,15 +22,15 @@ export default function Project({ addToRefs }: ProjectProps) {
         </h1>
 
         <div
-          className='grid 3xl:grid-cols-4 2xl:grid-cols-3 2xl:gap-10 xl:grid-cols-3 xl:content-start xl:place-items-start xl:pt-[3rem] md:grid-cols-2 md:content-center
-        md:place-items-center md:gap-10 md:pt-[5rem] sm:grid-cols-1 sm:content-center sm:place-items-center sm:gap-10 sm:pt-[5rem]  '
+          className='grid 3xl:grid-cols-4 2xl:grid-cols-3 2xl:gap-10 xl:grid-cols-3 xl:content-between xl:place-items-start xl:pt-[2rem] md:grid-cols-2 md:content-between
+        md:place-items-center md:gap-10 md:pt-[2rem] sm:grid-cols-1 sm:content-between sm:place-items-center sm:gap-10 sm:pt-[1rem]  '
         >
           {projectJSON.map((item) => {
             return (
               <div
                 key={item.id}
                 ref={addToRefs}
-                className='grid grid-cols-1 content-between dark:bg-white dark:text-black text-white bg-[#363636] shadow-2xl border-[1px]
+                className='grid grid-cols-1 content-between place-items-center gap-10 dark:bg-white dark:text-black text-white bg-[#363636] shadow-2xl border-[1px]
                 rounded-lg cursor-pointer min-h-full '
               >
                 <Image
@@ -38,9 +38,9 @@ export default function Project({ addToRefs }: ProjectProps) {
                   alt={item.title}
                   width={500}
                   height={500}
-                  className='rounded-t-lg w-full h-auto'
+                  className='rounded-t-lg w-full h-full object-cover'
                 />
-                <div className='flex flex-col justify-between items-start gap-4 p-4 h-full'>
+                <div className='flex flex-col justify-between items-start gap-4 p-2 h-full'>
                   <h1 className='text-xl '>{item.title}</h1>
                   <p>
                     {item.description.join(' ').substring(0, 250)}
