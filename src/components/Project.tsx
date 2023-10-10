@@ -6,14 +6,21 @@ import { BsGithub, BsLink45Deg } from 'react-icons/bs'
 
 import projectJSON from '@/components/projects.json'
 
-export default function Project() {
+type ProjectProps = {
+  addToRefs: any
+}
+
+export default function Project({ addToRefs }: ProjectProps) {
   return (
     <main className='flex flex-col justify-center items-center gap-5 xl:py-[5rem] xl:px-0 md:px-10 sm:px-5 '>
       <div className='flex flex-col justify-center items-center gap-5'>
-        <h1 className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'>
+        <h1
+          ref={addToRefs}
+          className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'
+        >
           Projects
         </h1>
-        <p className=''>
+        <p ref={addToRefs} className=''>
           Here are some of the projects I have worked on and you can find more
           on my github:
         </p>
@@ -25,6 +32,7 @@ export default function Project() {
             return (
               <div
                 key={item.id}
+                ref={addToRefs}
                 className='flex flex-col justify-start items-start gap-2 dark:bg-white dark:text-black text-white bg-[#363636] shadow-2xl rounded-lg w-full h-full cursor-pointer hover:scale-110 
                 active:scale-100 duration-200  '
               >

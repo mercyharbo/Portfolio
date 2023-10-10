@@ -1,54 +1,21 @@
-'use client'
+import React from 'react'
 
-import React, { useEffect, useRef } from 'react'
 import experience from './workExperience.json'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger)
+type AboutProps = {
+  addToRefs: any
+}
 
-export default function About() {
-  const revealRefs = useRef<any[]>([])
-  revealRefs.current = []
-
-  useEffect(() => {
-    revealRefs.current.forEach((el, index) => {
-      gsap.fromTo(
-        el,
-        {
-          autoAlpha: 0,
-          x: 0,
-        },
-        {
-          duration: 2,
-          autoAlpha: 1,
-          ease: 'back',
-          scrollTrigger: {
-            id: `section-${index + 1}`,
-            trigger: el,
-            start: 'top center+=100',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      )
-    })
-  }, [])
-
-  const addToRefs = (el: HTMLElement | null) => {
-    if (el && !revealRefs.current.includes(el)) {
-      revealRefs.current.push(el)
-    }
-  }
-
+export default function About({ addToRefs }: AboutProps) {
   return (
-    <main
-      ref={addToRefs}
-      className=' flex flex-col justify-start items-start gap-5 3xl:py-[5rem] xl:py-[5rem] xl:px-0 md:py-[2rem] md:px-10 sm:py-[5rem] sm:px-5 '
-    >
-      <h1 className='brand-container text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize '>
+    <main className='flex flex-col justify-start items-start gap-5 3xl:py-[7rem] xl:py-[5rem] xl:px-0 md:py-[2rem] md:px-10 sm:py-[5rem] sm:px-5 '>
+      <h1
+        ref={addToRefs}
+        className=' text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize '
+      >
         about me
       </h1>
-      <p className=''>
+      <p ref={addToRefs} className=''>
         I am a seasoned front-end developer with a rich background in crafting
         and nurturing web applications. My journey is marked by mastery of an
         array of cutting-edge technologies, including{' '}
@@ -60,14 +27,14 @@ export default function About() {
         testament to my unwavering commitment to staying at the forefront of web
         development.
       </p>
-      <p className=''>
+      <p ref={addToRefs} className=''>
         Collaboration is my second nature, and my thirst for knowledge is
         unquenchable. I thrive in dynamic, forward-thinking environments, where
         innovation is the driving force. My true passion lies in the art of
         fashioning user-friendly, visually captivating web applications that
         resonate with users.
       </p>
-      <p className=''>
+      <p ref={addToRefs} className=''>
         At this juncture, I am fervently seeking a Frontend Developer role that
         aligns with my aspirations in a high-octane, forward-looking setting. I
         hold the firm belief that I can bring a transformative influence to your
@@ -76,13 +43,17 @@ export default function About() {
       </p>
 
       <div className='flex flex-col justify-start items-start gap-5 3xl:w-[50%] 2xl:w-[50%] xl:w-[50%] md:w-full md:pt-10 sm:w-full sm:pt-10 '>
-        <h1 className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'>
+        <h1
+          ref={addToRefs}
+          className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'
+        >
           work experience{' '}
         </h1>
         {experience.map((item) => {
           return (
             <section
               key={item.id}
+              ref={addToRefs}
               className='flex w-full relative after:absolute after:border-b-[1px] after:w-full after:bottom-0 after:left-0 after:h-5 after:border-[#EBEAED] 
             after:dark:border-[#A7A7A7] xl:flex-row xl:justify-between xl:items-center xl:py-5 md:justify-between md:items-center md:py-5 sm:justify-between
             sm:items-center sm:py-2'
@@ -109,11 +80,15 @@ export default function About() {
       </div>
 
       <div className='flex flex-col justify-start items-start gap-5 3xl:w-[50%] 2xl:w-[50%] xl:w-[50%] md:w-full md:pt-10 sm:w-full sm:pt-10 '>
-        <h1 className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'>
+        <h1
+          ref={addToRefs}
+          className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'
+        >
           education
         </h1>
 
         <section
+          ref={addToRefs}
           className='flex w-full relative after:absolute after:border-b-[1px] after:w-full after:bottom-0 after:left-0 after:h-5 after:border-[#EBEAED] 
             after:dark:border-[#A7A7A7] xl:flex-row xl:justify-between xl:items-center xl:py-5 md:justify-between md:items-center md:py-5 sm:justify-between
             sm:items-center sm:py-2'
