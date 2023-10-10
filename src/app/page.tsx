@@ -49,9 +49,9 @@ export default function Home() {
     <main className='flex flex-col justify-center items-center gap-5 mx-auto overflow-hidden xl:w-[90%] md:w-full sm:w-full '>
       <Hero />
       <About addToRefs={addToRefs} />
-      <Project addToRefs={addToRefs} />
-      {/* <Blog />
-      <ContactForm addToRefs={addToRefs} /> */}
+      {/* <Project addToRefs={addToRefs} /> */}
+      {/* <Blog /> */}
+      <ContactForm addToRefs={addToRefs} />
     </main>
   )
 }

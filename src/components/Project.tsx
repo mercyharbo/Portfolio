@@ -25,16 +25,16 @@ export default function Project({ addToRefs }: ProjectProps) {
           on my github:
         </p>
         <div
-          className='flex flex-wrap xl:flex-row xl:justify-center xl:items-center xl:gap-10 md:flex-row md:justify-center md:items-center md:gap-10 sm:flex-col 
-          sm:justify-center sm:items-center sm:gap-10  '
+          className='grid 3xl:grid-cols-4 2xl:grid-cols-3 2xl:gap-10 xl:grid-cols-3 xl:content-start xl:place-items-start xl:pt-[3rem] md:grid-cols-2 md:content-center
+        md:place-items-center md:gap-10 md:pt-[5rem] sm:grid-cols-1 sm:content-center sm:place-items-center sm:gap-10 sm:pt-[5rem]  '
         >
           {projectJSON.map((item) => {
             return (
               <div
                 key={item.id}
                 ref={addToRefs}
-                className='3xl:w-[255] 2xl:w-[25%] xl:w-[33%] md:w-[45%] sm:w-full flex flex-col justify-start items-start gap-2 dark:bg-white dark:text-black text-white bg-[#363636] shadow-2xl 
-                rounded-lg w-full h-auto cursor-pointer '
+                className='flex flex-col justify-start items-start gap-2 dark:bg-white dark:text-black text-white bg-[#363636] shadow-2xl 
+                rounded-lg w-full h-full cursor-pointer '
               >
                 <Image
                   src={item.imagePath}
