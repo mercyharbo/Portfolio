@@ -96,7 +96,7 @@ const Blog: React.FC = () => {
         <p>Loading...</p>
       ) : (
         <div
-          className='w-full 3xl:py-[5rem] xl:py-[5rem] xl:px-0 md:py-[3rem] md:px-10 sm:px-5 sm:py-[3rem] '
+          className='w-full 3xl:my-[3rem] xl:my-[3rem] xl:px-0 md:my-[3rem] md:px-10 sm:px-5 sm:my-[3rem] '
         >
           <div className='flex flex-col gap-5'>
             <h1

@@ -4,8 +4,8 @@ import React, { useEffect } from 'react'
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
-import { AiOutlineDownload } from 'react-icons/ai'
 import gsap from 'gsap'
+import { AiOutlineDownload } from 'react-icons/ai'
 
 const poppins = Poppins({ weight: '900', subsets: ['latin'] })
 
@@ -72,8 +72,7 @@ export default function Hero() {
         <span className='greetings text-lg '>Hi,</span>
         <h1
           className={`title ${poppins} 3xl:text-6xl 3xl:leading-[70px] 2xl:text-5xl 2xl:leading-[65px] 2xl:w-full xl:text-5xl md:text-5xl md:leading-[70px] md:w-[80%]
-          sm:w-full sm:text-3xl
-          sm:leading-[50px] font-bold opacity-100 `}
+          sm:w-full sm:text-3xl sm:leading-[45px] font-bold opacity-100 `}
         >
           I am Damilare, a{' '}
           <span className='text-gradient '>Frontend Engineer</span> who write
