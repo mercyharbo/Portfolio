@@ -31,7 +31,10 @@ type StackProps = {
 
 export default function Stacks({ addToRefs }: StackProps) {
   return (
-    <div className='flex flex-col justify-start items-start 3xl:py-[2rem] 2xl:py-[5rem] xl:gap-10 xl:px-0 md:px-10 md:gap-10 md:py-[5rem] sm:py-[4rem] sm:gap-10 sm:px-5'>
+    <div
+      id='stack'
+      className='flex flex-col justify-start items-start 3xl:py-[2rem] 2xl:py-[5rem] xl:gap-10 xl:px-0 md:px-10 md:gap-10 md:py-[5rem] sm:py-[4rem] sm:gap-10 sm:px-5'
+    >
       <div className='flex flex-col justify-center items-center gap-5 w-full'>
         <h1
           ref={addToRefs}

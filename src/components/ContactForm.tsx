@@ -22,6 +22,7 @@ export default function ContactForm({ addToRefs }: ContactProps) {
   return (
     <main
       ref={addToRefs}
+      id='contact'
       className='3xl:my-[5rem] xl:px-0 md:px-10 md:my-[3rem] sm:px-5 sm:my-[2rem] flex flex-col justify-center items-center gap-10 mx-auto w-full '
     >
       <h1 className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'>
