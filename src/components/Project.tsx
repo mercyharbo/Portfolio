@@ -12,7 +12,10 @@ type ProjectProps = {
 
 export default function Project({ addToRefs }: ProjectProps) {
   return (
-    <main className=' xl:my-[3rem] xl:px-0 md:px-10 md:my-[3rem] md:gap-10 sm:gap-10 sm:px-5 sm:my-[2rem] '>
+    <main
+      id='projects'
+      className=' xl:my-[3rem] xl:px-0 md:px-10 md:my-[3rem] md:gap-10 sm:gap-10 sm:px-5 sm:my-[2rem] '
+    >
       <h1
         ref={addToRefs}
         className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'

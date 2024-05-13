@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/all'
 
 import About from '@/components/About'
 import Project from '@/components/Project'
-import Blog from '@/components/Blog'
+// import Blog from '@/components/Blog'
 import ContactForm from '@/components/ContactForm'
 import Hero from '@/components/Hero'
 
@@ -50,7 +50,7 @@ export default function Home() {
       <Hero />
       <About addToRefs={addToRefs} />
       <Project addToRefs={addToRefs} />
-      <Blog />
+      {/* <Blog /> */}
       <ContactForm addToRefs={addToRefs} />
     </main>
   )

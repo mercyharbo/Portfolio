@@ -69,30 +69,26 @@ export default function Hero() {
         md:py-[5rem] sm:flex-col sm:justify-center sm:items-center sm:gap-10 sm:px-5 sm:pt-[5rem] '
     >
       <div className='content-container flex flex-col justify-start items-start gap-5 3xl:w-[50%] 2xl:w-[50%] xl:w-[50%]  '>
-        <span className='greetings text-lg '>Hi,</span>
+        <span className='greetings text-lg '>Hey,</span>
         <h1
           className={`title ${poppins} 3xl:text-6xl 3xl:leading-[70px] 2xl:text-5xl 2xl:leading-[65px] 2xl:w-full xl:text-5xl md:text-5xl md:leading-[70px] md:w-[80%]
           sm:w-full sm:text-3xl sm:leading-[45px] font-bold opacity-100 `}
         >
           I am Damilare, a{' '}
-          <span className='text-gradient '>Frontend Engineer</span> who write
-          code that <span className='text-gradient'>solve problems</span>.
+          <span className='text-gradient '>Frontend Developer</span> passionate
+          about <span className='text-gradient'>building & solving</span>{' '}
+          internet problem.
         </h1>
         <p className='paragragh'>
-          I am a seasoned front-end developer with a rich background in crafting
-          and nurturing web applications. My journey is marked by mastery of an
-          array of cutting-edge technologies, including{' '}
-          <strong>
-            React, JavaScript, BootStrap, SASS, TypeScript, VS Code, Git &
-            GitHub, Tailwind, Next.js, CSS, HTML, and Redux Toolkit.
-          </strong>{' '}
-          My skills are not just a reflection of my experience; they are a
-          testament to my unwavering commitment to staying at the forefront of
-          web development.
+          I am a front-end developer with 4 years of experience in developing
+          and maintaining web applications. Proven ability to work independently
+          and as part of a team to deliver high-quality products. Strong skills
+          in React, JavaScript, Tailwind, Next.js, TypeScript, CSS, and Redux
+          Toolkit.
         </p>
         <Link
-          href='/AFOLABI RIDWAN DAMILARE.pdf'
-          download='/AFOLABI RIDWAN DAMILARE.pdf'
+          href='/AFOLABI RIDWAN DAMILARE - FRONTEND DEVELOPER.pdf'
+          download='/AFOLABI RIDWAN DAMILARE - FRONTEND DEVELOPER.pdf'
           className='btn bg-black text-white dark:bg-white dark:text-black hover:bg-[#E70FAA] py-3 px-5 rounded-lg flex justify-center items-center gap-2 '
         >
           {' '}
@@ -101,11 +97,11 @@ export default function Hero() {
       </div>
       <div className='imgElem xl:w-[50%] md:w-full sm:w-full '>
         <Image
-          src='/avatar.jpeg'
+          src='/avatar2.jpeg'
           alt='code with mercy'
           width={1000}
           height={1000}
-          className='object-cover object-top  rounded-full mx-auto 3xl:w-[30rem] 3xl:h-[30rem] 2xl:w-[20rem] 2xl:h-[20rem] md:w-[20rem] md:h-[20rem] sm:w-[15rem] sm:h-[15rem] '
+          className='object-cover object-center  rounded-full mx-auto 3xl:w-[30rem] 3xl:h-[30rem] 2xl:w-[20rem] 2xl:h-[20rem] md:w-[20rem] md:h-[20rem] sm:w-[15rem] sm:h-[15rem] '
         />
       </div>
     </div>

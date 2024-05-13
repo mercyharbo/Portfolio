@@ -39,21 +39,32 @@ const Blog: React.FC = () => {
   `
 
   const fetchData = useCallback(async () => {
-    const data = await fetch('https://api.hashnode.com/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query,
-        variables,
-      }),
-    })
+    try {
+      const data = await fetch('https://api.hashnode.com/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          query,
+          variables,
+        }),
+      })
 
-    const result = await data.json()
-    const post: Post[] = result.data.user.publication.posts
-    setPosts(post)
-    setLoading(false)
+      if (!data.ok) {
+        throw new Error(
+          `Network response was not ok (${data.status} ${data.statusText})`
+        )
+      }
+
+      const result = await data.json()
+      const post: Post[] = result.data.user.publication.posts
+      setPosts(post)
+      setLoading(false)
+    } catch (error) {
+      console.error('Error fetching data:', error)
+      // Handle the error (e.g., show a user-friendly message)
+    }
   }, [query, variables])
 
   useEffect(() => {
@@ -91,13 +102,11 @@ const Blog: React.FC = () => {
   }
 
   return (
-    <main className='w-full'>
+    <main id='blog' className='w-full'>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div
-          className='w-full 3xl:my-[3rem] xl:my-[3rem] xl:px-0 md:my-[3rem] md:px-10 sm:px-5 sm:my-[3rem] '
-        >
+        <div className='w-full 3xl:my-[3rem] xl:my-[3rem] xl:px-0 md:my-[3rem] md:px-10 sm:px-5 sm:my-[3rem] '>
           <div className='flex flex-col gap-5'>
             <h1
               ref={addToRefs}
