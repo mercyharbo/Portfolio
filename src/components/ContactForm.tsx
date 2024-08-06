@@ -1,13 +1,49 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+
 import { useForm, ValidationError } from '@formspree/react'
+
 import { RiMailSendFill } from 'react-icons/ri'
 
-type ContactProps = {
-  addToRefs: any
-}
+gsap.registerPlugin(ScrollTrigger)
 
-export default function ContactForm({ addToRefs }: ContactProps) {
+export default function ContactForm() {
   const [state, handleSubmit] = useForm('mgebqlnb')
+
+  const revealRefs = useRef<Array<HTMLElement>>([])
+
+  useEffect(() => {
+    revealRefs.current.forEach((el, index) => [
+      gsap.fromTo(
+        el,
+        { y: -100, autoAlpha: 0 },
+        {
+          y: 0,
+          duration: 1,
+          ease: 'power2.out',
+          autoAlpha: 1,
+          stagger: 0.5,
+          delay: 0.5,
+          scrollTrigger: {
+            id: `section-${index + 1}`,
+            trigger: el,
+            start: 'top center+=20',
+            end: 'bottom center',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      ),
+    ])
+  }, [revealRefs])
+
+  const addToRefs = (el: HTMLElement | null) => {
+    if (el && !revealRefs.current.includes(el)) {
+      revealRefs.current.push(el)
+    }
+  }
 
   if (state.succeeded) {
     return (
@@ -23,14 +59,14 @@ export default function ContactForm({ addToRefs }: ContactProps) {
     <main
       ref={addToRefs}
       id='contact'
-      className='3xl:my-[5rem] xl:px-0 md:px-10 md:my-[3rem] sm:px-5 sm:my-[2rem] flex flex-col justify-center items-center gap-10 mx-auto w-full '
+      className='3xl:my-[5rem] xl:px-0 md:px-10 md:my-[3rem] sm:px-5 sm:my-[2rem] flex flex-col justify-start items-start gap-10 mx-auto w-full '
     >
-      <h1 className='text-gradient xl:text-5xl md:text-4xl sm:text-3xl capitalize'>
+      <h1 className='text-gradient text-center mx-auto xl:text-5xl md:text-4xl sm:text-3xl capitalize'>
         Contact
       </h1>
       <form
         onSubmit={handleSubmit}
-        className='py-5 mr-auto xl:w-[50%] md:w-full sm:w-full '
+        className='py-5 xl:w-[50%] md:w-full sm:w-full '
       >
         <div className='flex flex-col justify-start items-start gap-2'>
           <label htmlFor='name' className='font-medium'>
