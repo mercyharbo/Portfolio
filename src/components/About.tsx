@@ -1,12 +1,46 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 
 import experience from './workExperience.json'
 
-type AboutProps = {
-  addToRefs: any
-}
+gsap.registerPlugin(ScrollTrigger)
 
-export default function About({ addToRefs }: AboutProps) {
+export default function About() {
+  const revealRefs = useRef<Array<HTMLElement>>([])
+
+  useEffect(() => {
+    revealRefs.current.forEach((el, index) => [
+      gsap.fromTo(
+        el,
+        { y: -100, autoAlpha: 0 },
+        {
+          y: 0,
+          duration: 1,
+          ease: 'power2.out',
+          autoAlpha: 1,
+          stagger: 0.5,
+          delay: 0.5,
+          scrollTrigger: {
+            id: `section-${index + 1}`,
+            trigger: el,
+            start: 'top center+=20',
+            end: 'bottom center',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      ),
+    ])
+  }, [revealRefs])
+
+  const addToRefs = (el: HTMLElement | null) => {
+    if (el && !revealRefs.current.includes(el)) {
+      revealRefs.current.push(el)
+    }
+  }
+
   return (
     <main
       id='about'

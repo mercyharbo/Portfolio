@@ -16,8 +16,8 @@ const poppins = Poppins({ weight: '900', subsets: ['latin'] })
 const navLinks = [
   { id: 1, name: 'home', href: '/' },
   { id: 2, name: 'about', href: '#about' },
-  { id: 3, name: 'tech stacks', href: '#stack' },
-  { id: 4, name: 'projects', href: '#projects' },
+  // { id: 3, name: 'tech stacks', href: '#stack' },
+  // { id: 4, name: 'projects', href: '#projects' },
   { id: 5, name: 'contact', href: '#contact' },
 ]
 

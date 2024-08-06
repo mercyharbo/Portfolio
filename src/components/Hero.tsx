@@ -64,8 +64,8 @@ export default function Hero() {
   }, [])
 
   return (
-    <div
-      className=' flex 3xl:py-[10rem] xl:flex-row xl:justify-center xl:items-center xl:gap-14 xl:px-0 md:flex-col md:justify-start md:items-start md:gap-10 md:px-10
+    <main
+      className='flex 3xl:py-[10rem] xl:flex-row xl:justify-center xl:items-center xl:gap-14 xl:px-0 md:flex-col md:justify-start md:items-start md:gap-10 md:px-10
         md:py-[5rem] sm:flex-col sm:justify-center sm:items-center sm:gap-10 sm:px-5 sm:pt-[5rem] '
     >
       <div className='content-container flex flex-col justify-start items-start gap-5 3xl:w-[50%] 2xl:w-[50%] xl:w-[50%]  '>
@@ -83,8 +83,7 @@ export default function Hero() {
           I am a front-end developer with 4 years of experience in developing
           and maintaining web applications. Proven ability to work independently
           and as part of a team to deliver high-quality products. Strong skills
-          in React, JavaScript, Tailwind, Next.js, TypeScript, CSS, and Redux
-          Toolkit.
+          in React, JavaScript, Tailwind CSS, Next.js, CSS, and Redux Toolkit.
         </p>
         <Link
           href='/AFOLABI RIDWAN DAMILARE - FRONTEND DEVELOPER.pdf'
@@ -101,9 +100,9 @@ export default function Hero() {
           alt='code with mercy'
           width={1000}
           height={1000}
-          className='object-cover object-center  rounded-full mx-auto 3xl:w-[30rem] 3xl:h-[30rem] 2xl:w-[20rem] 2xl:h-[20rem] md:w-[20rem] md:h-[20rem] sm:w-[15rem] sm:h-[15rem] '
+          className='object-cover object-top rounded-xl mx-auto 3xl:w-[30rem] 3xl:h-[30rem] 2xl:w-[20rem] 2xl:h-[20rem] md:w-[20rem] md:h-[20rem] sm:w-[15rem] sm:h-[15rem] '
         />
       </div>
-    </div>
+    </main>
   )
 }
