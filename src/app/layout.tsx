@@ -19,8 +19,6 @@ export const metadata: Metadata = {
     'Afolabi Ridwan Damilare, Frontend Developer, React Developer, Redux Specialist, Web Developer, JavaScript, HTML, CSS, Portfolio, Hire Developer, Nigeria',
   robots: 'index, follow',
   viewport: 'width=device-width, initial-scale=1.0',
-  title: 'Code With Mercy | Portfolio ',
-  description: 'I am a seasoned front-end developer with a rich background in crafting and nurturing web applications. My journey is marked by mastery of an array of cutting-edge technologies, including React, JavaScript, BootStrap, SASS, TypeScript, VS Code, Git & GitHub, Tailwind, Next.js, CSS, HTML, and Redux Toolkit.',
 }
 
 export default function RootLayout({
