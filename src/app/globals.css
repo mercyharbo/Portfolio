@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&display=swap');
+
 .text-gradient {
   background-image: linear-gradient(to right, #e70faa, #00c0fd);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   fallback: #000;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+
 }
 

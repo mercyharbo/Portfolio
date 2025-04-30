@@ -138,17 +138,18 @@ export default function Home() {
 
   return (
     <main className='flex flex-col gap-10 lg:gap-[5rem] px-5 lg:px-[10rem]'>
-      <section className='flex flex-col lg:flex-row items-center justify-between w-full lg:mt-[7rem] gap-10'>
-        <div className='flex flex-col justify-start items-start gap-5 w-full lg:w-1/2'>
+      <section className='flex flex-col lg:flex-row items-center justify-between w-full px-0 lg:px-[3rem] lg:mt-[4rem] gap-10'>
+        <div className='flex flex-col justify-start items-start gap-3 lg:gap-5 w-full lg:w-1/2'>
           <span className='title font-semibold text-gray-900 dark:text-gray-100'>
             Hello, I&apos;m Mercy,{' '}
           </span>
           <h1
-            className={` headings text-3xl lg:text-7xl/none capitalize font-extrabold flex flex-wrap`}
+            className={` headings text-5xl lg:text-7xl/none capitalize font-extrabold flex flex-wrap`}
           >
             <span className='gradient-text bg-gradient-to-r from-primary via-blue-400 to-violet-500 inline-block text-transparent bg-clip-text animate-gradient'>
               frontend
             </span>{' '}
+            <br />
             <span className='regular-text text-gray-900 dark:text-gray-100'>
               developer
             </span>
@@ -175,12 +176,12 @@ export default function Home() {
 
       <section
         id='about'
-        className='section flex flex-col gap-[5rem] w-full lg:w-2/3'
+        className='section flex flex-col gap-[5rem] w-full mt-8 lg:mt-0 lg:w-2/3'
       >
         <div className='flex flex-col gap-5 w-full'>
           <h1
             ref={addToRefs}
-            className='section-heading bg-gradient-to-r from-primary via-blue-400 to-violet-500 inline-block text-transparent bg-clip-text xl:text-5xl md:text-4xl sm:text-3xl capitalize'
+            className='section-heading bg-gradient-to-r from-primary via-blue-400 to-violet-500 inline-block text-transparent bg-clip-text text-3xl lg:text-5xl capitalize'
           >
             about me
           </h1>
