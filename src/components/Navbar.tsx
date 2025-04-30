@@ -62,7 +62,7 @@ function Navbar() {
       <nav className='fixed top-0 left-0 z-50 h-[5rem] bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 w-full flex justify-between items-center px-5 py-2 lg:px-[10rem]'>
         <Link
           href='/'
-          className={`text-2xl italic font-bold text-gray-900 dark:text-white`}
+          className={`logo text-2xl capitalize font-bold text-gray-900 dark:text-white`}
         >
           code with mercy
         </Link>
@@ -130,9 +130,9 @@ function Navbar() {
           <div className='flex justify-between items-center w-full'>
             <Link
               href='/'
-              className={`text-xl italic font-bold text-gray-900 dark:text-white`}
+              className={`text-xl font-bold text-gray-900 dark:text-white`}
             >
-              <h1 className='capitalize'>code with mercy</h1>
+              <h1 className='logo capitalize'>code with mercy</h1>
             </Link>
 
             <button
