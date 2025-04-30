@@ -137,19 +137,23 @@ export default function Home() {
   }
 
   return (
-    <main className='flex flex-col gap-[10rem] px-5 lg:px-[10rem]'>
+    <main className='flex flex-col gap-10 lg:gap-[5rem] px-5 lg:px-[10rem]'>
       <section className='flex flex-col lg:flex-row items-center justify-between w-full lg:mt-[7rem] gap-10'>
         <div className='flex flex-col justify-start items-start gap-5 w-full lg:w-1/2'>
-          <span className='title font-semibold'>Hello, I&apos;m Mercy, </span>
+          <span className='title font-semibold text-gray-900 dark:text-gray-100'>
+            Hello, I&apos;m Mercy,{' '}
+          </span>
           <h1
             className={` headings text-3xl lg:text-7xl/none capitalize font-extrabold flex flex-wrap`}
           >
             <span className='gradient-text bg-gradient-to-r from-primary via-blue-400 to-violet-500 inline-block text-transparent bg-clip-text animate-gradient'>
               frontend
             </span>{' '}
-            <span className='regular-text'>developer</span>
+            <span className='regular-text text-gray-900 dark:text-gray-100'>
+              developer
+            </span>
           </h1>
-          <span className='sub-title font-semibold'>
+          <span className='sub-title font-semibold text-gray-900 dark:text-gray-100'>
             based in Osogbo, Nigeria
           </span>
           <Link
@@ -181,7 +185,10 @@ export default function Home() {
             about me
           </h1>
 
-          <p ref={addToRefs} className='section-content'>
+          <p
+            ref={addToRefs}
+            className='section-content text-gray-700 dark:text-gray-300'
+          >
             Frontend Developer with 4+ years of expertise in React.js and
             Next.js, specializing in building responsive and accessible web
             applications. I transform complex design requirements into clean,
@@ -189,7 +196,10 @@ export default function Home() {
             and Redux Toolkit.
           </p>
 
-          <p ref={addToRefs} className='section-content'>
+          <p
+            ref={addToRefs}
+            className='section-content text-gray-700 dark:text-gray-300'
+          >
             My focus is on creating exceptional user experiences through
             optimized performance, smooth animations with GSAP, and
             pixel-perfect implementations. Passionate about web accessibility
@@ -219,7 +229,7 @@ export default function Home() {
                 >
                   <div className='flex justify-between items-start w-full mb-4'>
                     <div className='flex flex-col justify-start items-start gap-2'>
-                      <h3 className='xl:text-xl md:text-lg sm:text-base font-semibold'>
+                      <h3 className='xl:text-xl md:text-lg sm:text-base font-semibold dark:text-white'>
                         {item.role}
                       </h3>
                       <span className='text-[#A7A7A7] xl:text-sm md:text-sm sm:text-xs'>
@@ -239,7 +249,7 @@ export default function Home() {
                     {item.achievements?.map((achievement, index) => (
                       <li
                         key={index}
-                        className='text-sm text-gray-600 dark:text-gray-300'
+                        className='text-sm text-gray-700 dark:text-gray-300'
                       >
                         {achievement}
                       </li>
@@ -262,7 +272,7 @@ export default function Home() {
           </h1>
           <p
             ref={addToRefs}
-            className='section-content text-gray-600 dark:text-gray-300'
+            className='section-content text-gray-700 dark:text-gray-300'
           >
             Here are some of the projects I&apos;ve worked on.
           </p>
@@ -274,8 +284,8 @@ export default function Home() {
               <div
                 key={item.id}
                 ref={addToRefs}
-                className='group relative overflow-hidden dark:bg-white dark:text-black text-white bg-[#363636] shadow-2xl border-[1px]
-                rounded-lg cursor-pointer h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-primary/20'
+                className='group relative overflow-hidden bg-white dark:bg-[#1a1a1a] text-black dark:text-white border-[1px] border-gray-200 dark:border-gray-800
+                rounded-lg cursor-pointer h-full hover:scale-[1.02] '
               >
                 <div className='relative overflow-hidden'>
                   <Image
@@ -289,10 +299,10 @@ export default function Home() {
                 </div>
                 <div className='flex flex-col justify-between items-start gap-4 p-5 h-full'>
                   <div className='flex flex-col gap-7'>
-                    <h1 className='text-2xl font-bold group-hover:text-primary transition-colors duration-300'>
+                    <h1 className='text-2xl font-bold group-hover:text-primary transition-colors duration-300 text-gray-900 dark:text-gray-100'>
                       {item.title}
                     </h1>
-                    <p className='text-gray-300 dark:text-gray-600 line-clamp-3'>
+                    <p className='text-gray-700 dark:text-gray-300 line-clamp-3'>
                       {item.description.join(' ').substring(0, 200)}
                       {item.description.join(' ').length > 200 ? '...' : ''}
                     </p>
@@ -311,7 +321,7 @@ export default function Home() {
                     <Link
                       href={item.liveSite}
                       target='_blank'
-                      className='flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors duration-300'
+                      className='flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors duration-300 text-gray-900 dark:text-gray-100'
                     >
                       <BsLink45Deg className='text-xl' /> Live Preview
                     </Link>
@@ -333,7 +343,7 @@ export default function Home() {
           </h1>
           <p
             ref={addToRefs}
-            className='section-content text-gray-600 dark:text-gray-300'
+            className='section-content text-gray-700 dark:text-gray-300'
           >
             Here are the technologies and tools I work with.
           </p>
@@ -342,91 +352,103 @@ export default function Home() {
         <div className='section-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
           <div
             ref={addToRefs}
-            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#363636] shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1'
+            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#1a1a1a] shadow-lg hover:shadow-primary/20 hover:-translate-y-1'
           >
             <div className='absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             <SiJavascript className='text-4xl text-yellow-400 group-hover:scale-110 transition-transform duration-300' />
-            <span className='font-medium relative z-10'>JavaScript</span>
+            <span className='font-medium relative z-10 text-gray-900 dark:text-gray-100'>
+              JavaScript
+            </span>
           </div>
           <div
             ref={addToRefs}
-            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#363636] shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1'
+            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#1a1a1a] shadow-lg hover:shadow-primary/20  hover:-translate-y-1'
           >
             <div className='absolute inset-0 bg-gradient-to-r from-blue-400/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             <SiReact className='text-4xl text-blue-400 group-hover:scale-110 transition-transform duration-300' />
-            <span className='font-medium relative z-10'>React</span>
+            <span className='font-medium relative z-10 text-gray-900 dark:text-gray-100'>
+              React
+            </span>
           </div>
           <div
             ref={addToRefs}
-            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#363636] shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1'
+            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#1a1a1a] shadow-lg hover:shadow-primary/20  hover:-translate-y-1'
           >
             <div className='absolute inset-0 bg-gradient-to-r from-black/20 dark:from-white/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             <SiNextdotjs className='text-4xl text-black dark:text-white group-hover:scale-110 transition-transform duration-300' />
-            <span className='font-medium relative z-10'>Next.js</span>
+            <span className='font-medium relative z-10 text-gray-900 dark:text-gray-100'>
+              Next.js
+            </span>
           </div>
           <div
             ref={addToRefs}
-            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#363636] shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1'
+            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#1a1a1a] shadow-lg hover:shadow-primary/20 hover:-translate-y-1'
           >
             <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             <SiTypescript className='text-4xl text-blue-600 group-hover:scale-110 transition-transform duration-300' />
-            <span className='font-medium relative z-10'>TypeScript</span>
+            <span className='font-medium relative z-10 text-gray-900 dark:text-gray-100'>
+              TypeScript
+            </span>
           </div>
           <div
             ref={addToRefs}
-            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#363636] shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1'
+            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#1a1a1a] shadow-lg hover:shadow-primary/20 hover:-translate-y-1'
           >
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             <SiTailwindcss className='text-4xl text-cyan-400 group-hover:scale-110 transition-transform duration-300' />
-            <span className='font-medium relative z-10'>Tailwind CSS</span>
+            <span className='font-medium relative z-10 text-gray-900 dark:text-gray-100'>
+              Tailwind CSS
+            </span>
           </div>
           <div
             ref={addToRefs}
-            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#363636] shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1'
+            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#1a1a1a] shadow-lg hover:shadow-primary/20 hover:-translate-y-1'
           >
             <div className='absolute inset-0 bg-gradient-to-r from-purple-500/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             <TbBrandFramerMotion className='text-4xl text-purple-500 group-hover:scale-110 transition-transform duration-300' />
-            <span className='font-medium relative z-10'>Framer Motion</span>
+            <span className='font-medium relative z-10 text-gray-900 dark:text-gray-100'>
+              Framer Motion
+            </span>
           </div>
           <div
             ref={addToRefs}
-            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#363636] shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1'
+            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#1a1a1a] shadow-lg hover:shadow-primary/20 hover:-translate-y-1'
           >
             <div className='absolute inset-0 bg-gradient-to-r from-orange-500/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             <BsGit className='text-4xl text-orange-500 group-hover:scale-110 transition-transform duration-300' />
-            <span className='font-medium relative z-10'>Git</span>
+            <span className='font-medium relative z-10 text-gray-900 dark:text-gray-100'>
+              Git
+            </span>
           </div>
           <div
             ref={addToRefs}
-            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#363636] shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1'
+            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#1a1a1a] shadow-lg hover:shadow-primary/20 hover:-translate-y-1'
           >
             <div className='absolute inset-0 bg-gradient-to-r from-gray-800/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             <SiGithub className='text-4xl text-gray-800 dark:text-white group-hover:scale-110 transition-transform duration-300' />
-            <span className='font-medium relative z-10'>GitHub</span>
+            <span className='font-medium relative z-10 text-gray-900 dark:text-gray-100'>
+              GitHub
+            </span>
           </div>
           <div
             ref={addToRefs}
-            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#363636] shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1'
+            className='group relative flex flex-col items-center gap-3 p-6 rounded-lg bg-white dark:bg-[#1a1a1a] shadow-lg hover:shadow-primary/20 hover:-translate-y-1'
           >
             <div className='absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
             <SiRedux className='text-4xl text-purple-600 group-hover:scale-110 transition-transform duration-300' />
-            <span className='font-medium relative z-10'>Redux Toolkit</span>
+            <span className='font-medium relative z-10 text-gray-900 dark:text-gray-100'>
+              Redux Toolkit
+            </span>
           </div>
         </div>
       </section>
 
       <section id='contact' className='section flex flex-col gap-8 w-full'>
         <div className='flex flex-col gap-3'>
-          <h1
-            ref={addToRefs}
-            className='section-heading bg-gradient-to-r from-primary via-blue-400 to-violet-500 inline-block text-transparent bg-clip-text text-3xl lg:text-5xl capitalize'
-          >
+          <h1 className='section-heading bg-gradient-to-r from-primary via-blue-400 to-violet-500 inline-block text-transparent bg-clip-text text-3xl lg:text-5xl capitalize'>
             Get In Touch
           </h1>
-          <p
-            ref={addToRefs}
-            className='section-content text-gray-600 dark:text-gray-300 max-w-2xl'
-          >
+          <p className='section-content text-gray-700 dark:text-gray-300 max-w-2xl'>
             Have a project in mind or want to discuss potential opportunities?
             Feel free to reach out!
           </p>
@@ -449,7 +471,7 @@ export default function Home() {
               name='name'
               placeholder='Enter your name'
               required
-              className='w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#363636] focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300'
+              className='w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-gray-100 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none'
               onFocus={(e) => {
                 gsap.to(e.target, {
                   scale: 1.02,
@@ -486,7 +508,7 @@ export default function Home() {
               name='email'
               placeholder='Enter your email'
               required
-              className='w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#363636] focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300'
+              className='w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-gray-100 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none'
               onFocus={(e) => {
                 gsap.to(e.target, {
                   scale: 1.02,
@@ -522,7 +544,7 @@ export default function Home() {
               name='message'
               placeholder='Enter your message'
               required
-              className='w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#363636] focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 min-h-[150px] resize-y'
+              className='w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-gray-100 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none min-h-[150px] resize-y'
               onFocus={(e) => {
                 gsap.to(e.target, {
                   scale: 1.02,

@@ -1,7 +1,6 @@
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from '@/components/ThemeProvider'
-import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -68,12 +67,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en' className={`${inter.variable}`} suppressHydrationWarning>
-      <body className={inter.className}>
+    <html
+      lang='en'
+      className={`${inter.variable} dark`}
+      suppressHydrationWarning
+    >
+      <body className={`${inter.className} bg-white dark:bg-gray-900`}>
         <ThemeProvider>
-          <ThemeSwitcher />
           <Navbar />
-          <main className='pt-20 min-h-screen'>{children}</main>
+          <main className='pt-[8rem] min-h-screen'>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

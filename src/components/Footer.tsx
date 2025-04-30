@@ -106,7 +106,9 @@ export default function Footer() {
           </div>
 
           <div className='space-y-4'>
-            <h4 className='footer-heading font-semibold'>Quick Links</h4>
+            <h4 className='footer-heading font-semibold dark:text-white'>
+              Quick Links
+            </h4>
             <nav className='footer-content flex flex-col space-y-2 text-sm'>
               <Link
                 href='#about'
@@ -136,7 +138,9 @@ export default function Footer() {
           </div>
 
           <div className='space-y-4'>
-            <h4 className='footer-heading font-semibold'>Contact</h4>
+            <h4 className='footer-heading font-semibold dark:text-white'>
+              Contact
+            </h4>
             <div className='footer-content space-y-2 text-sm text-gray-600 dark:text-gray-400'>
               <p>Osogbo, Nigeria</p>
               <Link
@@ -149,8 +153,10 @@ export default function Footer() {
           </div>
 
           <div className='space-y-4'>
-            <h4 className='footer-heading font-semibold'>Connect</h4>
-            <div className='social-links flex flex-wrap gap-4'>
+            <h4 className='footer-heading font-semibold dark:text-white'>
+              Connect
+            </h4>
+            <div className='social-links flex flex-wrap gap-4 dark:text-white'>
               <Link
                 href='https://github.com/mercyharbo'
                 className='social-link hover:text-primary transition-colors p-2 rounded-full hover:bg-primary/10'
