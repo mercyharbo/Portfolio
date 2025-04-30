@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "title": "Larbol Construction",
+        "description": [
+            "Larbol Construction is a modern, responsive website designed for a professional construction company. The platform showcases the company's portfolio, services, and expertise in the construction industry. Built with Next.js and Tailwind CSS, the website features a clean, professional design that effectively communicates the company's capabilities and projects.",
+            "Key features include a dynamic project gallery, service descriptions, client testimonials, and a contact system. The website is optimized for both desktop and mobile viewing, ensuring potential clients can easily access information about the company's construction services, past projects, and contact details from any device."
+        ],
+        "imagePath": "/larbol.png",
+        "stack": [
+            "Next.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "GSAP"
+        ],
+        "liveSite": "https://larbol-construction.vercel.app/"
+    },
+    {
+        "id": 2,
+        "title": "DropConnect",
+        "description": [
+            "DropConnect is a comprehensive local delivery and food ordering platform designed to solve the challenges of local logistics and food delivery in smaller communities. The platform connects riders with users who need items delivered between locations or require errand services. Additionally, it serves as a marketplace for local food vendors, enabling them to reach customers who struggle to find reliable food delivery options in their area.",
+            "Key features include real-time rider tracking, secure payment processing, vendor management system, and a user-friendly interface for both customers and vendors. The platform addresses the common issues of inconsistent delivery services and the lack of proper digital presence for local food vendors, providing a centralized solution for local commerce and logistics."
+        ],
+        "imagePath": "/dropconnect.png",
+        "stack": [
+            "Next.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "Framer Motion",
+            "Supabase",
+            "Express.js"
+        ],
+        "liveSite": "https://drop-connect.vercel.app/"
+    }
+]

@@ -1,24 +1,25 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-import { Poppins } from 'next/font/google'
 import gsap from 'gsap'
-import { Power2 } from 'gsap/all'
+import { Playfair_Display } from 'next/font/google'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
-import { BsGithub, BsTwitter, BsLinkedin, BsInstagram } from 'react-icons/bs'
-import { HiOutlineBars3CenterLeft } from 'react-icons/hi2'
 import { AiOutlineClose } from 'react-icons/ai'
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs'
+import { HiOutlineBars3CenterLeft } from 'react-icons/hi2'
 
-const poppins = Poppins({ weight: '900', subsets: ['latin'] })
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['italic', 'normal'],
+})
 
 const navLinks = [
   { id: 1, name: 'home', href: '/' },
   { id: 2, name: 'about', href: '#about' },
-  // { id: 3, name: 'tech stacks', href: '#stack' },
-  // { id: 4, name: 'projects', href: '#projects' },
-  { id: 5, name: 'contact', href: '#contact' },
+  { id: 3, name: 'work', href: '#works' },
 ]
 
 function Navbar() {
@@ -59,12 +60,15 @@ function Navbar() {
 
   return (
     <main className='w-full'>
-      <nav className=' sticky top-0 left-0 flex justify-between items-center mx-auto 3xl:h-[5rem] 3xl:w-[90%] xl:w-[90%] 2xl:h-[5rem] md:h-[5rem] md:w-[90%] sm:w-[90%] sm:h-[5rem] '>
-        <Link href='/' className={`${poppins} text-2xl capitalize`}>
+      <nav className='fixed top-0 left-0 z-50 h-[5rem] bg-white border-b border-gray-200 w-full flex justify-between items-center px-5 py-2 lg:px-[10rem]'>
+        <Link
+          href='/'
+          className={`${playfair.className} text-2xl italic font-bold`}
+        >
           code with mercy
         </Link>
 
-        <div className='xl:flex xl:justify-center xl:items-center xl:gap-14 md:hidden sm:hidden'>
+        <div className='hidden lg:flex items-center gap-10 text-lg'>
           {navLinks.map((link) => {
             return (
               <Link
@@ -72,9 +76,9 @@ function Navbar() {
                 key={link.id}
                 className={`${
                   pathname === link.href
-                    ? 'dark:text-white text-black'
-                    : 'hover:dark:text-white hover:text-black'
-                } text-[#A7A7A7] capitalize`}
+                    ? 'text-primary dark:text-primary'
+                    : 'text-[#A7A7A7] hover:text-primary dark:hover:text-primary transition-colors duration-300'
+                } capitalize`}
               >
                 {link.name}
               </Link>
@@ -82,17 +86,29 @@ function Navbar() {
           })}
         </div>
 
-        <div className='xl:flex xl:justify-center xl:items-center xl:gap-5 xl:text-2xl md:hidden sm:hidden'>
-          <Link href='https://github.com/mercyharbo'>
+        <div className='hidden lg:flex items-center gap-5 text-lg'>
+          <Link
+            href='https://github.com/mercyharbo'
+            className='hover:text-primary transition-colors duration-300'
+          >
             <BsGithub />
           </Link>
-          <Link href='https://twitter.com/codewithmercy'>
+          <Link
+            href='https://twitter.com/codewithmercy'
+            className='hover:text-primary transition-colors duration-300'
+          >
             <BsTwitter />
           </Link>
-          <Link href='https://www.linkedin.com/in/codewithmercy'>
+          <Link
+            href='https://www.linkedin.com/in/codewithmercy'
+            className='hover:text-primary transition-colors duration-300'
+          >
             <BsLinkedin />
           </Link>
-          <Link href=''>
+          <Link
+            href=''
+            className='hover:text-primary transition-colors duration-300'
+          >
             <BsInstagram />
           </Link>
         </div>
@@ -100,62 +116,76 @@ function Navbar() {
         <button
           type='button'
           onClick={handleModalOpen}
-          className='text-3xl xl:hidden md:flex sm:flex'
+          className='text-3xl block lg:hidden'
         >
           <HiOutlineBars3CenterLeft />
         </button>
       </nav>
 
       {isModalOpen && (
-        <>
-          <div
-            onClick={handleModalOpen}
-            className='fixed h-screen w-full top-0 left-0 dark:bg-[#f1f0f060] bg-[#0000004d] '
-          ></div>
-          <div className='nav-wrapper absolute top-0 left-0 p-5 flex-col justify-start items-start gap-10 h-screen bg-[#191919] xl:hidden md:flex md:w-[50%] sm:flex '>
-            <div className='nav-link flex justify-between items-center w-full'>
-              <h1 className='uppercase '>cwm</h1>
-              <button
-                type='button'
-                onClick={handleModalOpen}
-                className='text-2xl ml-auto'
-              >
-                <AiOutlineClose />
-              </button>
-            </div>
+        <nav className='nav-wrapper absolute top-0 left-0 h-screen flex flex-col justify-start items-start gap-[5rem] py-10 px-5 bg-nav-bg dark:bg-nav-bg-dark lg:hidden w-[80%] transition-colors duration-300'>
+          <div className='flex justify-between items-center w-full'>
+            <Link
+              href='/'
+              className={`${playfair.className} text-2xl italic font-bold`}
+            >
+              <h1 className='capitalize'>code with mercy</h1>
+            </Link>
 
-            <div className='flex flex-col justify-start items-start gap-10 md:text-xl'>
-              {navLinks.map((link) => {
-                return (
-                  <Link
-                    key={link.id}
-                    href={link.href}
-                    className={`nav-link ${
-                      pathname === link.href ? 'dark:text-white text-black' : ''
-                    } text-[#A7A7A7] capitalize`}
-                  >
-                    {link.name}
-                  </Link>
-                )
-              })}
-            </div>
-
-            <div className='nav-link flex justify-center items-center gap-10 w-full md:text-2xl md:mt-[5em] sm:mt-[3rem] sm:text-xl '>
-              <Link href='https://github.com/mercyharbo'>
-                <BsGithub />
-              </Link>
-              <Link href='https://twitter.com/codewithmercy'>
-                <BsTwitter />
-              </Link>
-              <Link href='https://www.linkedin.com/in/codewithmercy'>
-                <BsLinkedin />
-              </Link>
-              <Link href='https://www.instagram.com/codewithmercy/'>
-                <BsInstagram />
-              </Link>
-            </div>
+            <button
+              type='button'
+              onClick={handleModalOpen}
+              className='text-2xl'
+            >
+              <AiOutlineClose />
+            </button>
           </div>
-        </>
+
+          <div className='flex flex-col gap-8 w-full'>
+            {navLinks.map((link) => {
+              return (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className={`${
+                    pathname === link.href
+                      ? 'text-primary dark:text-primary'
+                      : 'text-[#A7A7A7] hover:text-primary dark:hover:text-primary transition-colors duration-300'
+                  } capitalize`}
+                >
+                  {link.name}
+                </Link>
+              )
+            })}
+          </div>
+
+          <div className='flex items-center gap-7 text-3xl mt-[7rem]'>
+            <Link
+              href='https://github.com/mercyharbo'
+              className='hover:text-primary transition-colors duration-300'
+            >
+              <BsGithub />
+            </Link>
+            <Link
+              href='https://twitter.com/codewithmercy'
+              className='hover:text-primary transition-colors duration-300'
+            >
+              <BsTwitter />
+            </Link>
+            <Link
+              href='https://www.linkedin.com/in/codewithmercy'
+              className='hover:text-primary transition-colors duration-300'
+            >
+              <BsLinkedin />
+            </Link>
+            <Link
+              href='https://www.instagram.com/codewithmercy/'
+              className='hover:text-primary transition-colors duration-300'
+            >
+              <BsInstagram />
+            </Link>
+          </div>
+        </nav>
       )}
     </main>
   )
