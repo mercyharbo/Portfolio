@@ -32,5 +32,21 @@
             "Express.js"
         ],
         "liveSite": "https://drop-connect.vercel.app/"
+    },
+    {
+        "id": 3,
+        "title": "BeautySpaceNG",
+        "description": [
+            "Our platform makes discovering and booking beauty services simple and seamless. Users can explore a wide range of top-rated beauty treatments — from hair styling to spa services — all in one app. With instant booking and flexible scheduling, customers can secure appointments that fit their busy lives, without the hassle of waiting in line. Whether they prefer the comfort of their home or the atmosphere of a salon, our professional providers ensure a relaxing and exceptional beauty experience every time."
+        ],
+        "imagePath": "/beautyspace.png",
+        "stack": [
+            "Next.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "Redux Toolkit",
+            "Contentful"
+        ],
+        "liveSite": "https://beautyspaceng.com/"
     }
 ]
