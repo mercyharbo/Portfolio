@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -12,16 +12,54 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-playfair',
-  preload: true,
-})
-
 export const metadata: Metadata = {
   title: 'Mercy | Frontend Developer',
   description: 'Frontend Developer with expertise in React.js and Next.js',
+  keywords: [
+    'Frontend Developer',
+    'React.js',
+    'Next.js',
+    'Web Development',
+    'JavaScript',
+    'TypeScript',
+    'UI/UX',
+  ],
+  authors: [{ name: 'Mercy' }],
+  openGraph: {
+    title: 'Mercy | Frontend Developer',
+    description: 'Frontend Developer with expertise in React.js and Next.js',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Mercy Portfolio',
+    images: [
+      {
+        url: '/avatar1.JPEG',
+        width: 1200,
+        height: 630,
+        alt: 'Mercy - Frontend Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mercy | Frontend Developer',
+    description: 'Frontend Developer with expertise in React.js and Next.js',
+    images: ['/avatar1.JPEG'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  // verification: {
+  //   google: 'your-google-site-verification-code', // Replace with your actual verification code
+  // },
 }
 
 export default function RootLayout({
@@ -30,11 +68,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang='en'
-      className={`${inter.variable} ${playfair.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang='en' className={`${inter.variable}`} suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
           <ThemeSwitcher />

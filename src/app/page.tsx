@@ -2,7 +2,6 @@
 
 import DecorativeAvatar from '@/components/avatar'
 import gsap from 'gsap'
-import { Poppins } from 'next/font/google'
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 import { AiOutlineDownload } from 'react-icons/ai'
@@ -24,11 +23,6 @@ import { useForm, ValidationError } from '@formspree/react'
 import { ScrollTrigger } from 'gsap/all'
 import Image from 'next/image'
 import { RiMailSendFill } from 'react-icons/ri'
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '900'],
-})
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -148,7 +142,7 @@ export default function Home() {
         <div className='flex flex-col justify-start items-start gap-5 w-full lg:w-1/2'>
           <span className='title font-semibold'>Hello, I&apos;m Mercy, </span>
           <h1
-            className={`${poppins.className} headings text-3xl lg:text-7xl/none capitalize font-extrabold flex flex-wrap`}
+            className={` headings text-3xl lg:text-7xl/none capitalize font-extrabold flex flex-wrap`}
           >
             <span className='gradient-text bg-gradient-to-r from-primary via-blue-400 to-violet-500 inline-block text-transparent bg-clip-text animate-gradient'>
               frontend
