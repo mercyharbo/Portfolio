@@ -114,9 +114,9 @@ function Navbar() {
       </nav>
 
       {isModalOpen && (
-        <nav className='nav-wrapper absolute top-0 left-0 h-screen flex flex-col justify-start items-start gap-[5rem] py-10 px-5 bg-nav-bg dark:bg-nav-bg-dark lg:hidden w-[80%] transition-colors duration-300'>
+        <nav className='nav-wrapper absolute top-0 left-0 z-50 h-screen flex flex-col justify-start items-start gap-[5rem] py-10 px-5 bg-nav-bg dark:bg-nav-bg-dark lg:hidden w-[80%] transition-colors duration-300'>
           <div className='flex justify-between items-center w-full'>
-            <Link href='/' className={` text-2xl italic font-bold`}>
+            <Link href='/' className={` text-xl italic font-bold`}>
               <h1 className='capitalize'>code with mercy</h1>
             </Link>
 
