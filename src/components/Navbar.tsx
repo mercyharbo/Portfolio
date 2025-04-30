@@ -1,7 +1,7 @@
 'use client'
 
 import gsap from 'gsap'
-import { Playfair_Display } from 'next/font/google'
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -9,12 +9,6 @@ import { useEffect, useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs'
 import { HiOutlineBars3CenterLeft } from 'react-icons/hi2'
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  style: ['italic', 'normal'],
-})
 
 const navLinks = [
   { id: 1, name: 'home', href: '/' },
@@ -61,10 +55,7 @@ function Navbar() {
   return (
     <main className='w-full'>
       <nav className='fixed top-0 left-0 z-50 h-[5rem] bg-white border-b border-gray-200 w-full flex justify-between items-center px-5 py-2 lg:px-[10rem]'>
-        <Link
-          href='/'
-          className={`${playfair.className} text-2xl italic font-bold`}
-        >
+        <Link href='/' className={` text-2xl italic font-bold`}>
           code with mercy
         </Link>
 
@@ -125,10 +116,7 @@ function Navbar() {
       {isModalOpen && (
         <nav className='nav-wrapper absolute top-0 left-0 h-screen flex flex-col justify-start items-start gap-[5rem] py-10 px-5 bg-nav-bg dark:bg-nav-bg-dark lg:hidden w-[80%] transition-colors duration-300'>
           <div className='flex justify-between items-center w-full'>
-            <Link
-              href='/'
-              className={`${playfair.className} text-2xl italic font-bold`}
-            >
+            <Link href='/' className={` text-2xl italic font-bold`}>
               <h1 className='capitalize'>code with mercy</h1>
             </Link>
 
