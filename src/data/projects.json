@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "title": "Larbol Construction",
+        "description": "Larbol Construction is a Nigerian construction firm specializing in infrastructure development, including road construction, bridge development, building construction, drainage systems, infrastructure planning, and project management. With a commitment to quality, innovation, and customer satisfaction, Larbol Construction delivers projects that meet modern infrastructure needs while ensuring safety, timely delivery, cost efficiency, and eco-friendly practices.",
+        "website": "https://larbol-construction.vercel.app",
+        "location": "Oshogbo, Osun State, Nigeria",
+        "categories": [
+            "Construction",
+            "Infrastructure",
+            "Project Management"
+        ],
+        "tech_stack": [
+            "Next.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "Vercel"
+        ],
+        "notes": "Built using modern web technologies and deployed on Vercel for optimal performance and scalability."
+    },
+    {
+        "id": 2,
+        "title": "Blog CMS Platform",
+        "description": "A modern, full-stack content management system designed for personal blogging. Built with Next.js, Tailwind CSS, TypeScript, and Redux Toolkit, this platform offers a seamless user experience for creating, editing, and managing digital content. It features user authentication, content CRUD operations, and a responsive interface, all deployed on Vercel for optimal performance and scalability.",
+        "website": "https://blog-cms-frontend-nine.vercel.app/",
+        "location": "Nigeria",
+        "categories": [
+            "Content Management System",
+            "Blogging Platform",
+            "Web Application"
+        ],
+        "tech_stack": [
+            "Next.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "Redux Toolkit",
+            "Vercel"
+        ],
+        "notes": "Developed by Code With Mercy as a personal project to enhance skills in full-stack development and modern web technologies."
+    },
+    {
+        "id": 3,
+        "title": "BeautySpace",
+        "description": "BeautySpace is a Nigerian digital platform that connects users with a wide range of beauty and wellness services, including salons, spas, massage therapists, and barbershops. Through its user-friendly website and mobile apps, BeautySpace allows customers to discover top-rated professionals nearby and book appointments either at home or in the salon, offering convenience and flexibility. The platform also provides business management tools for beauty professionals, streamlining scheduling, customer engagement, and service delivery. Founded in 2022 and headquartered in Lagos, BeautySpace is committed to enhancing the beauty service experience across Nigeria.",
+        "website": "https://beautyspaceng.com",
+        "year_founded": 2022,
+        "location": "Lagos, Nigeria",
+        "categories": [
+            "Beauty",
+            "Wellness",
+            "Booking Platform",
+            "Business Management"
+        ],
+        "tech_stack": [
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "Redux Toolkit"
+        ],
+        "notes": "Migrated from React to Next.js to improve performance and SEO."
+    },
+    {
+        "id": 4,
+        "title": "Sparks and Stories",
+        "description": "Sparks and Stories is a creative writing platform that offers insightful articles, engaging stories, and thought-provoking content across various categories, including technology, entertainment, and anime. The platform aims to inspire creativity and foster a community of writers and readers.",
+        "website": "https://sparks-and-stories.vercel.app/",
+        "location": "Nigeria",
+        "categories": [
+            "Creative Writing",
+            "Blogging",
+            "Entertainment",
+            "Technology",
+            "Anime"
+        ],
+        "tech_stack": [
+            "Next.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "Vercel"
+        ],
+        "notes": "Developed by Code With Mercy, this platform emphasizes clean design and user-friendly navigation to enhance the reading experience."
+    }
+]

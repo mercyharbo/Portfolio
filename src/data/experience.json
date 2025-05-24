@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "role": "Frontend Developer",
+        "company": "BeautySpace NG",
+        "type_of_job": "Full-time",
+        "duration": "Feb 2021 – Present",
+        "achievements": [
+            "Led the migration of the frontend codebase from React to Next.js, enabling server-side rendering for better performance and SEO.",
+            "Redesigned key pages (landing, booking, dashboard) to reflect updated branding, significantly improving user engagement.",
+            "Collaborated with UI/UX designers to implement brand-consistent, reusable interface components.",
+            "Built a responsive design system using Tailwind CSS, ensuring a cohesive and maintainable layout across all devices.",
+            "Integrated payment gateways and real-time inventory management, contributing to a 25% increase in sales conversion.",
+            "Implemented Redux Toolkit for scalable and maintainable state management across the application.",
+            "Mentored three junior developers and established frontend development standards, enhancing team productivity and code quality."
+        ]
+    },
+    {
+        "id": 2,
+        "role": "Frontend Developer Intern",
+        "company": "Ojuolape Farms Nig Limited",
+        "type_of_job": "Internship",
+        "duration": "Jan 2020 – June 2020",
+        "achievements": [
+            "Developed a responsive farm management dashboard using React and Redux to improve data interaction and visualization.",
+            "Redesigned the company website, improving UI aesthetics and usability of key features.",
+            "Collaborated cross-functionally to design and implement new features based on stakeholder feedback.",
+            "Optimized site performance using Google Lighthouse insights, reducing load times by 50%.",
+            "Integrated Chart.js to deliver real-time metrics dashboards for farm operations.",
+            "Contributed to a shared UI component library to ensure consistency across the application.",
+            "Applied modern JavaScript and React best practices to streamline development workflows."
+        ]
+    },
+    {
+        "id": 3,
+        "role": "Frontend Developer",
+        "company": "Side Hustle Internship",
+        "type_of_job": "Internship",
+        "duration": "July 2020 – Dec 2020",
+        "achievements": [
+            "Developed and deployed over 5 responsive web applications using React.js and modern frontend tooling.",
+            "Engaged in daily stand-ups and code reviews, enhancing collaboration and code quality.",
+            "Implemented complex features through pair programming, demonstrating strong teamwork and problem-solving skills.",
+            "Received mentorship on industry-standard practices, significantly improving code structure and maintainability.",
+            "Proactively identified and fixed bugs during QA cycles, ensuring high software reliability.",
+            "Utilized Git for version control and collaboration, effectively managing branches and pull requests.",
+            "Actively contributed to technical discussions and planning sessions, influencing project direction.",
+            "Improved application performance with techniques such as code splitting and lazy loading."
+        ]
+    }
+]
