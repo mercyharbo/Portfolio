@@ -2,51 +2,83 @@
     {
         "id": 1,
         "title": "Larbol Construction",
-        "description": [
-            "Larbol Construction is a modern, responsive website designed for a professional construction company. The platform showcases the company's portfolio, services, and expertise in the construction industry. Built with Next.js and Tailwind CSS, the website features a clean, professional design that effectively communicates the company's capabilities and projects.",
-            "Key features include a dynamic project gallery, service descriptions, client testimonials, and a contact system. The website is optimized for both desktop and mobile viewing, ensuring potential clients can easily access information about the company's construction services, past projects, and contact details from any device."
+        "description": "Larbol Construction is a Nigerian construction firm specializing in infrastructure development, including road construction, bridge development, building construction, drainage systems, infrastructure planning, and project management. With a commitment to quality, innovation, and customer satisfaction, Larbol Construction delivers projects that meet modern infrastructure needs while ensuring safety, timely delivery, cost efficiency, and eco-friendly practices.",
+        "website": "https://larbol-construction.vercel.app",
+        "location": "Oshogbo, Osun State, Nigeria",
+        "categories": [
+            "Construction",
+            "Infrastructure",
+            "Project Management"
         ],
-        "imagePath": "/larbol.png",
-        "stack": [
+        "tech_stack": [
             "Next.js",
             "Tailwind CSS",
             "TypeScript",
-            "GSAP"
+            "Vercel"
         ],
-        "liveSite": "https://larbol-construction.vercel.app/"
+        "notes": "Built using modern web technologies and deployed on Vercel for optimal performance and scalability."
     },
     {
         "id": 2,
-        "title": "DropConnect",
-        "description": [
-            "DropConnect is a comprehensive local delivery and food ordering platform designed to solve the challenges of local logistics and food delivery in smaller communities. The platform connects riders with users who need items delivered between locations or require errand services. Additionally, it serves as a marketplace for local food vendors, enabling them to reach customers who struggle to find reliable food delivery options in their area.",
-            "Key features include real-time rider tracking, secure payment processing, vendor management system, and a user-friendly interface for both customers and vendors. The platform addresses the common issues of inconsistent delivery services and the lack of proper digital presence for local food vendors, providing a centralized solution for local commerce and logistics."
+        "title": "Blog CMS Platform",
+        "description": "A modern, full-stack content management system designed for personal blogging. Built with Next.js, Tailwind CSS, TypeScript, and Redux Toolkit, this platform offers a seamless user experience for creating, editing, and managing digital content. It features user authentication, content CRUD operations, and a responsive interface, all deployed on Vercel for optimal performance and scalability.",
+        "website": "https://blog-cms-frontend-nine.vercel.app/",
+        "location": "Nigeria",
+        "categories": [
+            "Content Management System",
+            "Blogging Platform",
+            "Web Application"
         ],
-        "imagePath": "/dropconnect.png",
-        "stack": [
-            "Next.js",
-            "Tailwind CSS",
-            "TypeScript",
-            "Framer Motion",
-            "Supabase",
-            "Express.js"
-        ],
-        "liveSite": "https://drop-connect.vercel.app/"
-    },
-    {
-        "id": 3,
-        "title": "BeautySpaceNG",
-        "description": [
-            "Our platform makes discovering and booking beauty services simple and seamless. Users can explore a wide range of top-rated beauty treatments — from hair styling to spa services — all in one app. With instant booking and flexible scheduling, customers can secure appointments that fit their busy lives, without the hassle of waiting in line. Whether they prefer the comfort of their home or the atmosphere of a salon, our professional providers ensure a relaxing and exceptional beauty experience every time."
-        ],
-        "imagePath": "/beautyspace.png",
-        "stack": [
+        "tech_stack": [
             "Next.js",
             "Tailwind CSS",
             "TypeScript",
             "Redux Toolkit",
-            "Contentful"
+            "Vercel"
         ],
-        "liveSite": "https://beautyspaceng.com/"
+        "notes": "Developed by Code With Mercy as a personal project to enhance skills in full-stack development and modern web technologies."
+    },
+    {
+        "id": 3,
+        "title": "BeautySpace",
+        "description": "BeautySpace is a Nigerian digital platform that connects users with a wide range of beauty and wellness services, including salons, spas, massage therapists, and barbershops. Through its user-friendly website and mobile apps, BeautySpace allows customers to discover top-rated professionals nearby and book appointments either at home or in the salon, offering convenience and flexibility. The platform also provides business management tools for beauty professionals, streamlining scheduling, customer engagement, and service delivery. Founded in 2022 and headquartered in Lagos, BeautySpace is committed to enhancing the beauty service experience across Nigeria.",
+        "website": "https://beautyspaceng.com",
+        "year_founded": 2022,
+        "location": "Lagos, Nigeria",
+        "categories": [
+            "Beauty",
+            "Wellness",
+            "Booking Platform",
+            "Business Management"
+        ],
+        "tech_stack": [
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "Redux Toolkit"
+        ],
+        "notes": "Migrated from React to Next.js to improve performance and SEO."
+    },
+    {
+        "id": 4,
+        "title": "Sparks and Stories",
+        "description": "Sparks and Stories is a creative writing platform that offers insightful articles, engaging stories, and thought-provoking content across various categories, including technology, entertainment, and anime. The platform aims to inspire creativity and foster a community of writers and readers.",
+        "website": "https://sparks-and-stories.vercel.app/",
+        "location": "Nigeria",
+        "categories": [
+            "Creative Writing",
+            "Blogging",
+            "Entertainment",
+            "Technology",
+            "Anime"
+        ],
+        "tech_stack": [
+            "Next.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "Vercel"
+        ],
+        "notes": "Developed by Code With Mercy, this platform emphasizes clean design and user-friendly navigation to enhance the reading experience."
     }
 ]
