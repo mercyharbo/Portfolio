@@ -1,21 +1,36 @@
 'use client'
 
-import { BsMoon, BsSun } from 'react-icons/bs'
-import { useTheme } from './ThemeProvider'
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
+import { IoMoon, IoSunny } from 'react-icons/io5'
 
 export function ThemeSwitcher() {
-  const { theme, toggleTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
+
+  console.log('Current theme:', theme)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      <button className='w-9 h-9 rounded-full flex justify-center items-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300'>
+        <IoSunny className='h-4 w-4 transition-all' />
+      </button>
+    )
+  }
 
   return (
     <button
-      onClick={toggleTheme}
-      className='p-2 rounded-full hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 transition-colors'
-      aria-label='Toggle theme'
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      className='w-9 h-9 rounded-full flex justify-center items-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300'
     >
-      {theme === 'light' ? (
-        <BsMoon className='w-5 h-5' />
+      {theme === 'dark' ? (
+        <IoSunny className='h-4 w-4 transition-all' />
       ) : (
-        <BsSun className='w-5 h-5' />
+        <IoMoon className='h-4 w-4 transition-all' />
       )}
     </button>
   )
