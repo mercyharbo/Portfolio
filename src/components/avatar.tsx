@@ -33,7 +33,7 @@ export default function DecorativeAvatar() {
         <div className='relative w-full h-full'>
           <div className='absolute inset-0 border-[2px] border-black/10 dark:border-gray-600 rounded-[40%] overflow-hidden'>
             <Image
-              src='/avatar1.jpeg'
+              src='/avatar1.JPEG'
               alt='Profile avatar'
               fill
               className='object-cover object-top'
