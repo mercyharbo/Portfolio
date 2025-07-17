@@ -1,3 +1,4 @@
+import ChatbotWidget from '@/components/chatbot-widget'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from '@/components/ThemeContext'
@@ -103,6 +104,7 @@ export default function RootLayout({
           <Navbar />
           <main className='pt-[8rem] min-h-screen'>{children}</main>
           <Footer />
+          <ChatbotWidget />
         </ThemeProvider>
       </body>
     </html>
