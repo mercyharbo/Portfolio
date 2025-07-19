@@ -54,39 +54,39 @@ const ChatbotWidget: React.FC = () => {
   const [userId] = useState(() => 'user_1750709036521_yllc4djkdql')
 
   // Fetch chat history from the endpoint
-  const fetchChatHistory = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/chatbot/history/${userId}`,
-        {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-API-Key': process.env.NEXT_PUBLIC_API_KEY || '',
-          },
-        }
-      )
-      if (response.ok) {
-        const history: Message[] = await response.json()
-        // Ensure history is an array and messages have valid role and content
-        if (Array.isArray(history)) {
-          const validMessages = history.filter(
-            (msg): msg is Message =>
-              typeof msg === 'object' &&
-              (msg.role === 'user' || msg.role === 'assistant') &&
-              typeof msg.content === 'string'
-          )
-          setMessages((prev) => [...validMessages, ...prev])
-        } else {
-          console.warn('Chat history is not an array:', history)
-        }
-      } else {
-        console.warn('Failed to fetch chat history:', response.status)
-      }
-    } catch (error) {
-      console.warn('Error fetching chat history:', error)
-    }
-  }
+  // const fetchChatHistory = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       `${process.env.NEXT_PUBLIC_BASE_URL}/chatbot/history/${userId}`,
+  //       {
+  //         method: 'GET',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //           'X-API-Key': process.env.NEXT_PUBLIC_API_KEY || '',
+  //         },
+  //       }
+  //     )
+  //     if (response.ok) {
+  //       const history: Message[] = await response.json()
+  //       // Ensure history is an array and messages have valid role and content
+  //       if (Array.isArray(history)) {
+  //         const validMessages = history.filter(
+  //           (msg): msg is Message =>
+  //             typeof msg === 'object' &&
+  //             (msg.role === 'user' || msg.role === 'assistant') &&
+  //             typeof msg.content === 'string'
+  //         )
+  //         setMessages((prev) => [...validMessages, ...prev])
+  //       } else {
+  //         console.warn('Chat history is not an array:', history)
+  //       }
+  //     } else {
+  //       console.warn('Failed to fetch chat history:', response.status)
+  //     }
+  //   } catch (error) {
+  //     console.warn('Error fetching chat history:', error)
+  //   }
+  // }
 
   // Load branding and chat history on mount
   useEffect(() => {
@@ -117,15 +117,15 @@ const ChatbotWidget: React.FC = () => {
     }
 
     loadBranding()
-    fetchChatHistory()
+    // fetchChatHistory()
   }, [])
 
   // Optional: Refresh history when widget opens
-  useEffect(() => {
-    if (isOpen) {
-      fetchChatHistory()
-    }
-  }, [isOpen])
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     fetchChatHistory()
+  //   }
+  // }, [isOpen])
 
   useEffect(() => {
     const root = document.documentElement
@@ -272,7 +272,7 @@ const ChatbotWidget: React.FC = () => {
                     setIsTyping(false)
                     break
                 }
-              } catch (e) {
+              } catch (line) {
                 console.error('Failed to parse JSON:', line)
               }
             }
@@ -376,7 +376,7 @@ const ChatbotWidget: React.FC = () => {
               {capitalizeWords(tenantInfo.business_name)}
             </div>
             <div className='chatbot-brand-subtitle'>
-              We're here to help! Ask us anything.
+              We&apos;re here to help! Ask us anything.
             </div>
           </div>
 
