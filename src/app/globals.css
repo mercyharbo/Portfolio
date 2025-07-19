@@ -62,8 +62,8 @@
 :root {
   --chatbot-secondary: #007bff; /* Default blue until branding loads */
   --chatbot-text: #222222;
-  --chatbot-border: #ced4da;
-  --chatbot-radius: 12px;
+  --chatbot-border: #888c91;
+  --chatbot-radius: 20px;
   --chatbot-font: 'Inter', sans-serif;
   --chatbot-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }

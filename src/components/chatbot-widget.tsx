@@ -39,7 +39,7 @@ const ChatbotWidget: React.FC = () => {
       logo_text: 'SB',
       logo_image: '',
       primary_color: '#007bff',
-      secondary_color: '#007bff', // Default blue color
+      secondary_color: '#007bff',
       text_color: '#222222',
       user_bubble_color: '#007bff',
       border_color: '#e0e0e0',
@@ -53,6 +53,42 @@ const ChatbotWidget: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null)
   const [userId] = useState(() => 'user_1750709036521_yllc4djkdql')
 
+  // Fetch chat history from the endpoint
+  const fetchChatHistory = async () => {
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/chatbot/history/${userId}`,
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-API-Key': process.env.NEXT_PUBLIC_API_KEY || '',
+          },
+        }
+      )
+      if (response.ok) {
+        const history: Message[] = await response.json()
+        // Ensure history is an array and messages have valid role and content
+        if (Array.isArray(history)) {
+          const validMessages = history.filter(
+            (msg): msg is Message =>
+              typeof msg === 'object' &&
+              (msg.role === 'user' || msg.role === 'assistant') &&
+              typeof msg.content === 'string'
+          )
+          setMessages((prev) => [...validMessages, ...prev])
+        } else {
+          console.warn('Chat history is not an array:', history)
+        }
+      } else {
+        console.warn('Failed to fetch chat history:', response.status)
+      }
+    } catch (error) {
+      console.warn('Error fetching chat history:', error)
+    }
+  }
+
+  // Load branding and chat history on mount
   useEffect(() => {
     const loadBranding = async () => {
       try {
@@ -61,12 +97,12 @@ const ChatbotWidget: React.FC = () => {
           {
             headers: {
               'Content-Type': 'application/json',
-              'X-API-Key': `${process.env.NEXT_PUBLIC_API_KEY}`,
+              'X-API-Key': process.env.NEXT_PUBLIC_API_KEY || '',
             },
           }
         )
         if (response.ok) {
-          const data = await response.json()
+          const data: TenantInfo = await response.json()
           if (data.branding) {
             setTenantInfo((prev) => ({
               ...prev,
@@ -79,25 +115,28 @@ const ChatbotWidget: React.FC = () => {
         console.warn('Failed to fetch branding', error)
       }
     }
+
     loadBranding()
+    fetchChatHistory()
   }, [])
+
+  // Optional: Refresh history when widget opens
+  useEffect(() => {
+    if (isOpen) {
+      fetchChatHistory()
+    }
+  }, [isOpen])
 
   useEffect(() => {
     const root = document.documentElement
     const { branding } = tenantInfo
-    // Only set the secondary color, use it as the primary design color
-    // root.style.setProperty('--chatbot-secondary', branding.secondary_color)
-    // root.style.setProperty('--chatbot-text', branding.text_color)
-    // root.style.setProperty('--chatbot-border', branding.border_color)
-    // root.style.setProperty('--chatbot-radius', branding.border_radius)
-    // root.style.setProperty('--chatbot-font', branding.font_family)
     root.style.setProperty('--chatbot-secondary', branding.user_bubble_color)
     root.style.setProperty('--chatbot-shadow', '0 8px 30px rgba(0,0,0,0.12)')
 
     if (branding.custom_css) {
       let styleEl = document.getElementById(
         'chatbot-custom-styles'
-      ) as HTMLStyleElement
+      ) as HTMLStyleElement | null
       if (!styleEl) {
         styleEl = document.createElement('style')
         styleEl.id = 'chatbot-custom-styles'
@@ -112,7 +151,7 @@ const ChatbotWidget: React.FC = () => {
   }, [messages, isTyping])
 
   const capitalizeWords = (str: string) => {
-    return str.replace(/w/g, (c) => c.toUpperCase())
+    return str.replace(/\b\w/g, (c) => c.toUpperCase())
   }
 
   const createLogo = (size = 32) => {
@@ -180,7 +219,7 @@ const ChatbotWidget: React.FC = () => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'X-API-Key': `${process.env.NEXT_PUBLIC_API_KEY}`,
+            'X-API-Key': process.env.NEXT_PUBLIC_API_KEY || '',
           },
           body: JSON.stringify({
             message: newMessage.content,
@@ -253,7 +292,7 @@ const ChatbotWidget: React.FC = () => {
     }
   }
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
       sendMessage()
@@ -274,7 +313,6 @@ const ChatbotWidget: React.FC = () => {
 
   return (
     <>
-      {/* Enhanced floating particles background */}
       <div className='chatbot-particles'>
         {[...Array(6)].map((_, i) => (
           <div key={i} className={`particle particle-${i + 1}`}></div>
@@ -297,7 +335,6 @@ const ChatbotWidget: React.FC = () => {
         }`}
         style={{ display: isOpen ? 'flex' : 'none' }}
       >
-        {/* Enhanced header with gradient */}
         <div className='chatbot-header'>
           <div className='chatbot-header-left'>
             <div className='chatbot-logo-container'>
@@ -330,7 +367,6 @@ const ChatbotWidget: React.FC = () => {
         </div>
 
         <div className='chatbot-body'>
-          {/* Enhanced brand section */}
           <div className='chatbot-brand-section'>
             <div className='chatbot-brand-logo-wrapper'>
               {createLogo(56)}
@@ -344,7 +380,6 @@ const ChatbotWidget: React.FC = () => {
             </div>
           </div>
 
-          {/* Enhanced messages with animations */}
           {messages.map((message, index) => (
             <div
               key={index}
@@ -353,11 +388,6 @@ const ChatbotWidget: React.FC = () => {
               } chatbot-message-animate`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* {message.role === 'assistant' && (
-                <div className='chatbot-avatar chatbot-avatar-bounce'>
-                  {createLogo(32)}
-                </div>
-              )} */}
               <div
                 className={`chatbot-bubble ${message.role} chatbot-bubble-enhanced`}
               >
@@ -367,12 +397,8 @@ const ChatbotWidget: React.FC = () => {
             </div>
           ))}
 
-          {/* Enhanced typing indicator */}
           {isTyping && (
             <div className='chatbot-message assistant chatbot-message-animate'>
-              {/* <div className='chatbot-avatar chatbot-avatar-bounce'>
-                {createLogo(32)}
-              </div> */}
               <div className='chatbot-bubble assistant typing-bubble chatbot-bubble-enhanced'>
                 <TypingIndicator />
                 <div className='chatbot-bubble-tail'></div>
@@ -382,7 +408,6 @@ const ChatbotWidget: React.FC = () => {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Enhanced input area */}
         <div className='chatbot-input-area'>
           <div className='chatbot-input-wrapper'>
             <input

@@ -6,11 +6,11 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
+// const inter = Inter({
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-inter',
+// })
 
 export const metadata: Metadata = {
   title: 'Mercy | Frontend Developer',
@@ -99,7 +99,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={`scroll-smooth`} suppressHydrationWarning>
-      <body className={`${inter.className}`}>
+      <body >
         <ThemeProvider>
           <Navbar />
           <main className='pt-[8rem] min-h-screen'>{children}</main>
