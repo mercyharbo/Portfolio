@@ -6,15 +6,16 @@ import type { Metadata } from 'next'
 import type React from 'react'
 import './globals.css'
 
+export const viewport: Record<string, string | number | boolean> = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+}
+
 export const metadata: Metadata = {
   title: 'Mercy | Frontend Developer',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-    viewportFit: 'cover',
-  },
   description:
     'Frontend Developer with 4+ years of expertise in React.js, Next.js, and TypeScript. Building beautiful, responsive, and accessible web applications.',
   keywords: [
