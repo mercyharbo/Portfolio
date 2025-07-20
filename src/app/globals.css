@@ -59,6 +59,75 @@
   font-family: 'Pacifico', cursive;
 }
 
+/* Ensure smooth scrolling and prevent layout shifts */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Prevent FOUC (Flash of Unstyled Content) */
+.navbar-container {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Ensure proper stacking context for fixed elements */
+.fixed {
+  transform: translateZ(0);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Ensure navbar stays on top */
+nav.navbar-container {
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+}
+
 :root {
   --chatbot-secondary: #007bff; /* Default blue until branding loads */
   --chatbot-text: #222222;
@@ -289,6 +358,13 @@
 .chatbot-logo-container {
   position: relative;
   margin-right: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chatbot-online-indicator {
@@ -404,6 +480,13 @@
 .chatbot-brand-logo-wrapper {
   position: relative;
   margin-bottom: 12px;
+  background-color: var(--chatbot-secondary);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chatbot-brand-glow {
@@ -749,7 +832,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .chatbot-widget {
-    width: calc(100vw - 32px);
+    width: 70vw;
     height: 80vh;
     max-width: none;
   }

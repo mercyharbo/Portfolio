@@ -3,13 +3,8 @@ import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from '@/components/ThemeContext'
 import type { Metadata } from 'next'
+import type React from 'react'
 import './globals.css'
-
-// const inter = Inter({
-//   subsets: ['latin'],
-//   display: 'swap',
-//   variable: '--font-inter',
-// })
 
 export const metadata: Metadata = {
   title: 'Mercy | Frontend Developer',
@@ -41,7 +36,7 @@ export const metadata: Metadata = {
     title: 'Code With Mercy | Creative Frontend Developer',
     description:
       'Frontend Developer specializing in building responsive and accessible web applications with modern technologies like React.js, Next.js, and TypeScript.',
-    url: 'https://codewithmercy.netlify.app/', // Replace with your actual domain
+    url: 'https://codewithmercy.netlify.app/',
     siteName: 'Code With Mercy Portfolio',
     locale: 'en_US',
     type: 'website',
@@ -85,7 +80,7 @@ export const metadata: Metadata = {
   category: 'technology',
   classification: 'Portfolio',
   referrer: 'origin-when-cross-origin',
-  metadataBase: new URL('https://codewithmercy.netlify.app/'), // Replace with your actual domain
+  metadataBase: new URL('https://codewithmercy.netlify.app/'),
   alternates: {
     canonical: '/',
   },
@@ -97,12 +92,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en' className={`scroll-smooth`} suppressHydrationWarning>
-      <body>
+    <html lang='en' className='scroll-smooth' suppressHydrationWarning>
+      <body className='relative'>
         <ThemeProvider>
+          {/* Sticky navbar - always visible */}
           <Navbar />
-          <main className='pt-[8rem] min-h-screen'>{children}</main>
+
+          {/* Main content with proper spacing */}
+          <main className='pt-20 lg:pt-24 min-h-screen'>{children}</main>
+
+          {/* Footer */}
           <Footer />
+
+          {/* Chatbot widget */}
           <ChatbotWidget />
         </ThemeProvider>
       </body>

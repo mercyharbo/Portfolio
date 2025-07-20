@@ -313,11 +313,11 @@ const ChatbotWidget: React.FC = () => {
 
   return (
     <>
-      <div className='chatbot-particles'>
+      {/* <div className='chatbot-particles'>
         {[...Array(6)].map((_, i) => (
           <div key={i} className={`particle particle-${i + 1}`}></div>
         ))}
-      </div>
+      </div> */}
 
       <button
         className={`chatbot-open-btn ${getPositionClass()}`}
