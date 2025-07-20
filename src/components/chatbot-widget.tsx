@@ -337,15 +337,11 @@ const ChatbotWidget: React.FC = () => {
       >
         <div className='chatbot-header'>
           <div className='chatbot-header-left'>
-            <div className='chatbot-logo-container'>
-              {createLogo(32)}
-              <div className='chatbot-online-indicator'></div>
-            </div>
+            <div className='chatbot-logo-container'>{createLogo(32)}</div>
             <div className='chatbot-header-info'>
               <span className='chatbot-title'>
                 {capitalizeWords(tenantInfo.business_name)}
               </span>
-              <span className='chatbot-status'>Online now</span>
             </div>
           </div>
           <button

@@ -8,6 +8,13 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Mercy | Frontend Developer',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    viewportFit: 'cover',
+  },
   description:
     'Frontend Developer with 4+ years of expertise in React.js, Next.js, and TypeScript. Building beautiful, responsive, and accessible web applications.',
   keywords: [
