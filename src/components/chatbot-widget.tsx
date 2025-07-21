@@ -229,56 +229,96 @@ const ChatbotWidget: React.FC = () => {
         }
       )
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
       const reader = response.body?.getReader()
+      if (!reader) {
+        throw new Error('Response body is not readable')
+      }
+
       const decoder = new TextDecoder()
-      let buffer = ''
+      let currentMessage = ''
 
-      if (reader) {
-        while (true) {
-          const { done, value } = await reader.read()
-          if (done) break
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
 
-          buffer += decoder.decode(value, { stream: true })
-          const lines = buffer.split(/\r?\n/)
-          buffer = lines.pop() || ''
+        // Decode the current chunk
+        const chunk = decoder.decode(value, { stream: true })
 
-          lines.forEach((line) => {
-            if (line.trim()) {
-              try {
-                const data = JSON.parse(line)
-                switch (data.type) {
-                  case 'main_response':
-                    setMessages((prev) => [
+        // Split the chunk into individual JSON objects
+        const lines = (currentMessage + chunk).split('\n')
+        currentMessage = lines.pop() || '' // Keep incomplete line for next iteration
+
+        // Process each complete line
+        for (const line of lines) {
+          if (!line.trim()) continue
+
+          try {
+            const data = JSON.parse(line)
+
+            switch (data.type) {
+              case 'main_response':
+                // Immediately update the UI with the new content
+                setMessages((prev) => {
+                  const lastMessage = prev[prev.length - 1]
+                  if (
+                    lastMessage?.role === 'assistant' &&
+                    lastMessage.content === ''
+                  ) {
+                    // Update existing empty assistant message
+                    return prev.map((msg, i) =>
+                      i === prev.length - 1
+                        ? { ...msg, content: data.content }
+                        : msg
+                    )
+                  } else {
+                    // Add new assistant message
+                    return [
                       ...prev,
                       { role: 'assistant', content: data.content },
-                    ])
-                    setIsTyping(false)
-                    break
-                  case 'followup':
-                    console.log('Followup suggestion:', data.content)
-                    break
-                  case 'complete':
-                    setIsTyping(false)
-                    break
-                  case 'error':
-                    console.error('Chat error:', data.error)
-                    setMessages((prev) => [
-                      ...prev,
-                      {
-                        role: 'assistant',
-                        content: 'Error responding, please try again.',
-                      },
-                    ])
-                    setIsTyping(false)
-                    break
+                    ]
+                  }
+                })
+                break
+
+              case 'followup':
+                // Handle followup suggestions
+                if (data.content) {
+                  console.log('Followup suggestion:', data.content)
+                  // You can implement followup UI here
                 }
-              } catch (line) {
-                console.error('Failed to parse JSON:', line)
-              }
+                break
+
+              case 'complete':
+                setIsTyping(false)
+                break
+
+              case 'error':
+                console.error('Chat error:', data.error)
+                setMessages((prev) => [
+                  ...prev,
+                  {
+                    role: 'assistant',
+                    content: 'Error responding, please try again.',
+                  },
+                ])
+                setIsTyping(false)
+                break
+
+              default:
+                console.warn('Unknown message type:', data.type)
             }
-          })
+          } catch (error) {
+            console.error('Failed to parse JSON:', error, 'Line:', line)
+          }
         }
       }
+
+      // Ensure typing indicator is removed when stream ends
+      setIsTyping(false)
     } catch (error) {
       console.error('Chat error:', error)
       setMessages((prev) => [
