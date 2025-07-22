@@ -1,6 +1,5 @@
 'use client'
-import type React from 'react'
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -23,6 +22,7 @@ interface Branding {
 
 interface TenantInfo {
   business_name: string
+  chatbot_widget_icon: string
   branding: Branding
 }
 
@@ -35,11 +35,12 @@ const ChatbotWidget: React.FC = () => {
   const [inputValue, setInputValue] = useState('')
   const [tenantInfo, setTenantInfo] = useState<TenantInfo>({
     business_name: 'Your Support Bot',
+    chatbot_widget_icon: '',
     branding: {
       logo_text: 'SB',
       logo_image: '',
       primary_color: '#007bff',
-      secondary_color: '#007bff',
+      secondary_color: '#007bff', // Default blue color
       text_color: '#222222',
       user_bubble_color: '#007bff',
       border_color: '#e0e0e0',
@@ -53,42 +54,32 @@ const ChatbotWidget: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null)
   const [userId] = useState(() => 'user_1750709036521_yllc4djkdql')
 
-  // Fetch chat history from the endpoint
-  // const fetchChatHistory = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       `${process.env.NEXT_PUBLIC_BASE_URL}/chatbot/history/${userId}`,
-  //       {
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           'X-API-Key': process.env.NEXT_PUBLIC_API_KEY || '',
-  //         },
-  //       }
-  //     )
-  //     if (response.ok) {
-  //       const history: Message[] = await response.json()
-  //       // Ensure history is an array and messages have valid role and content
-  //       if (Array.isArray(history)) {
-  //         const validMessages = history.filter(
-  //           (msg): msg is Message =>
-  //             typeof msg === 'object' &&
-  //             (msg.role === 'user' || msg.role === 'assistant') &&
-  //             typeof msg.content === 'string'
-  //         )
-  //         setMessages((prev) => [...validMessages, ...prev])
-  //       } else {
-  //         console.warn('Chat history is not an array:', history)
-  //       }
-  //     } else {
-  //       console.warn('Failed to fetch chat history:', response.status)
-  //     }
-  //   } catch (error) {
-  //     console.warn('Error fetching chat history:', error)
-  //   }
-  // }
+  const formatBotMessage = (content: string) => {
+    let formatted = content
+      .trim()
+      // Lists first - remove the bullet points since we'll style them with CSS
+      .replace(/^[•·]\s*(.*$)/gm, (_, text) => `<li>${text.trim()}</li>`)
+      .replace(/^\d+\.\s*(.*$)/gm, (_, text) => `<li>${text.trim()}</li>`)
 
-  // Load branding and chat history on mount
+      // Convert single line breaks to <br>, but handle double breaks differently
+      .replace(/\n\n+/g, '|||PARAGRAPH|||') // Temporary marker for paragraphs
+      .replace(/\n/g, '<br>')
+      .replace(/\|\|\|PARAGRAPH\|\|\|/g, '</p><p>') // Convert back to paragraphs
+
+    // Find consecutive list items and wrap them in <ul>
+    formatted = formatted.replace(
+      /(?:<li>.*?<\/li>(?:\s*<br>?\s*<li>.*?<\/li>)*)/g,
+      (match) => `<ul>${match.replace(/<br>?\s*/g, '')}</ul>`
+    )
+
+    // Wrap in paragraph if no block elements
+    if (!formatted.includes('<p>') && !formatted.includes('<ul>')) {
+      formatted = `<p>${formatted}</p>`
+    }
+
+    return formatted
+  }
+
   useEffect(() => {
     const loadBranding = async () => {
       try {
@@ -97,12 +88,12 @@ const ChatbotWidget: React.FC = () => {
           {
             headers: {
               'Content-Type': 'application/json',
-              'X-API-Key': process.env.NEXT_PUBLIC_API_KEY || '',
+              'X-API-Key': `${process.env.NEXT_PUBLIC_API_KEY}`,
             },
           }
         )
         if (response.ok) {
-          const data: TenantInfo = await response.json()
+          const data = await response.json()
           if (data.branding) {
             setTenantInfo((prev) => ({
               ...prev,
@@ -115,28 +106,25 @@ const ChatbotWidget: React.FC = () => {
         console.warn('Failed to fetch branding', error)
       }
     }
-
     loadBranding()
-    // fetchChatHistory()
   }, [])
-
-  // Optional: Refresh history when widget opens
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     fetchChatHistory()
-  //   }
-  // }, [isOpen])
 
   useEffect(() => {
     const root = document.documentElement
     const { branding } = tenantInfo
+    // Only set the secondary color, use it as the primary design color
+    // root.style.setProperty('--chatbot-secondary', branding.secondary_color)
+    // root.style.setProperty('--chatbot-text', branding.text_color)
+    // root.style.setProperty('--chatbot-border', branding.border_color)
+    // root.style.setProperty('--chatbot-radius', branding.border_radius)
+    // root.style.setProperty('--chatbot-font', branding.font_family)
     root.style.setProperty('--chatbot-secondary', branding.user_bubble_color)
     root.style.setProperty('--chatbot-shadow', '0 8px 30px rgba(0,0,0,0.12)')
 
     if (branding.custom_css) {
       let styleEl = document.getElementById(
         'chatbot-custom-styles'
-      ) as HTMLStyleElement | null
+      ) as HTMLStyleElement
       if (!styleEl) {
         styleEl = document.createElement('style')
         styleEl.id = 'chatbot-custom-styles'
@@ -160,6 +148,26 @@ const ChatbotWidget: React.FC = () => {
       return (
         <img
           src={branding.logo_image || '/placeholder.svg'}
+          alt='Logo'
+          style={{
+            width: size,
+            height: size,
+            borderRadius: '50%',
+            objectFit: 'cover',
+            display: 'block',
+          }}
+        />
+      )
+    }
+    return createTextLogo(size)
+  }
+
+  const createCompanyLogo = (size = 32) => {
+    const { chatbot_widget_icon } = tenantInfo
+    if (chatbot_widget_icon) {
+      return (
+        <img
+          src={chatbot_widget_icon || '/placeholder.svg'}
           alt='Logo'
           style={{
             width: size,
@@ -219,7 +227,7 @@ const ChatbotWidget: React.FC = () => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'X-API-Key': process.env.NEXT_PUBLIC_API_KEY || '',
+            'X-API-Key': `${process.env.NEXT_PUBLIC_API_KEY}`,
           },
           body: JSON.stringify({
             message: newMessage.content,
@@ -245,23 +253,34 @@ const ChatbotWidget: React.FC = () => {
         const { done, value } = await reader.read()
         if (done) break
 
-        // Decode the current chunk
         const chunk = decoder.decode(value, { stream: true })
 
-        // Split the chunk into individual JSON objects
         const lines = (currentMessage + chunk).split('\n')
-        currentMessage = lines.pop() || '' // Keep incomplete line for next iteration
+        currentMessage = lines.pop() || ''
 
-        // Process each complete line
         for (const line of lines) {
           if (!line.trim()) continue
 
           try {
             const data = JSON.parse(line)
+            console.log('Parsed message data:', data) // Log parsed data
 
             switch (data.type) {
               case 'main_response':
-                // Immediately update the UI with the new content
+                // Process and format the content
+                let formattedContent = data.content
+
+                // Preserve line breaks from backend
+                if (typeof formattedContent === 'string') {
+                  // Replace \n with <br /> for HTML rendering
+                  formattedContent = formattedContent
+                    .split('\n')
+                    .map((line) => line.trim())
+                    .filter((line) => line.length > 0)
+                    .join('\n')
+                }
+
+                // Immediately update the UI with the formatted content
                 setMessages((prev) => {
                   const lastMessage = prev[prev.length - 1]
                   if (
@@ -271,14 +290,14 @@ const ChatbotWidget: React.FC = () => {
                     // Update existing empty assistant message
                     return prev.map((msg, i) =>
                       i === prev.length - 1
-                        ? { ...msg, content: data.content }
+                        ? { ...msg, content: formattedContent }
                         : msg
                     )
                   } else {
                     // Add new assistant message
                     return [
                       ...prev,
-                      { role: 'assistant', content: data.content },
+                      { role: 'assistant', content: formattedContent },
                     ]
                   }
                 })
@@ -332,7 +351,7 @@ const ChatbotWidget: React.FC = () => {
     }
   }
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
       sendMessage()
@@ -353,18 +372,19 @@ const ChatbotWidget: React.FC = () => {
 
   return (
     <>
-      {/* <div className='chatbot-particles'>
+      {/* Enhanced floating particles background */}
+      <div className='chatbot-particles'>
         {[...Array(6)].map((_, i) => (
           <div key={i} className={`particle particle-${i + 1}`}></div>
         ))}
-      </div> */}
+      </div>
 
       <button
         className={`chatbot-open-btn ${getPositionClass()}`}
         onClick={() => setIsOpen(true)}
         style={{ display: isOpen ? 'none' : 'flex' }}
       >
-        {createLogo(24)}
+        {createCompanyLogo(24)}
         <div className='chatbot-pulse-ring'></div>
         <div className='chatbot-pulse-ring-2'></div>
       </button>
@@ -375,6 +395,7 @@ const ChatbotWidget: React.FC = () => {
         }`}
         style={{ display: isOpen ? 'flex' : 'none' }}
       >
+        {/* Enhanced header with gradient */}
         <div className='chatbot-header'>
           <div className='chatbot-header-left'>
             <div className='chatbot-logo-container'>{createLogo(32)}</div>
@@ -403,6 +424,7 @@ const ChatbotWidget: React.FC = () => {
         </div>
 
         <div className='chatbot-body'>
+          {/* Enhanced brand section */}
           <div className='chatbot-brand-section'>
             <div className='chatbot-brand-logo-wrapper'>
               {createLogo(56)}
@@ -416,6 +438,7 @@ const ChatbotWidget: React.FC = () => {
             </div>
           </div>
 
+          {/* Enhanced messages with animations */}
           {messages.map((message, index) => (
             <div
               key={index}
@@ -427,14 +450,31 @@ const ChatbotWidget: React.FC = () => {
               <div
                 className={`chatbot-bubble ${message.role} chatbot-bubble-enhanced`}
               >
-                {message.content}
+                {message.role === 'assistant' ? (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: formatBotMessage(message.content),
+                    }}
+                  />
+                ) : (
+                  message.content.split('\n').map((line, i) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      {i < message.content.split('\n').length - 1 && <br />}
+                    </React.Fragment>
+                  ))
+                )}
                 <div className='chatbot-bubble-tail'></div>
               </div>
             </div>
           ))}
 
+          {/* Enhanced typing indicator */}
           {isTyping && (
             <div className='chatbot-message assistant chatbot-message-animate'>
+              <div className='chatbot-avatar chatbot-avatar-bounce'>
+                {createLogo(32)}
+              </div>
               <div className='chatbot-bubble assistant typing-bubble chatbot-bubble-enhanced'>
                 <TypingIndicator />
                 <div className='chatbot-bubble-tail'></div>
@@ -444,6 +484,7 @@ const ChatbotWidget: React.FC = () => {
           <div ref={messagesEndRef} />
         </div>
 
+        {/* Enhanced input area */}
         <div className='chatbot-input-area'>
           <div className='chatbot-input-wrapper'>
             <input

@@ -307,6 +307,30 @@ nav.navbar-container {
   left: 24px;
 }
 
+.chatbot-bubble ul {
+  margin: 0.75em 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.chatbot-bubble li {
+  margin: 0.25em 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.chatbot-bubble li::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background-color: var(--chatbot-secondary);
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 0.6em;
+  transform: translateY(-50%);
+}
+
 /* Enhanced Header */
 .chatbot-header {
   display: flex;
