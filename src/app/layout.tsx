@@ -1,4 +1,3 @@
-import ChatbotWidget from '@/components/chatbot-widget'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from '@/components/ThemeContext'
@@ -103,17 +102,12 @@ export default function RootLayout({
     <html lang='en' className='scroll-smooth' suppressHydrationWarning>
       <body className='relative'>
         <ThemeProvider>
-          {/* Sticky navbar - always visible */}
           <Navbar />
-
-          {/* Main content with proper spacing */}
           <main className='pt-20 lg:pt-24 min-h-screen'>{children}</main>
-
-          {/* Footer */}
           <Footer />
 
-          {/* Chatbot widget */}
-          <ChatbotWidget />
+          {/* Chatbot widget
+          <ChatbotWidget /> */}
         </ThemeProvider>
       </body>
     </html>
