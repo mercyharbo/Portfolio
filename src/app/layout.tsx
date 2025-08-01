@@ -14,9 +14,9 @@ export const viewport: Record<string, string | number | boolean> = {
 }
 
 export const metadata: Metadata = {
-  title: 'Mercy | Frontend Developer',
+  title: 'Afolabi Ridwan D | Frontend Engineer',
   description:
-    'Frontend Developer with 4+ years of expertise in React.js, Next.js, and TypeScript. Building beautiful, responsive, and accessible web applications.',
+    'Frontend Engineer with 4+ years of expertise in React.js, Next.js, and TypeScript. Building beautiful, responsive, and accessible web applications.',
   keywords: [
     'Frontend Developer',
     'React.js Developer',
@@ -30,9 +30,19 @@ export const metadata: Metadata = {
     'Portfolio',
     'Mercy',
     'Code With Mercy',
+    'Creative Developer',
+    'Web Applications',
+    'Responsive Design',
+    'Accessible Web Design',
+    'Frontend Engineer',
+    'Web Performance',
+    'Web Accessibility',
+    'Frontend Technologies',
+    'Web Design',
+    'Frontend Portfolio',
   ],
-  authors: [{ name: 'Damilare', url: 'https://github.com/mercyharbo' }],
-  creator: 'Mercy',
+  authors: [{ name: 'Afolabi Ridwan D', url: 'https://github.com/mercyharbo' }],
+  creator: 'codewithmercy',
   publisher: 'Code With Mercy',
   formatDetection: {
     email: false,
@@ -40,37 +50,30 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Code With Mercy | Creative Frontend Developer',
+    title: 'Afolabi Ridwan D | Frontend Engineer',
     description:
-      'Frontend Developer specializing in building responsive and accessible web applications with modern technologies like React.js, Next.js, and TypeScript.',
+      'Frontend Engineer specializing in building responsive and accessible web applications with modern technologies like React.js, Next.js, and TypeScript.',
     url: 'https://codewithmercy.netlify.app/',
-    siteName: 'Code With Mercy Portfolio',
+    siteName: 'Afolabi Ridwan D | Portfolio',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/avatar1.JPEG',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Mercy - Frontend Developer',
-        type: 'image/jpeg',
-      },
-      {
-        url: '/avatar2.JPEG',
-        width: 1200,
-        height: 630,
-        alt: 'Mercy - Creative Developer Profile',
+        alt: 'Afolabi Ridwan D - Frontend Engineer',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Code With Mercy | Creative Frontend Developer',
+    title: 'Afolabi Ridwan D | Frontend Engineer ',
     description:
-      'Frontend Developer crafting beautiful web experiences with React.js, Next.js, and TypeScript. Check out my portfolio!',
+      'Frontend Engineer crafting beautiful web experiences with React.js, Next.js, and TypeScript. Check out my portfolio!',
     creator: '@codewithmercy',
-    images: ['/avatar1.JPEG'],
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
