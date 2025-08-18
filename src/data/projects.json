@@ -62,6 +62,53 @@
     },
     {
         "id": 4,
+        "title": "ShowTrackr",
+        "description": "ShowTrackr is a modern web application that helps users track movies and TV shows, stay updated on upcoming releases, and manage their personalized watchlists. Designed with a clean and intuitive interface, the platform features sections for Discover, Trending, Upcoming, and TV Shows, making it easy for users to explore new content. It also includes reminders for upcoming episodes, personalized recommendations, and newsletter updates. Built with a strong focus on performance and user experience, ShowTrackr showcases how technology can enhance entertainment discovery and organization.",
+        "website": "https://bingebook.vercel.app",
+        "year_founded": 2025,
+        "location": "Remote Project",
+        "categories": [
+            "Entertainment",
+            "Movies",
+            "TV Shows",
+            "Watchlist",
+            "Discovery Platform"
+        ],
+        "tech_stack": [
+            "Next.js",
+            "React",
+            "Tailwind CSS",
+            "TypeScript",
+            "shadcn/ui",
+            "Supabase",
+            "Zustand"
+        ],
+        "notes": "Built as a personal project to explore watchlist management, API integration, and performance optimization with Next.js."
+    },
+    {
+        "id": 4,
+        "title": "BeautySpace",
+        "description": "BeautySpace is a Nigerian digital platform that connects users with a wide range of beauty and wellness services, including salons, spas, massage therapists, and barbershops. Through its user-friendly website and mobile apps, BeautySpace allows customers to discover top-rated professionals nearby and book appointments either at home or in the salon, offering convenience and flexibility. The platform also provides business management tools for beauty professionals, streamlining scheduling, customer engagement, and service delivery. Founded in 2022 and headquartered in Lagos, BeautySpace is committed to enhancing the beauty service experience across Nigeria.",
+        "website": "https://beautyspaceng.com",
+        "year_founded": 2022,
+        "location": "Lagos, Nigeria",
+        "categories": [
+            "Beauty",
+            "Wellness",
+            "Booking Platform",
+            "Business Management"
+        ],
+        "tech_stack": [
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "Redux Toolkit"
+        ],
+        "notes": "Migrated from React to Next.js to improve performance and SEO."
+    },
+    {
+        "id": 5,
         "title": "Sparks and Stories",
         "description": "Sparks and Stories is a creative writing platform that offers insightful articles, engaging stories, and thought-provoking content across various categories, including technology, entertainment, and anime. The platform aims to inspire creativity and foster a community of writers and readers.",
         "website": "https://sparks-and-stories.vercel.app/",

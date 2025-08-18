@@ -103,6 +103,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className='scroll-smooth' suppressHydrationWarning>
+      <script
+        async
+        defer
+        src='https://gettinlytics.vercel.app/api/tracker/97fefa4e-9b4e-4c87-838c-e8d2155c56a7'
+      ></script>
       <body className='relative'>
         <ThemeProvider>
           <Navbar />
