@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     'Web Design',
     'Frontend Portfolio',
   ],
-  authors: [{ name: 'Afolabi Ridwan D', url: 'https://github.com/mercyharbo' }],
+  authors: [{ name: 'Afolabi Ridwan Damilare', url: 'https://github.com/mercyharbo' }],
   creator: 'codewithmercy',
   publisher: 'Code With Mercy',
   formatDetection: {
@@ -50,30 +50,30 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Afolabi Ridwan D | Frontend Engineer',
+    title: 'Afolabi Ridwan Damilare | Frontend Engineer',
     description:
       'Frontend Engineer specializing in building responsive and accessible web applications with modern technologies like React.js, Next.js, and TypeScript.',
-    url: 'https://codewithmercy.netlify.app/',
-    siteName: 'Afolabi Ridwan D | Portfolio',
+    url: 'https://codewithmercy.vercel.app/',
+    siteName: 'Afolabi Ridwan Damilare | Portfolio',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://codewithmercy.vercel.app/img1.JPEG',
         width: 1200,
         height: 630,
-        alt: 'Afolabi Ridwan D - Frontend Engineer',
+        alt: 'Afolabi Ridwan Damilare - Frontend Engineer',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Afolabi Ridwan D | Frontend Engineer ',
+    title: 'Afolabi Ridwan Damilare | Frontend Engineer ',
     description:
       'Frontend Engineer crafting beautiful web experiences with React.js, Next.js, and TypeScript. Check out my portfolio!',
     creator: '@codewithmercy',
-    images: ['/og-image.png'],
+    images: ['https://codewithmercy.vercel.app/img1.JPEG'],
   },
   robots: {
     index: true,
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
   category: 'technology',
   classification: 'Portfolio',
   referrer: 'origin-when-cross-origin',
-  metadataBase: new URL('https://codewithmercy.netlify.app/'),
+  metadataBase: new URL('https://codewithmercy.vercel.app/'),
   alternates: {
     canonical: '/',
   },
