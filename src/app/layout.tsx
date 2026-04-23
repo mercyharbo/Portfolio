@@ -1,5 +1,5 @@
 import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar'
+import Header from '@/components/Header'
 import { ThemeProvider } from '@/components/ThemeContext'
 import type { Metadata } from 'next'
 import type React from 'react'
@@ -41,7 +41,9 @@ export const metadata: Metadata = {
     'Web Design',
     'Frontend Portfolio',
   ],
-  authors: [{ name: 'Afolabi Ridwan Damilare', url: 'https://github.com/mercyharbo' }],
+  authors: [
+    { name: 'Afolabi Ridwan Damilare', url: 'https://github.com/mercyharbo' },
+  ],
   creator: 'codewithmercy',
   publisher: 'Code With Mercy',
   formatDetection: {
@@ -108,14 +110,11 @@ export default function RootLayout({
         defer
         src='https://gettinlytics.vercel.app/api/tracker/97fefa4e-9b4e-4c87-838c-e8d2155c56a7'
       ></script>
-      <body className='relative'>
+      <body className='relative' suppressHydrationWarning>
         <ThemeProvider>
-          <Navbar />
+          <Header />
           <main className='pt-20 lg:pt-24 min-h-screen'>{children}</main>
           <Footer />
-
-          {/* Chatbot widget
-          <ChatbotWidget /> */}
         </ThemeProvider>
       </body>
     </html>
