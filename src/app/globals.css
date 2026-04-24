@@ -1,10 +1,10 @@
-@import 'tailwindcss';
-
-@custom-variant dark (&:is(.dark *));
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
 
 @theme {
-  --font-display: 'Satoshi', 'sans-serif';
-  --breakpoint-3xl: 1920px;
+  --font-sans: 'Albert Sans', sans-serif;
+  --font-display: 'Albert Sans', sans-serif;
+  --breakpoint-3xl: 120rem;
   --color-avocado-100: oklch(0.99 0 0);
   --color-avocado-200: oklch(0.98 0.04 113.22);
   --color-avocado-300: oklch(0.94 0.11 115.03);
@@ -67,33 +67,6 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #0f172a;
-    --card: #ffffff;
-    --card-foreground: #0f172a;
-    --popover: #ffffff;
-    --popover-foreground: #0f172a;
-    --primary: #2563EB;
-    --primary-foreground: #ffffff;
-    --secondary: #f1f5f9;
-    --secondary-foreground: #0f172a;
-    --muted: #f1f5f9;
-    --muted-foreground: #64748b;
-    --accent: #f1f5f9;
-    --accent-foreground: #0f172a;
-    --destructive: #ef4444;
-    --destructive-foreground: #ffffff;
-    --border: #e0e1dd;
-    --input: #e0e1dd;
-    --ring: #2563EB;
-    --chart-1: #e76e50;
-    --chart-2: #2a9d8f;
-    --chart-3: #264653;
-    --chart-4: #e9c46a;
-    --chart-5: #f4a261;
-    --radius: 0.5rem;
-  }
-  .dark {
     --background: #0f172a;
     --foreground: #f8fafc;
     --card: #0f172a;
@@ -118,6 +91,7 @@
     --chart-3: #e88a1a;
     --chart-4: #af57db;
     --chart-5: #ee3333;
+    --radius: 0.5rem;
   }
 }
 
@@ -126,7 +100,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
 
@@ -166,7 +140,7 @@ body {
   transform: translateZ(0);
 }
 
-/* Smooth transitions for theme switching */
+/* Smooth transitions for UI elements */
 * {
   transition-property: background-color, border-color, color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -179,15 +153,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-gray-800;
+  @apply bg-gray-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+  @apply bg-gray-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400 dark:bg-gray-500;
+  @apply bg-gray-500;
 }
 
 

@@ -1,6 +1,5 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import { ThemeProvider } from '@/components/ThemeContext'
 import type { Metadata } from 'next'
 import type React from 'react'
 import './globals.css'
@@ -104,18 +103,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en' className='scroll-smooth' suppressHydrationWarning>
+    <html lang='en' className='scroll-smooth'>
       <script
         async
         defer
         src='https://gettinlytics.vercel.app/api/tracker/97fefa4e-9b4e-4c87-838c-e8d2155c56a7'
       ></script>
-      <body className='relative' suppressHydrationWarning>
-        <ThemeProvider>
-          <Header />
-          <main className='pt-20 lg:pt-24 min-h-screen'>{children}</main>
-          <Footer />
-        </ThemeProvider>
+      <body className='relative'>
+        <Header />
+        <main className='pt-20 lg:pt-24 min-h-screen'>{children}</main>
+        <Footer />
       </body>
     </html>
   )
