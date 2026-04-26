@@ -5,34 +5,34 @@ import { motion } from 'framer-motion'
 const services = [
   {
     id: '01',
-    title: 'Scalable Architecture',
+    title: 'Frontend Architecture',
     description:
-      'Architecting robust, type-safe frontend systems using Next.js and TypeScript, designed for long-term maintainability and high-traffic scale.',
+      "Building robust, type-safe foundations using Next.js and TypeScript that won't break as your user base scales.",
   },
   {
     id: '02',
-    title: 'High-Conversion UI',
+    title: 'High-Conversion Interfaces',
     description:
-      'Transforming design systems into pixel-perfect, interactive interfaces with a proven track record of driving significant business revenue.',
+      'Translating designs into pixel-perfect, responsive applications focused on keeping users engaged and driving revenue.',
   },
   {
     id: '03',
-    title: 'Performance Engineering',
+    title: 'Performance Optimization',
     description:
-      'Optimizing Core Web Vitals and slashing initial load times by up to 40% to boost user retention and organic SEO performance.',
+      'Speed matters. I optimize Core Web Vitals to slash load times, significantly improving both SEO rankings and user retention.',
   },
   {
     id: '04',
-    title: 'System Integration',
+    title: 'Complex Integrations',
     description:
-      'Connecting complex REST/GraphQL APIs with secure RBAC systems and real-time dashboards for data-driven applications.',
+      'Seamlessly connecting heavy APIs and real-time data to create intuitive dashboards that just work.',
   },
 ]
 
 export default function Services() {
   return (
-    <section className='w-full py-20 px-4 lg:px-20'>
-      <div className='flex flex-col gap-16'>
+    <section className='w-full px-5'>
+      <div className='flex flex-col gap-8'>
         {/* Section Header */}
         <div className='text-center space-y-4'>
           <motion.h2
@@ -65,10 +65,10 @@ export default function Services() {
 
               {/* Card Content */}
               <div className='relative z-10 flex flex-col gap-4 h-full pt-6'>
-                <h3 className='text-xl font-medium text-white group-hover:text-primary transition-colors'>
+                <h3 className='text-lg font-medium text-white group-hover:text-primary transition-colors'>
                   {service.title}
                 </h3>
-                <p className='text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors'>
+                <p className='text-gray-300 text-sm leading-relaxed group-hover:text-gray-200 transition-colors'>
                   {service.description}
                 </p>
               </div>

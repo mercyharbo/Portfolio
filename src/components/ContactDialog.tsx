@@ -13,8 +13,20 @@ import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
+import { cn } from '@/lib/utils'
+import { useState } from 'react'
 
-export function ContactDialog() {
+export function ContactDialog({ 
+  triggerText = "Let's work together",
+  className
+}: { 
+  triggerText?: string,
+  className?: string
+}) {
+  const [open, setOpen] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
   const { register, handleSubmit, reset } = useForm({
     defaultValues: {
       name: '',
@@ -23,17 +35,45 @@ export function ContactDialog() {
     },
   })
 
-  const onSubmit = (data: any) => {
-    console.log('Form submitted:', data)
-    // Add submission logic here
-    reset()
+  const onSubmit = async (data: any) => {
+    setIsSubmitting(true)
+    setStatus('idle')
+
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        reset()
+        setTimeout(() => {
+          setOpen(false)
+          setTimeout(() => setStatus('idle'), 500) // Reset status after dialog close animation
+        }, 2000)
+      } else {
+        setStatus('error')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className='inline-flex items-center justify-center px-10 h-12 rounded-full'>
-          Let&apos;s work together
+        <Button className={cn(
+          'inline-flex items-center bg-white text-black hover:bg-white/90 justify-center px-10 h-12 rounded-full w-full sm:w-auto',
+          className
+        )}>
+          {triggerText}
         </Button>
       </DialogTrigger>
       <DialogContent className=' sm:max-w-2xl'>
@@ -89,9 +129,19 @@ export function ContactDialog() {
               className='p-3 resize-none'
             />
           </div>
-          <Button type='submit' className='w-full h-12'>
-            Send Message
+          <Button type='submit' className='w-full h-11' disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </Button>
+          {status === 'success' && (
+            <p className='text-sm text-green-500 text-center font-medium animate-in fade-in slide-in-from-top-1'>
+              Message sent successfully! I&apos;ll get back to you soon.
+            </p>
+          )}
+          {status === 'error' && (
+            <p className='text-sm text-red-500 text-center font-medium animate-in fade-in slide-in-from-top-1'>
+              Something went wrong. Please try again or email me directly.
+            </p>
+          )}
         </form>
       </DialogContent>
     </Dialog>

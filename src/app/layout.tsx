@@ -109,9 +109,9 @@ export default function RootLayout({
         defer
         src='https://gettinlytics.vercel.app/api/tracker/97fefa4e-9b4e-4c87-838c-e8d2155c56a7'
       ></script>
-      <body className='relative'>
+      <body className='relative space-y-5'>
         <Header />
-        <main className='pt-20 lg:pt-24 min-h-screen'>{children}</main>
+        <main className='pt-10 lg:pt-10 min-h-screen'>{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { BsInstagram, BsLinkedin, BsTwitterX } from 'react-icons/bs'
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from 'react-icons/bs'
 import { HiOutlineHome } from 'react-icons/hi2'
 
 const Footer = () => {
@@ -22,6 +22,13 @@ const Footer = () => {
 
         {/* Right Side: Social Icons */}
         <div className='flex items-center gap-3'>
+          <Link
+            href='https://github.com/mercyharbo'
+            target='_blank'
+            className='flex items-center justify-center size-9 rounded-full border border-primary text-white hover:text-primary transition-all duration-300'
+          >
+            <BsGithub size={14} />
+          </Link>
           <Link
             href='https://x.com/codewithmercy'
             target='_blank'

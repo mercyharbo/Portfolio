@@ -6,14 +6,24 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
+import { ProjectDetailsDialog } from './project-details-dialog'
 
 export default function ProjectSection({
   addToRefs,
 }: {
   addToRefs: (element: HTMLElement | null) => void
 }) {
+  const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+
+  const handleProjectClick = (project: (typeof projects)[0]) => {
+    setSelectedProject(project)
+    setIsDialogOpen(true)
+  }
+
   return (
-    <section id='works' className='flex flex-col gap-16 w-full px-4 lg:px-20'>
+    <section id='works' className='flex flex-col gap-8 w-full px-5'>
       {/* Section Header */}
       <div className='text-center space-y-4'>
         <motion.h2
@@ -37,12 +47,15 @@ export default function ProjectSection({
             whileHover={{ y: -10 }}
             className='h-full'
           >
-            <Card className='group relative h-full bg-dark-accent transition-all duration-500'>
+            <Card 
+              className='group relative h-full bg-dark-accent transition-all duration-500 cursor-pointer overflow-hidden'
+              onClick={() => handleProjectClick(project)}
+            >
               {/* Image Container */}
               <div className='relative aspect-video w-full overflow-hidden p-4 pb-0'>
                 <div className='relative h-full w-full rounded-2xl overflow-hidden bg-gray-400/20'>
                   <Image
-                    src={`/img${(index % 2) + 1}.JPEG`} // Placeholder pattern
+                    src={project.image}
                     alt={project.title}
                     fill
                     className='object-cover opacity-60 group-hover/card:opacity-100 group-hover/card:scale-105 transition-all duration-700'
@@ -74,24 +87,33 @@ export default function ProjectSection({
                   </p>
                 </div>
               </CardContent>
-              <CardFooter className='bg-transparent border-none'>
+              <CardFooter className='bg-transparent border-none min-h-[44px]'>
                 {/* Visit Link */}
-                <Link
-                  href={project.website}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='inline-flex items-center gap-2 text-sm text-primary group/link'
-                >
-                  <ArrowUpRight className='size-5 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1' />
-                  <span className='group-hover/link:underline underline-offset-4 decoration-2'>
-                    Visit website
-                  </span>
-                </Link>
+                {project.website && (
+                  <Link
+                    href={project.website}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    onClick={(e) => e.stopPropagation()}
+                    className='inline-flex items-center gap-2 text-sm text-primary group/link'
+                  >
+                    <ArrowUpRight className='size-5 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1' />
+                    <span className='group-hover/link:underline underline-offset-4 decoration-2'>
+                      Visit website
+                    </span>
+                  </Link>
+                )}
               </CardFooter>
             </Card>
           </motion.div>
         ))}
       </div>
+
+      <ProjectDetailsDialog 
+        project={selectedProject}
+        isOpen={isDialogOpen}
+        onClose={() => setIsDialogOpen(false)}
+      />
     </section>
   )
 }

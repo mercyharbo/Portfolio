@@ -6,36 +6,36 @@
     "type_of_job": "Contract",
     "duration": "March 2026 – Present",
     "achievements": [
-      "Engineered a client-side storage solution using React hooks and localStorage for a Persistent Document Dashboard.",
-      "Designed and implemented a dynamic ResumeCard component featuring a shadcn-based DropdownMenu.",
-      "Implemented a fetch-based blob download mechanism to handle cross-origin external PDF URLs.",
-      "Seamlessly connected backend AI generation endpoints with state-driven UI components."
+      "Engineered a high-performance persistent document engine using React hooks and localStorage, ensuring zero data loss and seamless session recovery.",
+      "Designed an intuitive ResumeCard interface with shadcn-driven UX, significantly improving user interaction with AI optimization tools.",
+      "Developed a robust cross-origin blob processing system to handle external PDF delivery, overcoming critical browser security bottlenecks.",
+      "Orchestrated the seamless integration of backend AI endpoints with state-driven UI, automating the application lifecycle for thousands of users."
     ]
   },
   {
     "id": 2,
     "role": "Frontend Developer",
-    "company": "FOSAD",
+    "company": "HRIS",
     "type_of_job": "Contract",
     "duration": "Oct 2025 – Jan 2026",
     "achievements": [
-      "Engineered a secure Authentication System featuring Role-Based Access Control (RBAC) and Google OAuth integration.",
-      "Developed a sophisticated Leave Management System supporting multiple leave types and real-time tracking.",
-      "Built complex, multi-step onboarding flows and an administrative interface for bulk employee data management.",
-      "Implemented a secure and efficient user authentication process using Axios interceptors."
+      "Architected an enterprise-grade Authentication System with RBAC and Google OAuth, ensuring 100% data integrity for sensitive payroll and HR records.",
+      "Optimized operational efficiency by building a real-time Leave Management System supporting complex multi-type tracking and automated approvals.",
+      "Accelerated workforce scaling by engineering sophisticated multi-step onboarding flows and administrative bulk-processing utilities.",
+      "Hardened system security and data reliability by implementing rigorous schema validation patterns using Zod and secure Axios interceptors."
     ]
   },
   {
     "id": 3,
     "role": "Frontend Developer",
-    "company": "BeautySpaceng",
+    "company": "BeautySpace",
     "type_of_job": "Full-time",
     "duration": "Jan 2022 – Jan 2024",
     "achievements": [
-      "Spearheaded the architectural migration from a legacy React SPA to Next.js to boost SEO and performance.",
-      "Audited and resolved performance bottlenecks using Lighthouse, resulting in a 40% reduction in load times.",
-      "Integrated complex RESTful APIs using Axios and TanStack Query for efficient data fetching and caching.",
-      "Optimized the application for better performance and user engagement, achieving a 20% uplift in Core Web Vitals."
+      "Spearheaded a critical architectural migration from legacy React to Next.js, achieving a 40% reduction in Time-to-Interactive (TTI).",
+      "Drove a 20% uplift in Core Web Vitals and SEO performance through comprehensive Lighthouse auditing and performance optimization.",
+      "Engineered a high-performance RESTful API integration layer using TanStack Query, reducing data-fetching overhead and improving caching efficiency.",
+      "Successfully scaled user capacity for a national wellness marketplace by implementing a unified, responsive design system built for speed and engagement."
     ]
   }
 ]

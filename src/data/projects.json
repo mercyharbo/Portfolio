@@ -1,49 +1,59 @@
 [
   {
     "id": 0,
-    "title": "OpenRole | AI Career Intelligence Platform",
-    "description": "Architecting a high-performance career management system that leverages AI-driven endpoints and sophisticated state persistence to automate document optimization. Engineered for massive scale and seamless real-time user interaction.",
-    "website": "https://openrole.com",
+    "title": "OpenRole | AI-Powered Job Application Platform",
+    "description": "A comprehensive SaaS platform that automates the end-to-end job application lifecycle. OpenRole leverages AI to source high-relevance roles, tailor resumes to specific job descriptions, and execute automated applications across major ATS platforms, allowing candidates to scale their search while maintaining a personalized touch.",
+    "website": "https://openrolehq.com",
+    "image": "/openrole-cover.png",
     "location": "Remote",
     "categories": [
       "AI Automation",
       "SaaS",
-      "Infrastructure"
+      "Recruitment Tech"
     ],
     "tech_stack": [
-      "Next.js",
-      "TypeScript",
-      "AI Integration",
-      "Zustand",
+      "Next.js 16",
+      "React 19",
+      "Tailwind CSS 4",
+      "Framer Motion 12",
+      "Zustand 5",
+      "Axios Interceptors",
+      "SWR",
+      "Recharts",
+      "Driver.js",
       "Shadcn UI"
     ],
-    "notes": "Focused on persistent state-driven UI and complex fetch-based blob handling for cross-origin document management."
+    "notes": "Architected a robust authentication system featuring automated silent token refresh via Axios interceptors and synchronized Zustand state persistence. The platform includes a high-fidelity landing page with orchestrated Framer Motion animations and a real-time candidate dashboard with interactive onboarding tours and data visualization."
   },
   {
     "id": 1,
-    "title": "FOSAD | Secure Enterprise HR Operations",
-    "description": "Engineering a robust HRIS solution with rigorous RBAC security and real-time operational tracking. Architected sophisticated multi-step onboarding flows and secure authentication mechanisms to ensure 100% data integrity for enterprise clients.",
-    "website": "https://fosad.com",
-    "location": "Remote",
+    "title": "HRIS | Enterprise Human Resource Information System",
+    "description": "A comprehensive, enterprise-grade HR management platform designed to digitize and automate the entire employee lifecycle. MercyHarbor HRIS streamlines complex multi-stage onboarding, digital document verification, and workforce management through a centralized dashboard, featuring real-time administrative analytics and granular role-based access control.",
+    "website": "https://hris-app.com",
+    "image": "/hris-cover.png",
+    "location": "Remote / Enterprise",
     "categories": [
-      "Enterprise Software",
-      "Cybersecurity",
-      "HR Tech"
+      "Enterprise SaaS",
+      "HR Tech",
+      "Workforce Automation"
     ],
     "tech_stack": [
-      "React",
-      "Node.js",
-      "RBAC",
+      "Next.js 15",
+      "React 18",
+      "Tailwind CSS 4",
+      "Zustand",
       "Axios Interceptors",
-      "Zod"
+      "SWR",
+      "Recharts"
     ],
-    "notes": "Implemented automated token refresh and schema validation to maintain high security standards for sensitive employee data."
+    "notes": "Architected a resilient authentication and session management layer featuring automated token refresh cycles via Axios interceptors and persistent global state using Zustand. The platform manages high-density workforce data through optimized TanStack Table implementations and provides interactive administrative insights via Recharts visualization."
   },
   {
     "id": 2,
     "title": "Leban Street | High-Performance E-commerce",
     "description": "A revenue-optimized food-tech engine that generated $30,000+ within 60 days of launch. Features a proprietary 'Smart Cart' system with multi-order batching and real-time supply chain visualization to maximize conversion rates.",
     "website": "https://lebanstreet.com",
+    "image": "/leban-street.jpg",
     "location": "Remote",
     "categories": [
       "E-commerce",
@@ -61,22 +71,28 @@
   },
   {
     "id": 3,
-    "title": "BeautySpace | Scalable Wellness Marketplace",
-    "description": "Spearheaded a critical architectural migration from legacy React to Next.js, achieving a 40% reduction in Time-to-Interactive (TTI) and a 20% uplift in Core Web Vitals, directly boosting SEO and user retention for a national brand.",
-    "website": "https://beautyspaceng.com",
-    "location": "Lagos, Nigeria",
+    "title": "Bukky Group | Excellence in Beauty, Fashion, Lifestyle & Empowerment",
+    "description": "A premium multi-industry conglomerate spanning high-end beauty, haute couture, culinary excellence, and vocational education. The platform serves as a unified digital ecosystem for diverse brands including 3S The Label, Bukky Beauty World, and the Get Busy Foundation, bridging the gap between luxury services and social impact.",
+    "website": "https://bukkygroup.com",
+    "image": "/bukkygroup-cover.png",
+    "location": "Centurion, South Africa",
     "categories": [
-      "Marketplace",
-      "SEO Optimization",
-      "Architecture"
+      "Lifestyle Conglomerate",
+      "Luxury Fashion",
+      "Beauty & EdTech",
+      "Social Impact"
     ],
     "tech_stack": [
-      "Next.js",
-      "TanStack Query",
-      "Performance Auditing",
-      "Tailwind CSS",
-      "Lighthouse"
+      "Next.js 16",
+      "React 19",
+      "Tailwind CSS 4",
+      "Framer Motion",
+      "Zustand",
+      "SWR",
+      "Radix UI",
+      "Resend",
+      "Zod"
     ],
-    "notes": "Utilized aggressive caching strategies and server-side rendering to resolve historical performance bottlenecks and scale user capacity."
+    "notes": "Engineered a high-fidelity, multi-brand digital ecosystem featuring an immersive 'Logo Orbit' navigation system. The implementation focuses on premium brand storytelling through sophisticated typography (Cinzel, Playfair Display) and fluid motion design, while maintaining a robust state-managed architecture for cross-brand service discovery."
   }
 ]

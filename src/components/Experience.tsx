@@ -6,8 +6,8 @@ import { Card, CardContent } from '@/components/ui/card'
 
 export default function Experience() {
   return (
-    <section id='experience' className='w-full px-4 lg:px-20'>
-      <div className='flex flex-col gap-16'>
+    <section id='experience' className='w-full px-5'>
+      <div className='flex flex-col gap-8'>
         {/* Section Header */}
         <div className='text-left'>
           <motion.h2
