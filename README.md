@@ -3,7 +3,7 @@
 Welcome to the source code of my personal developer portfolio! 
 This repository houses the code for my professional hub, showcasing my engineering experience, projects, and the scalable solutions I build for the web.
 
-**Live Site:** [codewithmercy.netlify.app](https://codewithmercy.netlify.app) (Update link if you move from Netlify)
+**Live Site:** [codewithmercy.netlify.app](https://codewithmercy.vercel.app) (Update link if you move from Netlify)
 
 ---
 
