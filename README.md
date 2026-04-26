@@ -1,9 +1,9 @@
 # Afolabi Ridwan Damilare | Frontend Engineer Portfolio
 
-Welcome to the source code of my personal developer portfolio! 
+Welcome to the source code of my personal developer portfolio!
 This repository houses the code for my professional hub, showcasing my engineering experience, projects, and the scalable solutions I build for the web.
 
-**Live Site:** [codewithmercy.netlify.app](https://codewithmercy.vercel.app) (Update link if you move from Netlify)
+**Live Site:** [codewithmercy.vercel.app](https://codewithmercy.vercel.app) (Update link if you move from Netlify)
 
 ---
 
@@ -12,6 +12,7 @@ This repository houses the code for my professional hub, showcasing my engineeri
 This portfolio is engineered for maximum performance and conversion. It moves beyond a simple "digital resume" and acts as a high-fidelity showcase of modern frontend architecture, featuring fluid animations, accessible components, and optimized loading strategies.
 
 ### Core Features
+
 - **Ultra-Modern Stack:** Built on the bleeding edge with **Next.js 16 (App Router)** and **React 19**.
 - **Next-Gen Styling:** Fully styled using the newly released **Tailwind CSS v4** for lightning-fast build times and modern utility logic.
 - **High-Performance Animations:** Orchestrated complex scroll animations and micro-interactions using a combination of **Framer Motion** and **GSAP (ScrollTrigger)**.
@@ -38,12 +39,14 @@ This portfolio is engineered for maximum performance and conversion. It moves be
 To run this project locally, follow these steps:
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/mercyharbo/Portfolio.git
    cd Portfolio
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    # or
@@ -56,6 +59,7 @@ To run this project locally, follow these steps:
    Create a `.env.local` file in the root directory and add any necessary API keys (e.g., for the Resend email integration).
 
 4. **Start the development server:**
+
    ```bash
    npm run dev
    # or
@@ -71,7 +75,7 @@ To run this project locally, follow these steps:
 
 ```text
 ├── public/                 # Static assets (images, fonts, resume)
-├── src/                    
+├── src/
 │   ├── app/                # Next.js App Router (pages, API routes, layout)
 │   ├── components/         # Reusable UI components (Hero, About, Stats, etc.)
 │   ├── components/ui/      # Shadcn foundational components
@@ -85,7 +89,7 @@ To run this project locally, follow these steps:
 
 ## 🤝 Let's Connect
 
-I am always open to discussing full-time engineering roles, high-impact freelance collaborations, or exciting new projects. 
+I am always open to discussing full-time engineering roles, high-impact freelance collaborations, or exciting new projects.
 
 - **GitHub:** [@mercyharbo](https://github.com/mercyharbo)
 - **X / Twitter:** [@codewithmercy](https://x.com/codewithmercy)

@@ -13,32 +13,25 @@ export const viewport: Record<string, string | number | boolean> = {
 }
 
 export const metadata: Metadata = {
-  title: 'Afolabi Ridwan D | Frontend Engineer',
+  title: 'Afolabi Ridwan Damilare | Frontend Engineer',
   description:
-    'Frontend Engineer with 4+ years of expertise in React.js, Next.js, and TypeScript. Building beautiful, responsive, and accessible web applications.',
+    'Frontend Engineer with 4+ years of experience architecting fast, scalable, and highly functional web applications using Next.js and TypeScript. I turn complex problems into digital products that drive real business results.',
   keywords: [
     'Frontend Developer',
     'React.js Developer',
     'Next.js Expert',
     'TypeScript Developer',
-    'UI/UX Development',
-    'Web Development',
-    'JavaScript',
+    'Software Engineer',
+    'Web Architecture',
+    'UI/UX Integration',
     'GSAP Animation',
     'Tailwind CSS',
-    'Portfolio',
-    'Mercy',
+    'Afolabi Ridwan Damilare',
     'Code With Mercy',
-    'Creative Developer',
-    'Web Applications',
-    'Responsive Design',
-    'Accessible Web Design',
-    'Frontend Engineer',
-    'Web Performance',
-    'Web Accessibility',
-    'Frontend Technologies',
-    'Web Design',
     'Frontend Portfolio',
+    'Web Performance Optimization',
+    'E-commerce Development',
+    'SaaS Development',
   ],
   authors: [
     { name: 'Afolabi Ridwan Damilare', url: 'https://github.com/mercyharbo' },
@@ -53,28 +46,28 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Afolabi Ridwan Damilare | Frontend Engineer',
     description:
-      'Frontend Engineer specializing in building responsive and accessible web applications with modern technologies like React.js, Next.js, and TypeScript.',
+      'I build fast, scalable web apps that drive real business results. Explore my portfolio to see high-performance frontend architecture in action.',
     url: 'https://codewithmercy.vercel.app/',
     siteName: 'Afolabi Ridwan Damilare | Portfolio',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://codewithmercy.vercel.app/img1.JPEG',
+        url: 'https://codewithmercy.vercel.app/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Afolabi Ridwan Damilare - Frontend Engineer',
-        type: 'image/jpeg',
+        alt: 'Code With Mercy - Frontend Engineer Portfolio',
+        type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Afolabi Ridwan Damilare | Frontend Engineer ',
+    title: 'Afolabi Ridwan Damilare | Frontend Engineer',
     description:
-      'Frontend Engineer crafting beautiful web experiences with React.js, Next.js, and TypeScript. Check out my portfolio!',
+      'I build fast, scalable web apps that drive real business results. Explore my portfolio to see high-performance frontend architecture in action.',
     creator: '@codewithmercy',
-    images: ['https://codewithmercy.vercel.app/img1.JPEG'],
+    images: ['https://codewithmercy.vercel.app/og-image.png'],
   },
   robots: {
     index: true,
