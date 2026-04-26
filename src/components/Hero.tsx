@@ -63,7 +63,7 @@ export default function Hero() {
               size='lg'
               className='rounded-full px-10 h-12 w-full sm:w-auto border-white/20 text-white hover:bg-white/10'
             >
-              <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'>
+              <a href='/Afolabi Ridwan Damilare.pdf' target='_blank' rel='noopener noreferrer'>
                 View Resume
               </a>
             </Button>

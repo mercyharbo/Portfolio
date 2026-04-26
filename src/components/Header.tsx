@@ -18,7 +18,7 @@ const Header = () => {
       </div>
 
       {/* Resume Button */}
-      <Link href='/resume.pdf' target='_blank'>
+      <Link href='/Afolabi Ridwan Damilare.pdf' target='_blank'>
         <Button className='rounded-full px-6 h-10 text-sm font-medium transition-all duration-300'>
           View Resume
         </Button>
