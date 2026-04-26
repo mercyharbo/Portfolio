@@ -51,6 +51,12 @@ export default function About() {
               I care about Core Web Vitals, clean architecture, and building
               products that users actually enjoy using.
             </p>
+            <p>
+              When I&apos;m not coding, I am active in the Osun tech community,
+              mentoring developers and building in public on social media. I
+              believe the best software is built by people who understand the
+              real-world problems their users face every day.
+            </p>
           </motion.div>
         </div>
 
