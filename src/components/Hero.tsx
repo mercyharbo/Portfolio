@@ -3,7 +3,6 @@
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
 import { ContactDialog } from './ContactDialog'
 
 export default function Hero() {
@@ -16,7 +15,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className='text-xs md:text-base lg:text-sm text-primary'
+            className='text-xs md:text-base lg:text-sm text-gray-300'
           >
             Hi, I&apos;m Afolabi Ridwan Damilare
           </motion.p>
@@ -48,7 +47,10 @@ export default function Hero() {
             transition={{ delay: 0.6 }}
             className='w-full sm:w-auto'
           >
-            <ContactDialog triggerText='Get In Touch' className='bg-primary text-white hover:bg-primary/90' />
+            <ContactDialog
+              triggerText='Get In Touch'
+              className='bg-primary text-white hover:bg-primary/90'
+            />
           </motion.div>
 
           <motion.div
@@ -63,7 +65,11 @@ export default function Hero() {
               size='lg'
               className='rounded-full px-10 h-12 w-full sm:w-auto border-white/20 text-white hover:bg-white/10'
             >
-              <a href='/Afolabi Ridwan Damilare.pdf' target='_blank' rel='noopener noreferrer'>
+              <a
+                href='/Afolabi Ridwan Damilare.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 View Resume
               </a>
             </Button>

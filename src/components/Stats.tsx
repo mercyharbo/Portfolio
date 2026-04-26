@@ -26,9 +26,9 @@ export default function Stats() {
                   : ''
               }`}
             >
-              <h3 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent mb-2'>
+              <p className='text-4xl md:text-5xl lg:text-6xl font-bold bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent mb-2'>
                 {stat.number}
-              </h3>
+              </p>
               <p className='text-gray-400 text-sm md:text-base font-medium uppercase tracking-wider'>
                 {stat.label}
               </p>

@@ -25,6 +25,7 @@ const Footer = () => {
           <Link
             href='https://github.com/mercyharbo'
             target='_blank'
+            aria-label='Visit my GitHub profile'
             className='flex items-center justify-center size-9 rounded-full border border-primary text-white hover:text-primary transition-all duration-300'
           >
             <BsGithub size={14} />
@@ -32,6 +33,7 @@ const Footer = () => {
           <Link
             href='https://x.com/codewithmercy'
             target='_blank'
+            aria-label='Visit my X (Twitter) profile'
             className='flex items-center justify-center size-9 rounded-full border border-primary text-white hover:text-primary transition-all duration-300'
           >
             <BsTwitterX size={14} />
@@ -39,6 +41,7 @@ const Footer = () => {
           <Link
             href='https://linkedin.com/in/codewithmercy1'
             target='_blank'
+            aria-label='Visit my LinkedIn profile'
             className='flex items-center justify-center size-9 rounded-full border border-primary text-white hover:text-primary transition-all duration-300'
           >
             <BsLinkedin size={14} />
@@ -46,6 +49,7 @@ const Footer = () => {
           <Link
             href='https://instagram.com/codewithmercy'
             target='_blank'
+            aria-label='Visit my Instagram profile'
             className='flex items-center justify-center size-9 rounded-full border border-primary text-white hover:text-primary transition-all duration-300'
           >
             <BsInstagram size={14} />

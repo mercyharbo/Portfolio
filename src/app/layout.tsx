@@ -7,8 +7,6 @@ import './globals.css'
 export const viewport: Record<string, string | number | boolean> = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   viewportFit: 'cover',
 }
 
