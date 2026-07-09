@@ -45,13 +45,13 @@ export const metadata: Metadata = {
     title: 'Afolabi Ridwan Damilare | Frontend Engineer',
     description:
       'I build fast, scalable web apps that drive real business results. Explore my portfolio to see high-performance frontend architecture in action.',
-    url: 'https://codewithmercy.vercel.app/',
+    url: 'https://codewithmercy.codes/',
     siteName: 'Afolabi Ridwan Damilare | Portfolio',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://codewithmercy.vercel.app/og-image.png',
+        url: 'https://codewithmercy.codes/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Code With Mercy - Frontend Engineer Portfolio',
@@ -65,7 +65,10 @@ export const metadata: Metadata = {
     description:
       'I build fast, scalable web apps that drive real business results. Explore my portfolio to see high-performance frontend architecture in action.',
     creator: '@codewithmercy',
-    images: ['https://codewithmercy.vercel.app/og-image.png'],
+    images: ['https://codewithmercy.codes/og-image.png'],
+  },
+  verification: {
+    google: 'Qu4_ZKMKHSIy8eSdyq5p6YDeAwUksSAnayzck2w2ZvA',
   },
   robots: {
     index: true,
@@ -82,7 +85,7 @@ export const metadata: Metadata = {
   category: 'technology',
   classification: 'Portfolio',
   referrer: 'origin-when-cross-origin',
-  metadataBase: new URL('https://codewithmercy.vercel.app/'),
+  metadataBase: new URL('https://codewithmercy.codes/'),
   alternates: {
     canonical: '/',
   },
@@ -100,6 +103,40 @@ export default function RootLayout({
         defer
         src='https://gettinlytics.vercel.app/api/tracker/97fefa4e-9b4e-4c87-838c-e8d2155c56a7'
       ></script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "mainEntity": {
+              "@type": "Person",
+              "name": "Afolabi Ridwan Damilare",
+              "alternateName": "codewithmercy",
+              "jobTitle": "Frontend Engineer",
+              "url": "https://codewithmercy.codes",
+              "image": "https://codewithmercy.codes/img2.JPEG",
+              "sameAs": [
+                "https://github.com/mercyharbo",
+                "https://x.com/codewithmercy",
+                "https://linkedin.com/in/codewithmercy1",
+                "https://instagram.com/codewithmercy"
+              ],
+              "knowsAbout": [
+                "Frontend Development",
+                "React",
+                "Next.js",
+                "TypeScript",
+                "JavaScript",
+                "Web Development",
+                "UI/UX Design",
+                "Web Performance Optimization"
+              ],
+              "description": "Frontend Engineer with 4+ years of experience architecting fast, scalable, and highly functional web applications using Next.js and TypeScript."
+            }
+          })
+        }}
+      />
       <body className='relative space-y-5'>
         <Header />
         <main className='pt-10 lg:pt-10 min-h-screen'>{children}</main>
