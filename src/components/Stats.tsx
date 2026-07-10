@@ -10,7 +10,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className='w-full px-5'>
+    <section className='w-full 3xl:max-w-7xl'>
       <div className='bg-secondary/30 border border-white/5 rounded-3xl p-8 lg:p-12 backdrop-blur-sm'>
         <div className='flex flex-col md:flex-row w-full'>
           {stats.map((stat, index) => (
@@ -26,10 +26,10 @@ export default function Stats() {
                   : ''
               }`}
             >
-              <p className='text-4xl md:text-5xl lg:text-6xl font-bold bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent mb-2'>
+              <p className='text-4xl md:text-5xl font-bold bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent'>
                 {stat.number}
               </p>
-              <p className='text-gray-400 text-sm md:text-base font-medium uppercase tracking-wider'>
+              <p className='text-gray-400 text-sm md:text-base font-medium'>
                 {stat.label}
               </p>
             </motion.div>

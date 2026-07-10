@@ -3,10 +3,11 @@
 import About from '@/components/About'
 import CTA from '@/components/CTA'
 import Experience from '@/components/Experience'
+import FAQ from '@/components/FAQ'
 import Hero from '@/components/Hero'
 import ProjectSection from '@/components/project-section'
-import ProjectMarquee from '@/components/ProjectMarquee'
 import Services from '@/components/Services'
+import Skills from '@/components/Skills'
 import Stats from '@/components/Stats'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
@@ -46,15 +47,18 @@ export default function Home() {
   }
 
   return (
-    <main className='flex flex-col gap-30 lg:px-10 md:px-10 px-5'>
+    <main className='flex flex-col items-center gap-30 px-5 md:px-16 3xl:px-0'>
       <Hero />
       <Stats />
       <About />
-      <ProjectMarquee />
       <Services />
+      <Skills />
       <ProjectSection addToRefs={addToRefs} />
       <Experience />
-      <CTA />
+      <FAQ />
+      <div className='flex w-full flex-col gap-16 3xl:max-w-7xl'>
+        <CTA />
+      </div>
     </main>
   )
 }

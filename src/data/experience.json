@@ -2,40 +2,41 @@
   {
     "id": 1,
     "role": "Frontend Developer",
-    "company": "OpenRole",
+    "company": "OpenRoleHQ",
     "type_of_job": "Contract",
-    "duration": "March 2026 – Present",
-    "achievements": [
-      "Engineered a high-performance persistent document engine using React hooks and localStorage, ensuring zero data loss and seamless session recovery.",
-      "Designed an intuitive ResumeCard interface with shadcn-driven UX, significantly improving user interaction with AI optimization tools.",
-      "Developed a robust cross-origin blob processing system to handle external PDF delivery, overcoming critical browser security bottlenecks.",
-      "Orchestrated the seamless integration of backend AI endpoints with state-driven UI, automating the application lifecycle for thousands of users."
-    ]
+    "duration": "March 2026 - Present",
+    "description": "Built AI workflow screens, onboarding, resume tooling, and dashboard flows that help candidates move through applications with less friction."
   },
   {
     "id": 2,
-    "role": "Frontend Developer",
-    "company": "HRIS",
+    "role": "Lead Frontend Engineer",
+    "company": "Adaptibles",
     "type_of_job": "Contract",
-    "duration": "Oct 2025 – Jan 2026",
-    "achievements": [
-      "Architected an enterprise-grade Authentication System with RBAC and Google OAuth, ensuring 100% data integrity for sensitive payroll and HR records.",
-      "Optimized operational efficiency by building a real-time Leave Management System supporting complex multi-type tracking and automated approvals.",
-      "Accelerated workforce scaling by engineering sophisticated multi-step onboarding flows and administrative bulk-processing utilities.",
-      "Hardened system security and data reliability by implementing rigorous schema validation patterns using Zod and secure Axios interceptors."
-    ]
+    "duration": "December 2025 - Present",
+    "description": "Lead frontend delivery across product UI, implementation quality, and scalable interface patterns for a growing product team."
   },
   {
     "id": 3,
     "role": "Frontend Developer",
+    "company": "HRIS",
+    "type_of_job": "Contract",
+    "duration": "Oct 2025 - Jan 2026",
+    "description": "Shipped admin workflows for onboarding, document review, workforce data, and reporting so HR teams could manage operations with more confidence."
+  },
+  {
+    "id": 4,
+    "role": "Frontend Engineer",
+    "company": "Freelance",
+    "type_of_job": "Freelance",
+    "duration": "2024 - Present",
+    "description": "Build websites, dashboards, API-backed interfaces, and performance-focused frontend experiences for founders and small teams."
+  },
+  {
+    "id": 5,
+    "role": "Frontend Developer",
     "company": "BeautySpace",
     "type_of_job": "Full-time",
-    "duration": "Jan 2022 – Jan 2024",
-    "achievements": [
-      "Spearheaded a critical architectural migration from legacy React to Next.js, achieving a 40% reduction in Time-to-Interactive (TTI).",
-      "Drove a 20% uplift in Core Web Vitals and SEO performance through comprehensive Lighthouse auditing and performance optimization.",
-      "Engineered a high-performance RESTful API integration layer using TanStack Query, reducing data-fetching overhead and improving caching efficiency.",
-      "Successfully scaled user capacity for a national wellness marketplace by implementing a unified, responsive design system built for speed and engagement."
-    ]
+    "duration": "Jan 2022 - Jan 2024",
+    "description": "Improved marketplace speed, SEO, and responsive UI while helping move the product from legacy React patterns into a stronger Next.js experience."
   }
 ]

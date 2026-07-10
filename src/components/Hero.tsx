@@ -7,7 +7,7 @@ import { ContactDialog } from './ContactDialog'
 
 export default function Hero() {
   return (
-    <section className='relative min-h-[70dvh] lg:min-h-[80dvh] flex flex-col lg:flex-row items-center justify-between px-5 py-8 lg:py-16 3xl:px-20 2xl:px-16 lg:px-5 bg-secondary rounded-3xl overflow-hidden'>
+    <section className='relative min-h-[70dvh] lg:min-h-[80dvh] flex w-full flex-col lg:flex-row items-center justify-between gap-12 lg:gap-0 px-5 py-8 lg:px-10 lg:py-16 2xl:px-16 3xl:max-w-7xl 3xl:px-20 bg-secondary rounded-3xl overflow-hidden'>
       {/* Content Side */}
       <div className='flex flex-col gap-8 w-full lg:w-1/2 z-10 text-left items-center md:items-start'>
         <div className='space-y-4'>
@@ -23,10 +23,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className='text-3xl sm:text-5xl md:text-5xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl leading-tight font-bold text-white tracking-tight'
+            className='text-3xl sm:text-4xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-4xl 3xl:text-5xl leading-tight font-bold text-white'
           >
-            I build fast, scalable web apps <br className='hidden lg:block' />
-            that drive real business results.
+            Frontend Engineer building products that drive real business
+            results.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -34,9 +34,9 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className='text-gray-300 max-w-2xl text-sm md:text-xl lg:text-base leading-relaxed'
           >
-            Frontend Engineer with 4+ years of experience turning complex
-            problems into fast, scalable, and highly functional web
-            applications.
+            I help startups and teams turn messy ideas into fast, scalable
+            products that are easy to use, built to perform, and focused on
+            measurable growth.
           </motion.p>
         </div>
 
@@ -78,7 +78,7 @@ export default function Hero() {
       </div>
 
       {/* Image Side */}
-      <div className='relative w-full lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0'>
+      <div className='relative w-full lg:w-1/2 flex justify-center lg:justify-end'>
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -88,10 +88,11 @@ export default function Hero() {
           {/* The Arch Frame */}
           <div className='relative w-full h-[350px] md:h-[450px] lg:w-[400px] lg:h-[400px] 3xl:w-[500px] 3xl:h-[600px] overflow-hidden rounded-xl lg:rounded-3xl '>
             <Image
-              src='/img2.JPEG'
-              alt='Portrait'
+              src='/IMG-1.png'
+              alt='Afolabi Ridwan Damilare, CodeWithMercy frontend engineer'
               fill
               className='object-cover hover:scale-105 transition-transform duration-700'
+              sizes='(max-width: 1024px) 100vw, (max-width: 1920px) 40vw, 500px'
               priority
             />
           </div>

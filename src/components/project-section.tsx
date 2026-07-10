@@ -23,19 +23,19 @@ export default function ProjectSection({
   }
 
   return (
-    <section id='works' className='flex flex-col gap-8 w-full px-5'>
+    <section id='works' className='flex flex-col gap-8 w-full 3xl:max-w-7xl'>
       {/* Section Header */}
       <div className='text-center space-y-4'>
         <motion.h2
           ref={addToRefs}
-          className='text-3xl md:text-5xl font-bold text-white'
+          className='text-3xl md:text-4xl font-bold text-white'
         >
           Featured Projects
         </motion.h2>
       </div>
 
       {/* Projects Grid */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-4 gap-8'>
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
@@ -56,9 +56,10 @@ export default function ProjectSection({
                 <div className='relative h-full w-full rounded-2xl overflow-hidden bg-gray-400/20'>
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`Screenshot of ${project.title}`}
                     fill
                     className='object-cover opacity-60 group-hover/card:opacity-100 group-hover/card:scale-105 transition-all duration-700'
+                    sizes='(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 25vw'
                   />
                 </div>
               </div>
@@ -79,7 +80,7 @@ export default function ProjectSection({
 
                 {/* Title & Description */}
                 <div className='space-y-3'>
-                  <h3 className='text-base font-semibold text-white group-hover/card:text-primary transition-colors'>
+                  <h3 className='text-sm font-semibold leading-snug text-white group-hover/card:text-primary transition-colors md:text-base'>
                     {project.title}
                   </h3>
                   <p className='text-sm text-gray-300 leading-relaxed line-clamp-3 transition-colors'>

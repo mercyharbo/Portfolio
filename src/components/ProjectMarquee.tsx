@@ -4,17 +4,41 @@ import Image from 'next/image'
 import Marquee from 'react-fast-marquee'
 
 const projects = [
-  { id: 1, src: '/leban-street.jpg' },
-  { id: 2, src: '/project (1).png' },
-  { id: 3, src: '/project (2).png' },
-  { id: 4, src: '/project (3).png' },
-  { id: 5, src: '/project (4).png' },
-  { id: 6, src: '/bukky.png' },
+  {
+    id: 1,
+    src: '/leban-street.jpg',
+    alt: 'Leban Street Resturant online ordering website interface',
+  },
+  {
+    id: 2,
+    src: '/project (1).png',
+    alt: 'CodeWithMercy frontend project landing page preview',
+  },
+  {
+    id: 3,
+    src: '/project (2).png',
+    alt: 'Responsive web application interface preview',
+  },
+  {
+    id: 4,
+    src: '/project (3).png',
+    alt: 'Dashboard interface for a product management project',
+  },
+  {
+    id: 5,
+    src: '/project (4).png',
+    alt: 'Frontend portfolio website project preview',
+  },
+  {
+    id: 6,
+    src: '/bukky.png',
+    alt: 'Bukky Group multi-brand business website interface',
+  },
 ]
 
 export default function ProjectMarquee() {
   return (
-    <section className='w-full bg-background/50 overflow-hidden'>
+    <section className='w-full bg-background/50 overflow-hidden 3xl:max-w-7xl'>
       <Marquee
         gradient={false}
         speed={40}
@@ -28,7 +52,7 @@ export default function ProjectMarquee() {
           >
             <Image
               src={project.src}
-              alt={`Project ${project.id}`}
+              alt={project.alt}
               fill
               className='object-cover '
               sizes='(max-width: 768px) 100vw, 50vw'

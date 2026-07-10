@@ -1,8 +1,8 @@
 [
   {
     "id": 0,
-    "title": "OpenRole | AI-Powered Job Application Platform",
-    "description": "A comprehensive SaaS platform that automates the end-to-end job application lifecycle. OpenRole leverages AI to source high-relevance roles, tailor resumes to specific job descriptions, and execute automated applications across major ATS platforms, allowing candidates to scale their search while maintaining a personalized touch.",
+    "title": "OpenRoleHQ - AI Job Search Workspace",
+    "description": "OpenRoleHQ helps candidates manage a faster, more focused job search. I worked on the frontend experience for role discovery, resume tailoring, onboarding, and dashboard flows, with AI features designed to support the user without getting in the way.",
     "website": "https://openrolehq.com",
     "image": "/openrole-cover.png",
     "location": "Remote",
@@ -12,23 +12,24 @@
       "Recruitment Tech"
     ],
     "tech_stack": [
-      "Next.js 16",
-      "React 19",
-      "Tailwind CSS 4",
-      "Framer Motion 12",
-      "Zustand 5",
-      "Axios Interceptors",
+      "NEXTJS",
+      "REST API",
+      "AI",
+      "SEO OPTIMIZATION",
+      "TAILWIND CSS",
+      "FRAMER MOTION",
+      "ZUSTAND",
       "SWR",
-      "Recharts",
-      "Driver.js",
-      "Shadcn UI"
+      "RECHARTS",
+      "DRIVERJS",
+      "SHADCN UI"
     ],
-    "notes": "Architected a robust authentication system featuring automated silent token refresh via Axios interceptors and synchronized Zustand state persistence. The platform includes a high-fidelity landing page with orchestrated Framer Motion animations and a real-time candidate dashboard with interactive onboarding tours and data visualization."
+    "notes": "Built the core frontend around reliable auth state, guided onboarding, AI-assisted workflows, and a dashboard that keeps the application process easy to follow."
   },
   {
     "id": 1,
-    "title": "HRIS | Enterprise Human Resource Information System",
-    "description": "A comprehensive, enterprise-grade HR management platform designed to digitize and automate the entire employee lifecycle. MercyHarbor HRIS streamlines complex multi-stage onboarding, digital document verification, and workforce management through a centralized dashboard, featuring real-time administrative analytics and granular role-based access control.",
+    "title": "HRIS - Workforce Management Dashboard",
+    "description": "A practical HR platform for onboarding, document review, staff records, and admin reporting. The work focused on making dense workforce data easier to manage through clear dashboards, role-aware flows, and dependable state.",
     "website": "https://hris-app.com",
     "image": "/hris-cover.png",
     "location": "Remote / Enterprise",
@@ -38,20 +39,19 @@
       "Workforce Automation"
     ],
     "tech_stack": [
-      "Next.js 15",
-      "React 18",
-      "Tailwind CSS 4",
-      "Zustand",
-      "Axios Interceptors",
+      "NEXTJS",
+      "REST API",
+      "TAILWIND CSS",
+      "ZUSTAND",
       "SWR",
-      "Recharts"
+      "RECHARTS"
     ],
-    "notes": "Architected a resilient authentication and session management layer featuring automated token refresh cycles via Axios interceptors and persistent global state using Zustand. The platform manages high-density workforce data through optimized TanStack Table implementations and provides interactive administrative insights via Recharts visualization."
+    "notes": "Improved the admin experience around authentication, workforce tables, document checks, and reporting views so the platform could support real operational use."
   },
   {
     "id": 2,
-    "title": "Leban Street | High-Performance E-commerce",
-    "description": "A revenue-optimized food-tech engine that generated $30,000+ within 60 days of launch. Features a proprietary 'Smart Cart' system with multi-order batching and real-time supply chain visualization to maximize conversion rates.",
+    "title": "Leban Street Resturant - Fast Food Ordering Experience",
+    "description": "A restaurant ordering platform built around speed, clear product discovery, and a smoother checkout path. The project included cart logic, delivery-fee handling, and performance work that supported stronger conversion.",
     "website": "https://lebanstreet.com",
     "image": "/leban-street.jpg",
     "location": "Remote",
@@ -61,18 +61,20 @@
       "Logistics"
     ],
     "tech_stack": [
-      "Next.js",
-      "Zustand",
-      "Google Places API",
-      "Recharts",
+      "NEXTJS",
+      "REST API",
+      "SEO OPTIMIZATION",
+      "ZUSTAND",
+      "GOOGLE PLACES API",
+      "RECHARTS",
       "SWR"
     ],
-    "notes": "Optimized checkout flows and integrated location-based delivery fee automation to reduce cart abandonment by 25%."
+    "notes": "Refined the ordering and checkout flow with location-aware delivery pricing, clearer cart behavior, and performance-minded frontend decisions."
   },
   {
     "id": 3,
-    "title": "Bukky Group | Excellence in Beauty, Fashion, Lifestyle & Empowerment",
-    "description": "A premium multi-industry conglomerate spanning high-end beauty, haute couture, culinary excellence, and vocational education. The platform serves as a unified digital ecosystem for diverse brands including 3S The Label, Bukky Beauty World, and the Get Busy Foundation, bridging the gap between luxury services and social impact.",
+    "title": "Bukky Group - Multi-Brand Business Website",
+    "description": "A polished website for a group of beauty, fashion, food, and empowerment brands. I focused on service discovery, brand storytelling, responsive UI, SEO-friendly structure, and a frontend that could hold several business lines without feeling crowded.",
     "website": "https://bukkygroup.com",
     "image": "/bukkygroup-cover.png",
     "location": "Centurion, South Africa",
@@ -83,16 +85,16 @@
       "Social Impact"
     ],
     "tech_stack": [
-      "Next.js 16",
-      "React 19",
-      "Tailwind CSS 4",
-      "Framer Motion",
-      "Zustand",
+      "NEXTJS",
+      "TAILWIND CSS",
+      "FRAMER MOTION",
+      "ZUSTAND",
+      "SEO OPTIMIZATION",
       "SWR",
-      "Radix UI",
-      "Resend",
-      "Zod"
+      "RADIX UI",
+      "RESEND",
+      "ZOD"
     ],
-    "notes": "Engineered a high-fidelity, multi-brand digital ecosystem featuring an immersive 'Logo Orbit' navigation system. The implementation focuses on premium brand storytelling through sophisticated typography (Cinzel, Playfair Display) and fluid motion design, while maintaining a robust state-managed architecture for cross-brand service discovery."
+    "notes": "Created a premium frontend system for multiple brands, balancing motion, content structure, service navigation, and conversion-focused presentation."
   }
 ]

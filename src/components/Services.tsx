@@ -7,13 +7,13 @@ const services = [
     id: '01',
     title: 'Frontend Architecture',
     description:
-      "Building robust, type-safe foundations using Next.js and TypeScript that won't break as your user base scales.",
+      "Building robust, type-safe React and Next.js foundations that won't break as your user base or product complexity grows.",
   },
   {
     id: '02',
-    title: 'High-Conversion Interfaces',
+    title: 'Website Development',
     description:
-      'Translating designs into pixel-perfect, responsive applications focused on keeping users engaged and driving revenue.',
+      'Creating responsive landing pages, marketing sites, and product interfaces that feel polished, load quickly, and support clear business goals.',
   },
   {
     id: '03',
@@ -23,15 +23,15 @@ const services = [
   },
   {
     id: '04',
-    title: 'Complex Integrations',
+    title: 'Dashboard and API Integration',
     description:
-      'Seamlessly connecting heavy APIs and real-time data to create intuitive dashboards that just work.',
+      'Connecting complex APIs, auth flows, and real-time data into intuitive dashboards that stay usable as information density grows.',
   },
 ]
 
 export default function Services() {
   return (
-    <section className='w-full px-5'>
+    <section id='services' className='w-full 3xl:max-w-7xl'>
       <div className='flex flex-col gap-8'>
         {/* Section Header */}
         <div className='text-center space-y-4'>
@@ -40,10 +40,21 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className='text-3xl md:text-5xl font-bold text-white tracking-tight'
+            className='text-3xl md:text-4xl font-bold text-white'
           >
             How I Can Help You
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className='mx-auto max-w-3xl text-sm leading-relaxed text-gray-300 md:text-base'
+          >
+            I help teams and founders ship frontend experiences that combine
+            strong UI execution, scalable architecture, performance, and
+            practical SEO foundations.
+          </motion.p>
         </div>
 
         {/* Services Grid */}
