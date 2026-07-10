@@ -26,6 +26,7 @@ export function ContactDialog({
   const [open, setOpen] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
 
   const { register, handleSubmit, reset } = useForm({
     defaultValues: {
@@ -38,6 +39,7 @@ export function ContactDialog({
   const onSubmit = async (data: any) => {
     setIsSubmitting(true)
     setStatus('idle')
+    setErrorMessage('')
 
     try {
       const response = await fetch('/api/send', {
@@ -56,6 +58,12 @@ export function ContactDialog({
           setTimeout(() => setStatus('idle'), 500) // Reset status after dialog close animation
         }, 2000)
       } else {
+        const result = await response.json().catch(() => null)
+
+        if (typeof result?.message === 'string') {
+          setErrorMessage(result.message)
+        }
+
         setStatus('error')
       }
     } catch (error) {
@@ -139,7 +147,8 @@ export function ContactDialog({
           )}
           {status === 'error' && (
             <p className='text-sm text-red-500 text-center font-medium animate-in fade-in slide-in-from-top-1'>
-              Something went wrong. Please try again or email me directly.
+              {errorMessage ||
+                'Something went wrong. Please try again or email me directly.'}
             </p>
           )}
         </form>
