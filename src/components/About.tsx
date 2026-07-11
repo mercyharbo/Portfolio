@@ -37,8 +37,7 @@ export default function About() {
             viewport={{ once: true }}
             className='text-3xl font-bold leading-snug text-white md:text-4xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl'
           >
-            I write code that solves <br className='hidden sm:block' /> actual
-            business problems.
+            I write code that solves <br className='hidden sm:block' /> <span className='text-primary'>actual business problems</span>.
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -48,13 +47,13 @@ export default function About() {
             className='mx-auto flex max-w-xl flex-col gap-6 text-sm leading-relaxed text-gray-300 md:text-lg lg:mx-0 lg:text-sm'
           >
             <p>
-              I&apos;m Afolabi Ridwan Damilare, known online as CodeWithMercy. I
+              I&apos;m Afolabi Ridwan Damilare, known online as <span className='text-primary font-medium'>CodeWithMercy</span>. I
               solve business problems with software, sitting close to product,
               design, and engineering so ideas can move from rough flow to
               shipped interface without losing the business goal.
             </p>
             <p>
-              Over the past 4+ years, I&apos;ve built dashboards, SaaS workflows,
+              Over the past <span className='text-primary font-medium'>4+ years</span>, I&apos;ve built dashboards, SaaS workflows,
               e-commerce experiences, and API-backed interfaces for teams that
               need more than a good-looking screen. The work has to be clear,
               fast, usable, and useful to the people paying for it.

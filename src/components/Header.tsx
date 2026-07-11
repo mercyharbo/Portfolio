@@ -30,7 +30,7 @@ const Header = () => {
             <HiOutlineHome className='size-[18px] text-white' />
           </div>
           <span className='text-sm font-medium text-white transition-colors duration-300 hover:text-primary'>
-            Afolabi Ridwan Damilare
+            Code With Mercy
           </span>
         </Link>
 

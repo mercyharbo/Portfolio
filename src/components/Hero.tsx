@@ -25,8 +25,7 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className='text-3xl sm:text-4xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-4xl 3xl:text-5xl leading-tight font-bold text-white'
           >
-            Frontend Engineer building products that drive real business
-            results.
+            <span className='text-primary'>Frontend Engineer</span> building products that drive <span className='text-primary'>real business results</span>.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

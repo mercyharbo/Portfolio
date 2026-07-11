@@ -15,7 +15,7 @@ const Footer = () => {
       <div className='mx-auto flex max-w-7xl flex-col gap-8'>
         {/* Left Side: Brand */}
         <div className='flex flex-col items-start justify-between gap-6 md:flex-row md:items-center'>
-          <div className='flex max-w-xl items-start gap-3'>
+          <div className='flex max-w-xl items-center gap-3'>
             <div className='flex size-10 shrink-0 items-center justify-center rounded-full border border-primary text-white'>
               <HiOutlineHome size={18} />
             </div>
@@ -24,20 +24,12 @@ const Footer = () => {
                 href='/'
                 className='text-base font-semibold text-white transition-colors duration-300 hover:text-primary'
               >
-                Afolabi Ridwan Damilare
+                Code With Mercy
               </Link>
-              <p className='text-sm leading-relaxed text-gray-400'>
-                Frontend Engineer building clean, fast, and practical web
-                experiences with CodeWithMercy.
-              </p>
             </div>
           </div>
 
           <div className='flex flex-col gap-4 sm:flex-row sm:items-center'>
-            <ContactDialog
-              triggerText='Start a Project'
-              className='bg-primary text-white hover:bg-primary/90'
-            />
             <div className='flex items-center gap-3'>
               <Link
                 href='https://github.com/mercyharbo'
