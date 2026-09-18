@@ -5,12 +5,14 @@ type ContactPayload = {
   name?: unknown
   email?: unknown
   message?: unknown
+  website_hp?: unknown
 }
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const DEFAULT_FROM_EMAIL = 'Code With Mercy <contact@codewithmercy.codes>'
 
 function getMissingConfigKeys() {
-  return ['RESEND_API_KEY', 'CONTACT_EMAIL', 'RESEND_FROM_EMAIL'].filter(
+  return ['RESEND_API_KEY', 'CONTACT_EMAIL'].filter(
     (key) => !process.env[key]
   )
 }
@@ -25,6 +27,11 @@ function escapeHtml(value: string) {
 }
 
 function normalizePayload(payload: ContactPayload) {
+  // Honeypot check: if filled, treat as bot submission
+  if (typeof payload.website_hp === 'string' && payload.website_hp.trim().length > 0) {
+    return { isBot: true } as const
+  }
+
   const name = typeof payload.name === 'string' ? payload.name.trim() : ''
   const email = typeof payload.email === 'string' ? payload.email.trim() : ''
   const message =
@@ -34,7 +41,7 @@ function normalizePayload(payload: ContactPayload) {
     return null
   }
 
-  return { name, email, message }
+  return { isBot: false, name, email, message } as const
 }
 
 export async function POST(request: Request) {
@@ -61,21 +68,38 @@ export async function POST(request: Request) {
       )
     }
 
+    // Silently succeed for bot submissions without hitting Resend or using quota
+    if (payload.isBot) {
+      console.warn('Blocked automated bot submission via honeypot field')
+      return NextResponse.json({ message: 'Message sent successfully.' })
+    }
+
     const resend = new Resend(process.env.RESEND_API_KEY)
+    const fromEmail = process.env.RESEND_FROM_EMAIL || DEFAULT_FROM_EMAIL
+    const contactEmail = process.env.CONTACT_EMAIL as string
     const { name, email, message } = payload
+
     const safeName = escapeHtml(name)
     const safeEmail = escapeHtml(email)
     const safeMessage = escapeHtml(message).replace(/\n/g, '<br />')
 
+    const timestamp = new Date().toLocaleString('en-US', {
+      timeZone: 'UTC',
+      dateStyle: 'medium',
+      timeStyle: 'short',
+    })
+
     const { data, error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL as string,
-      to: [process.env.CONTACT_EMAIL as string],
-      subject: `New Message from ${name}`,
+      from: fromEmail,
+      to: [contactEmail],
+      subject: `New Message from ${name} [${timestamp} UTC]`,
       replyTo: email,
+      text: `New Message from Portfolio\n\nName: ${name}\nEmail: ${email}\nDate: ${timestamp} UTC\n\nMessage:\n${message}`,
       html: `
         <h2>New Message from Portfolio</h2>
         <p><strong>Name:</strong> ${safeName}</p>
         <p><strong>Email:</strong> ${safeEmail}</p>
+        <p><strong>Date:</strong> ${timestamp} UTC</p>
         <p><strong>Message:</strong></p>
         <p>${safeMessage}</p>
       `,
@@ -92,6 +116,11 @@ export async function POST(request: Request) {
         { status: 500 }
       );
     }
+
+    console.log('Contact form email dispatched successfully', {
+      id: data?.id,
+      to: contactEmail,
+    })
 
     return NextResponse.json({ data });
   } catch (error) {

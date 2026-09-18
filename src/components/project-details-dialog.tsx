@@ -15,7 +15,7 @@ interface Project {
   id: number
   title: string
   description: string
-  website: string
+  website?: string
   image: string
   location: string
   categories: string[]

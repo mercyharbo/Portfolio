@@ -14,10 +14,10 @@ export default function ProjectSection({
 }: {
   addToRefs: (element: HTMLElement | null) => void
 }) {
-  const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
+  const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
 
-  const handleProjectClick = (project: (typeof projects)[0]) => {
+  const handleProjectClick = (project: (typeof projects)[number]) => {
     setSelectedProject(project)
     setIsDialogOpen(true)
   }

@@ -28,15 +28,26 @@ export function ContactDialog({
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
-  const { register, handleSubmit, reset } = useForm({
+  const { register, handleSubmit, reset } = useForm<{
+    name: string
+    email: string
+    message: string
+    website_hp: string
+  }>({
     defaultValues: {
       name: '',
       email: '',
       message: '',
+      website_hp: '',
     },
   })
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: {
+    name: string
+    email: string
+    message: string
+    website_hp?: string
+  }) => {
     setIsSubmitting(true)
     setStatus('idle')
     setErrorMessage('')
@@ -96,6 +107,17 @@ export function ContactDialog({
           onSubmit={handleSubmit(onSubmit)}
           className='flex flex-col gap-4 py-4'
         >
+          {/* Honeypot field for bot protection */}
+          <div className='hidden' aria-hidden='true'>
+            <input
+              id='website_hp'
+              type='text'
+              tabIndex={-1}
+              autoComplete='off'
+              {...register('website_hp')}
+            />
+          </div>
+
           <div className='flex flex-col gap-2'>
             <Label htmlFor='name' className='text-sm font-medium text-gray-300'>
               Name
@@ -146,10 +168,20 @@ export function ContactDialog({
             </p>
           )}
           {status === 'error' && (
-            <p className='text-sm text-red-500 text-center font-medium animate-in fade-in slide-in-from-top-1'>
-              {errorMessage ||
-                'Something went wrong. Please try again or email me directly.'}
-            </p>
+            <div className='text-sm text-red-400 text-center font-medium space-y-1 animate-in fade-in slide-in-from-top-1'>
+              <p>
+                {errorMessage || 'Something went wrong while sending your message.'}
+              </p>
+              <p className='text-xs text-gray-400'>
+                You can also email me directly at{' '}
+                <a
+                  href='mailto:damilare791@gmail.com'
+                  className='text-primary underline underline-offset-2 hover:text-primary/80'
+                >
+                  damilare791@gmail.com
+                </a>
+              </p>
+            </div>
           )}
         </form>
       </DialogContent>

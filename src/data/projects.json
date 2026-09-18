@@ -30,7 +30,6 @@
     "id": 1,
     "title": "HRIS - Workforce Management Dashboard",
     "description": "A practical HR platform for onboarding, document review, staff records, and admin reporting. The work focused on making dense workforce data easier to manage through clear dashboards, role-aware flows, and dependable state.",
-    "website": "https://hris-app.com",
     "image": "/hris-cover.png",
     "location": "Remote / Enterprise",
     "categories": [
