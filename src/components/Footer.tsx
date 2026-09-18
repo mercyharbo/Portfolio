@@ -3,7 +3,7 @@
 import { ContactDialog } from '@/components/ContactDialog'
 import Link from 'next/link'
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from 'react-icons/bs'
-import { HiOutlineEnvelope, HiOutlineHome } from 'react-icons/hi2'
+import { HiOutlineHome } from 'react-icons/hi2'
 
 const Footer = () => {
   const year = new Date().getFullYear()
@@ -73,13 +73,6 @@ const Footer = () => {
 
         <div className='flex flex-col justify-between gap-3 border-t border-white/10 pt-5 text-sm text-gray-500 md:flex-row md:items-center'>
           <p>&copy; {year} CodeWithMercy. Built with care and performance in mind.</p>
-          <a
-            href='mailto:afolabiridwandamilare@gmail.com'
-            className='inline-flex items-center gap-2 text-gray-400 transition-colors hover:text-primary'
-          >
-            <HiOutlineEnvelope className='size-4' />
-            afolabiridwandamilare@gmail.com
-          </a>
         </div>
       </div>
     </footer>
