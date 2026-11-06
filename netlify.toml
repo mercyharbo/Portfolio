@@ -1,0 +1,4 @@
+[build.environment]
+  # The contact address is intentionally public in the portfolio's mailto links.
+  # Keep secret scanning enabled for RESEND_API_KEY and all other secret values.
+  SECRETS_SCAN_OMIT_KEYS = "CONTACT_EMAIL"
