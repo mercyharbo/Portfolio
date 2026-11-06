@@ -1,82 +1,24 @@
-'use client'
-
-import { ContactDialog } from '@/components/ContactDialog'
+import { ArrowUp, ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
-import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from 'react-icons/bs'
-import { HiOutlineHome } from 'react-icons/hi2'
 
-const Footer = () => {
-  const year = new Date().getFullYear()
+const socialLinks = [
+  { label: 'GitHub', href: 'https://github.com/mercyharbo' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/codewithmercy1' },
+  { label: 'X', href: 'https://x.com/codewithmercy' },
+]
 
+export default function Footer() {
   return (
-    <footer className='w-full relative px-5 pt-20 pb-10 md:px-16 3xl:px-0'>
-      {/* Gradient Border Line */}
-      <div className='absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-linear-to-r from-transparent via-primary via-50% to-transparent opacity-80' />
-      <div className='mx-auto flex max-w-7xl flex-col gap-8'>
-        {/* Left Side: Brand */}
-        <div className='flex flex-col items-start justify-between gap-6 md:flex-row md:items-center'>
-          <div className='flex max-w-xl items-center gap-3'>
-            <div className='flex size-10 shrink-0 items-center justify-center rounded-full border border-primary text-white'>
-              <HiOutlineHome size={18} />
-            </div>
-            <div className='flex flex-col gap-2'>
-              <Link
-                href='/'
-                className='text-base font-semibold text-white transition-colors duration-300 hover:text-primary'
-              >
-                Code With Mercy
-              </Link>
-            </div>
-          </div>
-
-          <div className='flex flex-col gap-4 sm:flex-row sm:items-center'>
-            <div className='flex items-center gap-3'>
-              <Link
-                href='https://github.com/mercyharbo'
-                target='_blank'
-                rel='noopener noreferrer'
-                aria-label='Visit Afolabi Ridwan Damilare on GitHub'
-                className='flex size-9 items-center justify-center rounded-full border border-primary text-white transition-all duration-300 hover:text-primary'
-              >
-                <BsGithub size={14} />
-              </Link>
-              <Link
-                href='https://x.com/codewithmercy'
-                target='_blank'
-                rel='noopener noreferrer'
-                aria-label='Visit CodeWithMercy on X'
-                className='flex size-9 items-center justify-center rounded-full border border-primary text-white transition-all duration-300 hover:text-primary'
-              >
-                <BsTwitterX size={14} />
-              </Link>
-              <Link
-                href='https://linkedin.com/in/codewithmercy1'
-                target='_blank'
-                rel='noopener noreferrer'
-                aria-label='Visit Afolabi Ridwan Damilare on LinkedIn'
-                className='flex size-9 items-center justify-center rounded-full border border-primary text-white transition-all duration-300 hover:text-primary'
-              >
-                <BsLinkedin size={14} />
-              </Link>
-              <Link
-                href='https://instagram.com/codewithmercy'
-                target='_blank'
-                rel='noopener noreferrer'
-                aria-label='Visit CodeWithMercy on Instagram'
-                className='flex size-9 items-center justify-center rounded-full border border-primary text-white transition-all duration-300 hover:text-primary'
-              >
-                <BsInstagram size={14} />
-              </Link>
-            </div>
-          </div>
+    <footer className='border-t border-white/10 bg-dark text-white'>
+      <div className='editorial-container flex flex-col gap-10 py-10'>
+        <div className='flex flex-col justify-between gap-8 md:flex-row md:items-center'>
+          <Link href='/#home' className='text-2xl font-medium'>CodeWithMercy<span className='text-red-500'>.</span></Link>
+          <nav aria-label='Social links' className='flex flex-wrap gap-6'>
+            {socialLinks.map(link => <a key={link.label} href={link.href} target='_blank' rel='noopener noreferrer' className='flex min-h-11 items-center gap-2 text-sm hover:text-red-300'>{link.label}<ArrowUpRight aria-hidden='true' className='size-4' /></a>)}
+          </nav>
         </div>
-
-        <div className='flex flex-col justify-between gap-3 border-t border-white/10 pt-5 text-sm text-gray-500 md:flex-row md:items-center'>
-          <p>&copy; {year} CodeWithMercy. Built with care and performance in mind.</p>
-        </div>
+        <div className='flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-xs text-gray-400 sm:flex-row'><p>© {new Date().getFullYear()} Afolabi Ridwan Damilare</p><a href='#main-content' className='flex min-h-11 items-center gap-2 self-start hover:text-white'>Back to the top<ArrowUp aria-hidden='true' className='size-4' /></a></div>
       </div>
     </footer>
   )
 }
-
-export default Footer

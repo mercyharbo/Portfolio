@@ -15,6 +15,7 @@ import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
+import { sendContactMessage } from '@/lib/contact-request'
 
 export function ContactDialog({ 
   triggerText = "Let's work together",
@@ -53,15 +54,9 @@ export function ContactDialog({
     setErrorMessage('')
 
     try {
-      const response = await fetch('/api/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
+      const result = await sendContactMessage(data)
 
-      if (response.ok) {
+      if (result.ok) {
         setStatus('success')
         reset()
         setTimeout(() => {
@@ -69,16 +64,10 @@ export function ContactDialog({
           setTimeout(() => setStatus('idle'), 500) // Reset status after dialog close animation
         }, 2000)
       } else {
-        const result = await response.json().catch(() => null)
-
-        if (typeof result?.message === 'string') {
-          setErrorMessage(result.message)
-        }
-
+        setErrorMessage(result.message)
         setStatus('error')
       }
-    } catch (error) {
-      console.error('Error submitting form:', error)
+    } catch {
       setStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -163,12 +152,12 @@ export function ContactDialog({
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </Button>
           {status === 'success' && (
-            <p className='text-sm text-green-500 text-center font-medium animate-in fade-in slide-in-from-top-1'>
+            <p role='status' className='text-center text-sm font-medium text-white'>
               Message sent successfully! I&apos;ll get back to you soon.
             </p>
           )}
           {status === 'error' && (
-            <div className='text-sm text-red-400 text-center font-medium space-y-1 animate-in fade-in slide-in-from-top-1'>
+            <div role='alert' className='space-y-1 text-center text-sm font-medium text-red-400'>
               <p>
                 {errorMessage || 'Something went wrong while sending your message.'}
               </p>

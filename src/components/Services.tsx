@@ -1,93 +1,35 @@
-'use client'
-
-import { motion } from 'framer-motion'
+import AnimatedAccordion from './animated-accordion'
+import { ArrowUpRight } from 'lucide-react'
+import { SectionHeading, SectionLabel } from './editorial'
 
 const services = [
-  {
-    id: '01',
-    title: 'Frontend Architecture',
-    description:
-      "Building robust, type-safe React and Next.js foundations that won't break as your user base or product complexity grows.",
-  },
-  {
-    id: '02',
-    title: 'Website Development',
-    description:
-      'Creating responsive landing pages, marketing sites, and product interfaces that feel polished, load quickly, and support clear business goals.',
-  },
-  {
-    id: '03',
-    title: 'Performance Optimization',
-    description:
-      'Speed matters. I optimize Core Web Vitals to slash load times, significantly improving both SEO rankings and user retention.',
-  },
-  {
-    id: '04',
-    title: 'Dashboard and API Integration',
-    description:
-      'Connecting complex APIs, auth flows, and real-time data into intuitive dashboards that stay usable as information density grows.',
-  },
+  { title: 'Frontend engineering', heading: 'A foundation that holds up.', description: 'React, Next.js, and TypeScript applications built around clear component boundaries, dependable state, and a codebase your team can keep working in.', deliverables: ['Frontend architecture', 'Reusable components', 'State and form workflows'] },
+  { title: 'Product UI implementation', heading: 'From design to a working product.', description: 'Responsive interfaces that carry the design intent through the real details: loading states, empty screens, keyboard interactions, and the small moments between pages.', deliverables: ['Responsive UI', 'Accessible interactions', 'Consistent design systems'] },
+  { title: 'Dashboards and API integration', heading: 'Complex data. Clear interfaces.', description: 'Connect authentication, APIs, tables, charts, and business workflows without making the interface feel as complicated as the system underneath it.', deliverables: ['API-backed workflows', 'Authentication and roles', 'Operational dashboards'] },
+  { title: 'Performance and technical SEO', heading: 'The work behind a faster experience.', description: 'Focused improvements to rendering, images, metadata, and crawlable structure, guided by the product’s actual needs and the behaviour of its users.', deliverables: ['Performance investigation', 'Image and loading strategy', 'Metadata and structured data'] },
 ]
 
 export default function Services() {
   return (
-    <section id='services' className='w-full 3xl:max-w-7xl'>
-      <div className='flex flex-col gap-8'>
-        {/* Section Header */}
-        <div className='text-center space-y-4'>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='text-3xl md:text-4xl font-bold text-white'
-          >
-            How I Can Help You
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className='mx-auto max-w-3xl text-sm leading-relaxed text-gray-300 md:text-base'
-          >
-            I help teams and founders ship frontend experiences that combine
-            strong UI execution, scalable architecture, performance, and
-            practical SEO foundations.
-          </motion.p>
-        </div>
-
-        {/* Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
-          {services.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className='group relative bg-dark-accent/40 border border-white/5 p-8 rounded-3xl overflow-hidden transition-all duration-500 hover:border-blue-500/30'
-            >
-              {/* Background Number */}
-              <div className='absolute -top-4 -right-2 text-8xl font-black text-blue-500/10 transition-colors duration-500 group-hover:text-blue-500/20 select-none pointer-events-none'>
-                {service.id}
-              </div>
-
-              {/* Card Content */}
-              <div className='relative z-10 flex flex-col gap-4 h-full pt-6'>
-                <h3 className='text-lg font-medium text-white group-hover:text-primary transition-colors'>
-                  {service.title}
-                </h3>
-                <p className='text-gray-300 text-sm leading-relaxed group-hover:text-gray-200 transition-colors'>
-                  {service.description}
-                </p>
-              </div>
-
-              {/* Decorative Corner Light */}
-              <div className='absolute top-0 right-0 w-24 h-24 bg-blue-500/5 blur-2xl rounded-full group-hover:bg-blue-500/10 transition-colors' />
-            </motion.div>
-          ))}
+    <section id='services' aria-labelledby='services-heading' className='editorial-dark bg-dark text-white'>
+      <div className='editorial-container editorial-grid grid gap-10 py-20 md:grid-cols-4 md:gap-0 md:py-28'>
+        <div className='self-start md:sticky md:top-8'><SectionLabel number='03'>How I can help</SectionLabel></div>
+        <div className='flex flex-col gap-12 md:col-span-3'>
+          <div className='grid gap-8 md:grid-cols-3'>
+            <div className='flex flex-col gap-8 md:col-span-2 md:pr-12'>
+              <SectionHeading id='services-heading' text='Thoughtful work. Solid engineering.' />
+              <p className='max-w-md text-base leading-relaxed text-gray-400'>From a new product to a frontend that needs a better foundation, I help teams turn the next step into something they can ship.</p>
+            </div>
+            <a href='#contact' className='flex min-h-14 items-center justify-between gap-3 self-end border-b border-red-600 py-4 text-sm transition-colors hover:text-red-300'>Tell me what you’re building<ArrowUpRight aria-hidden='true' className='size-4 shrink-0' /></a>
+          </div>
+          <AnimatedAccordion items={services.map(service => ({
+            title: service.title,
+            content: <div className='grid gap-8 md:grid-cols-3'>
+              <h4 className='text-2xl leading-tight font-medium md:text-3xl'>{service.heading}</h4>
+              <p className='text-sm leading-relaxed text-gray-400'>{service.description}</p>
+              <ul className='flex flex-col gap-4 text-sm'>{service.deliverables.map(item => <li key={item} className='flex items-start gap-2'><span aria-hidden='true' className='relative top-2 size-1.5 shrink-0 bg-red-600' />{item}</li>)}</ul>
+            </div>,
+          }))} />
         </div>
       </div>
     </section>

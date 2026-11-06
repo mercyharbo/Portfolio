@@ -1,27 +1,9 @@
 'use client'
 
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog'
-import { ArrowUpRight, Globe, MapPin, Tag } from 'lucide-react'
-import Link from 'next/link'
-
-interface Project {
-  id: number
-  title: string
-  description: string
-  website?: string
-  image: string
-  location: string
-  categories: string[]
-  tech_stack: string[]
-  notes: string
-}
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import { ArrowUpRight } from 'lucide-react'
+import Image from 'next/image'
+import { unavailableLinkLabel, type Project } from '@/lib/projects'
 
 interface ProjectDetailsDialogProps {
   project: Project | null
@@ -29,113 +11,39 @@ interface ProjectDetailsDialogProps {
   onClose: () => void
 }
 
-export function ProjectDetailsDialog({
-  project,
-  isOpen,
-  onClose,
-}: ProjectDetailsDialogProps) {
+export function ProjectDetailsDialog({ project, isOpen, onClose }: ProjectDetailsDialogProps) {
   if (!project) return null
 
   return (
-    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className='lg:max-w-3xl md:max-w-3xl h-fit max-h-[60dvh] overflow-auto scrollbar-hide bg-dark-accent text-white'>
-        <div className='p-6 md:p-8 space-y-6'>
-          <DialogHeader className='space-y-4'>
-            <div className='flex flex-wrap gap-2'>
-              {project.categories.map((category) => (
-                <Badge
-                  key={category}
-                  variant='secondary'
-                  className='bg-primary/10 text-white py-2 h-8 border-primary/20'
-                >
-                  <Tag className='size-3 mr-1' />
-                  {category}
-                </Badge>
-              ))}
-            </div>
-            <DialogTitle className='text-base md:text-2xl lg:text-lg font-bold'>
-              {project.title}
-            </DialogTitle>
-          </DialogHeader>
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <div className='md:col-span-2 space-y-6'>
-              <div className='space-y-3'>
-                <h4 className='text-sm font-medium md:text-base lg:text-sm text-gray-300'>
-                  About Project
-                </h4>
-                <p className='text-gray-300 leading-relaxed md:text-base lg:text-sm text-sm'>
-                  {project.description}
-                </p>
-              </div>
-
-              {project.notes && (
-                <div className='p-4 rounded-xl bg-white/5 border border-white/10 space-y-2'>
-                  <h4 className='text-sm font-semibold text-primary uppercase tracking-wider'>
-                    Key Focus
-                  </h4>
-                  <p className='text-sm text-gray-400 italic'>
-                    "{project.notes}"
-                  </p>
-                </div>
-              )}
-            </div>
-
-            <div className='space-y-6'>
-              <div className='space-y-3'>
-                <h4 className='text-sm font-semibold text-gray-400 uppercase tracking-wider'>
-                  Tech Stack
-                </h4>
-                <div className='flex flex-wrap gap-2'>
-                  {project.tech_stack.map((tech) => (
-                    <Badge
-                      key={tech}
-                      variant='outline'
-                      className='border-white/10 bg-white/5 text-gray-300'
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-
-              <div className='space-y-4 pt-4 border-t border-white/10'>
-                <div className='flex items-center gap-3 text-sm text-gray-400'>
-                  <MapPin className='size-4 text-primary' />
-                  <span>{project.location}</span>
-                </div>
-                {project.website && (
-                  <div className='flex items-center gap-3 text-sm text-gray-400'>
-                    <Globe className='size-4 text-primary' />
-                    <Link
-                      href={project.website}
-                      target='_blank'
-                      className='hover:text-primary transition-colors'
-                    >
-                      {new URL(project.website).hostname}
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              {project.website && (
-                <Button
-                  asChild
-                  size={'lg'}
-                  className='w-full bg-primary hover:bg-primary/90 text-white group'
-                >
-                  <Link
-                    href={project.website}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    Visit Live Site
-                    <ArrowUpRight className='ml-2 size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1' />
-                  </Link>
-                </Button>
-              )}
-            </div>
+    <Dialog open={isOpen} onOpenChange={open => { if (!open) onClose() }}>
+      <DialogContent className='flex max-h-[85svh] flex-col gap-6 overflow-y-auto rounded-none bg-dark p-6 text-white [&>*]:shrink-0 md:max-w-3xl md:p-10'>
+        <DialogHeader className='gap-4'>
+          <p className='text-xs text-gray-400'>{project.categories.join(' / ')}</p>
+          <DialogTitle className='pr-8 text-2xl leading-tight font-medium md:text-3xl'>{project.title}</DialogTitle>
+          <DialogDescription className='text-sm leading-relaxed text-gray-400'>{project.description}</DialogDescription>
+        </DialogHeader>
+        <div className='relative aspect-video overflow-hidden'>
+          <Image src={project.image} alt={`Interface preview of ${project.title}`} fill sizes='(max-width: 767px) 90vw, 700px' className='object-cover' />
+        </div>
+        <div className='grid gap-8 border-t border-white/10 py-6 md:grid-cols-3'>
+          <div className='flex flex-col gap-4 md:col-span-2'>
+            <h3 className='text-base font-medium'>My contribution</h3>
+            <p className='text-sm leading-relaxed text-gray-400'>{project.notes}</p>
           </div>
+          <div className='flex flex-col gap-4'>
+            <h3 className='text-base font-medium'>Technologies</h3>
+            <ul className='flex flex-wrap gap-x-3 gap-y-2 text-xs text-gray-400'>
+              {project.tech_stack.map(tech => <li key={tech}>{tech}</li>)}
+            </ul>
+          </div>
+        </div>
+        <div className='flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-5 text-sm'>
+          <span className='text-gray-400'>{project.location}</span>
+          {project.website ? (
+            <a href={project.website} target='_blank' rel='noopener noreferrer' className='flex min-h-11 items-center gap-3 hover:text-red-300'>
+              Visit live website<ArrowUpRight aria-hidden='true' className='size-4' />
+            </a>
+          ) : <span className='text-xs text-gray-400'>{unavailableLinkLabel}</span>}
         </div>
       </DialogContent>
     </Dialog>

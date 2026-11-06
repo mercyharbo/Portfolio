@@ -25,13 +25,13 @@ export default function RootLayout({
   const jsonLd = [createProfilePageJsonLd(), createWebsiteJsonLd()]
 
   return (
-    <html lang='en' className='scroll-smooth'>
+    <html lang='en' className='scroll-smooth' data-scroll-behavior='smooth'>
       <script
         async
         defer
         src='https://gettinlytics.vercel.app/api/tracker/97fefa4e-9b4e-4c87-838c-e8d2155c56a7'
       ></script>
-      <body className='relative space-y-5'>
+      <body className='relative'>
         {jsonLd.map((schema) => (
           <script
             key={schema['@type']}
@@ -40,7 +40,7 @@ export default function RootLayout({
           />
         ))}
         <Header />
-        <main className='pt-10 lg:pt-10 min-h-screen'>{children}</main>
+        <main id='main-content' className='min-h-screen'>{children}</main>
         <Footer />
       </body>
     </html>
