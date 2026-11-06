@@ -1,4 +1,6 @@
 import { ProfileCard, SectionLabel } from './editorial'
+import Link from 'next/link'
+import { ArrowUpRight } from 'lucide-react'
 
 const introduction = 'I’m Afolabi Ridwan Damilare. I build thoughtful interfaces for products with real complexity — turning business goals, design decisions, and APIs into experiences people can actually use.'
 const facts = [
@@ -23,6 +25,7 @@ export default function About() {
           <p className='max-w-lg text-base leading-relaxed text-gray-600'>
             I work closely with founders, designers, and product teams. My focus is a frontend that is clear to use, dependable in production, and straightforward for the next engineer to maintain.
           </p>
+          <Link href='/about' className='flex min-h-11 items-center gap-3 self-start text-sm hover:text-red-700'>More about me<ArrowUpRight aria-hidden='true' className='size-4' /></Link>
           <div className='grid grid-cols-1 gap-0 sm:grid-cols-2'>
             {facts.map((fact, index) => (
               <div key={fact.title} data-enter className={`flex flex-col gap-5 border-t border-gray-200 p-6 lg:p-8 ${index % 2 === 1 ? 'sm:translate-y-12 sm:border-l' : ''}`}>

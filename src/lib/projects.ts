@@ -15,3 +15,8 @@ export const workProjects: Project[] = displayOrder.map(slug => {
 export const featuredProjects = workProjects.slice(0, 3)
 
 export const unavailableLinkLabel = 'Public link unavailable'
+
+export function getProjectDetailHref(project: Project): string | undefined {
+  return 'detailPath' in project && typeof project.detailPath === 'string'
+    ? project.detailPath : undefined
+}

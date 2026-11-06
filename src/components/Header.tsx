@@ -5,14 +5,14 @@ import { ArrowRight, ArrowUpRight, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { featuredProjects } from '@/lib/projects'
+import { featuredProjects, getProjectDetailHref } from '@/lib/projects'
 import { useEffect, useState } from 'react'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
 const links = [
   { label: 'Home', href: '/#home' },
   { label: 'Work', href: '/work' },
-  { label: 'About', href: '/#about' },
+  { label: 'About', href: '/about' },
   { label: 'Contact', href: '/#contact' },
 ]
 
@@ -81,7 +81,7 @@ export default function Header() {
               </div>
               <div className='hidden grid-rows-2 md:col-span-3 md:grid'>
                 {menuProjects.map(project => (
-                  <Link key={project.slug} href={`/work#${project.slug}`} onClick={() => setOpen(false)} className='menu-project relative isolate flex min-h-56 items-end overflow-hidden p-6'>
+                  <Link key={project.slug} href={getProjectDetailHref(project) ?? `/work#${project.slug}`} onClick={() => setOpen(false)} className='menu-project relative isolate flex min-h-56 items-end overflow-hidden p-6'>
                     <Image src={project.image} alt='' fill sizes='400px' className='-z-10 object-cover brightness-50' />
                     <span className='flex w-full items-center justify-between gap-4 text-sm font-medium'>
                       {project.name}<ArrowUpRight className='size-4' aria-hidden='true' />

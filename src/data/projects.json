@@ -2,6 +2,7 @@
   {
     "id": 0,
     "slug": "openrolehq",
+    "detailPath": "/work/openrolehq",
     "name": "OpenRoleHQ",
     "title": "OpenRoleHQ - AI Job Search Workspace",
     "description": "OpenRoleHQ helps candidates manage a faster, more focused job search. I worked on the frontend experience for role discovery, resume tailoring, onboarding, and dashboard flows, with AI features designed to support the user without getting in the way.",

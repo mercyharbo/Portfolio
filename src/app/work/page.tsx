@@ -4,7 +4,7 @@ import CTA from '@/components/CTA'
 import WorkCollection from '@/components/work-collection'
 import { SectionLabel } from '@/components/editorial'
 import { createMetadata, siteUrl } from '@/lib/seo'
-import { workProjects } from '@/lib/projects'
+import { getProjectDetailHref, workProjects } from '@/lib/projects'
 
 export const metadata = createMetadata({
   title: 'Work',
@@ -19,7 +19,7 @@ export default function WorkPage() {
     name: 'Frontend engineering projects by CodeWithMercy',
     itemListElement: workProjects.map((project, index) => ({
       '@type': 'ListItem', position: index + 1, name: project.name,
-      url: `${siteUrl}/work#${project.slug}`,
+      url: `${siteUrl}${getProjectDetailHref(project) ?? `/work#${project.slug}`}`,
     })),
   }
 

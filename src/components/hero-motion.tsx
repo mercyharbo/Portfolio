@@ -16,9 +16,12 @@ export default function HeroMotion() {
           y: 20, opacity: 0, duration: 0.85, stagger: 0.1,
           ease: 'power3.out', clearProps: 'all',
         })
-        gsap.fromTo('[data-hero-art]', { scale: 1.035 }, {
-          scale: 1, duration: 2.4, ease: 'power2.out', clearProps: 'transform',
-        })
+        const art = section.querySelector('[data-hero-art]')
+        if (art) {
+          gsap.fromTo(art, { scale: 1.035 }, {
+            scale: 1, duration: 2.4, ease: 'power2.out', clearProps: 'transform',
+          })
+        }
       }, section)
       return () => context.revert()
     })

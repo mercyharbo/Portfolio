@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { SectionHeading, SectionLabel } from './editorial'
 import { ProjectDetailsDialog } from './project-details-dialog'
+import ProjectDetailsAction from './project-details-action'
 
 const featured = featuredProjects.map(project => ({
   project, name: project.name,
@@ -40,10 +41,7 @@ export default function ProjectSection() {
             <Image src={project.image} alt={`Interface preview for ${name}`} fill sizes='100vw' className='object-cover' />
           </div>
           <div className='editorial-container grid w-full grid-cols-1 items-end gap-6 py-8 md:grid-cols-4 md:gap-0 md:py-10'>
-            <button type='button' onClick={() => { setSelected(project); setOpen(true) }} className='editorial-button group flex min-h-14 w-full items-center justify-between bg-black text-sm text-white md:col-span-1'>
-              <span className='px-5'>Explore project</span><span className='flex min-h-14 w-14 shrink-0 items-center justify-center bg-red-600'><ArrowUpRight aria-hidden='true' className='size-5' /></span>
-              <span className='sr-only'>: {name}</span>
-            </button>
+            <ProjectDetailsAction project={project} variant='panel' onExplore={() => { setSelected(project); setOpen(true) }} />
             <div className='project-caption flex flex-col gap-2 md:col-span-2 md:col-start-3 md:px-8'>
               <h3 className='text-3xl font-medium md:text-4xl'>{name}</h3>
               <p className='text-sm'>{type}</p>

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { unavailableLinkLabel, type Project } from '@/lib/projects'
 import { ProjectDetailsDialog } from './project-details-dialog'
+import ProjectDetailsAction from './project-details-action'
 
 export default function WorkCollection({ projects }: { projects: Project[] }) {
   const [selected, setSelected] = useState<Project | null>(null)
@@ -39,9 +40,7 @@ export default function WorkCollection({ projects }: { projects: Project[] }) {
                 </ul>
                 <div className='flex flex-col gap-4 border-t border-gray-200 pt-6'>
                   <div className='flex flex-wrap gap-3'>
-                    <button type='button' onClick={() => { setSelected(project); setOpen(true) }} aria-label={`View details for ${project.name}`} className='flex min-h-12 items-center justify-between gap-6 border border-gray-300 px-5 text-sm transition-colors hover:border-black hover:bg-gray-100'>
-                      Project details<ArrowUpRight aria-hidden='true' className='size-4' />
-                    </button>
+                    <ProjectDetailsAction project={project} onExplore={() => { setSelected(project); setOpen(true) }} />
                     {project.website ? (
                       <a href={project.website} target='_blank' rel='noopener noreferrer' aria-label={`Visit ${project.name} live website`} className='flex min-h-12 items-center justify-between gap-6 bg-red-600 px-5 text-sm text-white transition-colors hover:bg-red-700'>
                         Live website<ArrowUpRight aria-hidden='true' className='size-4' />

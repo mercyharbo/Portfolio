@@ -2,12 +2,12 @@ import experience from '@/data/experience.json'
 import { ArrowUpRight } from 'lucide-react'
 import { SectionHeading, SectionLabel } from './editorial'
 
-export default function Experience() {
+export default function Experience({ number = '05' }: { number?: string }) {
   return (
     <section id='experience' aria-labelledby='experience-heading' className='editorial-light bg-white text-black'>
       <div className='editorial-container editorial-grid grid gap-12 py-20 md:grid-cols-4 md:gap-0 md:py-28'>
         <div className='flex flex-col gap-8 self-start md:sticky md:top-8 md:col-span-2 md:pr-16'>
-          <SectionLabel number='05'>Experience</SectionLabel>
+          <SectionLabel number={number}>Experience</SectionLabel>
           <SectionHeading id='experience-heading' text='Built alongside good teams.' />
           <a href='/Afolabi%20Ridwan%20Damilare.pdf' target='_blank' rel='noopener noreferrer' className='flex min-h-11 items-center gap-3 self-start text-sm hover:text-red-700'>View full résumé<ArrowUpRight aria-hidden='true' className='size-4' /></a>
         </div>
