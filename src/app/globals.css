@@ -121,7 +121,6 @@
 .editorial-grid { --grid-line: rgb(0 0 0 / 0.06); }
 .editorial-dark .editorial-grid { --grid-line: rgb(255 255 255 / 0.06); }
 .editorial-heading { text-wrap: balance; }
-.project-media { height: clamp(20rem, 52vw, 47.5rem); }
 .editorial-button { transition: background-color 200ms ease; }
 .editorial-button svg { transition: transform 200ms ease; }
 .editorial-button:hover svg { transform: translate(2px, -2px); }

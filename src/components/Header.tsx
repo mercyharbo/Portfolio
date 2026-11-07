@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpRight, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { featuredProjects, getProjectDetailHref } from '@/lib/projects'
+import { workProjects, getProjectDetailHref } from '@/lib/projects'
 import { useEffect, useState } from 'react'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
@@ -13,10 +13,10 @@ const links = [
   { label: 'Home', href: '/#home' },
   { label: 'Work', href: '/work' },
   { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Contact', href: '/contact' },
 ]
 
-const menuProjects = [featuredProjects[0], featuredProjects[2]]
+const menuProjects = workProjects.filter(project => ['leban-street', 'swiftlink'].includes(project.slug))
 
 function LocalTime() {
   const [time, setTime] = useState('—:—')
@@ -50,7 +50,7 @@ export default function Header() {
               <span aria-hidden='true' className='grid size-3 grid-cols-2 gap-0.5'><i className='bg-current' /><i className='bg-current' /><i className='bg-current' /><i className='bg-current' /></span>
               Menu
             </Dialog.Trigger>
-            <Link href='/#home' aria-label='CodeWithMercy home' className='order-1 text-base font-semibold md:order-2'>CodeWithMercy<span className='text-red-500'>.</span></Link>
+            <Link href='/#home' aria-label='Codewithmercy home' className='order-1 text-base font-semibold md:order-2'>Codewithmercy<span className='text-red-500'>.</span></Link>
           </div>
           <Dialog.Portal>
             <Dialog.Backdrop className='portfolio-menu-backdrop fixed inset-0 z-50 bg-black/45 backdrop-blur-sm' />
@@ -82,7 +82,7 @@ export default function Header() {
               <div className='hidden grid-rows-2 md:col-span-3 md:grid'>
                 {menuProjects.map(project => (
                   <Link key={project.slug} href={getProjectDetailHref(project) ?? `/work#${project.slug}`} onClick={() => setOpen(false)} className='menu-project relative isolate flex min-h-56 items-end overflow-hidden p-6'>
-                    <Image src={project.image} alt='' fill sizes='400px' className='-z-10 object-cover brightness-50' />
+                    <Image src={project.cover.src} alt='' fill sizes='400px' className='-z-10 object-cover brightness-50' />
                     <span className='flex w-full items-center justify-between gap-4 text-sm font-medium'>
                       {project.name}<ArrowUpRight className='size-4' aria-hidden='true' />
                     </span>
@@ -93,7 +93,7 @@ export default function Header() {
           </Dialog.Portal>
         </Dialog.Root>
         <LocalTime />
-        <Link href='/#contact' className='header-contact hidden h-12 items-center bg-black text-sm md:flex'>
+        <Link href='/contact' className='header-contact hidden h-12 items-center bg-black text-sm md:flex'>
           <Image src='/IMG-1.png' alt='' width={48} height={48} className='h-12 w-12 object-cover grayscale' />
           <span className='px-5'>Let’s talk</span><span className='flex h-full w-12 items-center justify-center bg-red-600'><ArrowRight aria-hidden='true' className='size-5' /></span>
         </Link>

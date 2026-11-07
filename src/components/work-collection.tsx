@@ -1,11 +1,11 @@
 'use client'
 
 import { ArrowUpRight } from 'lucide-react'
-import Image from 'next/image'
 import { useState } from 'react'
 import { unavailableLinkLabel, type Project } from '@/lib/projects'
 import { ProjectDetailsDialog } from './project-details-dialog'
 import ProjectDetailsAction from './project-details-action'
+import { ProjectPreview } from './project-media'
 
 export default function WorkCollection({ projects }: { projects: Project[] }) {
   const [selected, setSelected] = useState<Project | null>(null)
@@ -22,9 +22,8 @@ export default function WorkCollection({ projects }: { projects: Project[] }) {
                   <span className='flex items-center gap-2'><span aria-hidden='true' className='size-1.5 bg-red-600' />0{index + 1}</span>
                   <span>{project.categories.slice(0, 2).join(' / ')}</span>
                 </div>
-                <div className='relative aspect-[4/3] overflow-hidden bg-gray-100'>
-                  <Image src={project.image} alt={`Interface preview of ${project.name}`} fill sizes='(max-width: 767px) 100vw, 60vw' className='object-contain' />
-                </div>
+                <ProjectPreview media={project.cover} sizes='(max-width: 767px) 100vw, 60vw' />
+                {project.galleryNote ? <p className='text-xs leading-relaxed text-gray-600'>Interface previews using fictional demo data.</p> : null}
               </div>
               <div className='flex flex-col justify-center gap-8 md:col-span-5'>
                 <div className='flex flex-col gap-4'>

@@ -1,13 +1,194 @@
 [
   {
+    "id": 2,
+    "slug": "leban-street",
+    "name": "Leban Street",
+    "title": "Leban Street - Restaurant Ordering & Operations",
+    "description": "An active restaurant platform I built that the business continues to use. It connects customer ordering and checkout with kitchen, sales, inventory, and super admin dashboards for managing orders, stock, and revenue.",
+    "website": "https://lebanstreet.com",
+    "location": "Remote",
+    "categories": [
+      "E-commerce",
+      "Restaurant operations",
+      "Dashboards"
+    ],
+    "tech_stack": [
+      "Next.js",
+      "REST APIs",
+      "SEO",
+      "Zustand",
+      "Google Places API",
+      "Recharts",
+      "SWR"
+    ],
+    "notes": "Built the customer ordering frontend and operational dashboards for kitchen preparation, sales order handling, inventory and raw materials, and super admin revenue and cost reporting. Connected these API-backed interfaces with role-specific navigation and state management.",
+    "role": "Frontend engineering",
+    "cover": {
+      "src": "/images/projects/leban-street-mockup.webp",
+      "original": "/leban-street.jpg",
+      "width": 2400,
+      "height": 1697,
+      "alt": "Leban Street mobile ordering interface shown in the original phone mockup on a dark background",
+      "caption": "The original Leban Street presentation mockup. See the live catalogue capture below for the current interface."
+    },
+    "detailPath": "/work/leban-street",
+    "gallery": [
+      {
+        "src": "/images/projects/leban-street-mockup.webp",
+        "original": "/leban-street.jpg",
+        "width": 2400,
+        "height": 1697,
+        "alt": "Leban Street mobile ordering interface shown in the original phone mockup on a dark background",
+        "caption": "The original Leban Street presentation mockup. See the live catalogue capture below for the current interface."
+      },
+      {
+        "src": "/images/projects/leban-street-catalogue.webp",
+        "original": "/images/projects/originals/leban-street-catalogue.png",
+        "width": 2880,
+        "height": 2000,
+        "alt": "Leban Street food catalogue with category navigation and ordering cards",
+        "caption": "The live Leban Street catalogue, showing menu categories and food ordering cards."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "pawen",
+    "detailPath": "/work/pawen",
+    "name": "PAWEN",
+    "title": "PAWEN - Event Website & Participation Flows",
+    "description": "A connected frontend for the PAWEN Summit, Exhibition, and Awards Gala. It combines Contentful-backed speakers and awards content with nominations, registration and exhibitor forms, travel guidance, and a digital helpdesk integration.",
+    "website": "https://thepawenawards.org/",
+    "location": "Remote",
+    "role": "Full frontend implementation",
+    "categories": [
+      "Event platform",
+      "Content management",
+      "Participation flows"
+    ],
+    "tech_stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "SWR",
+      "Zustand",
+      "Framer Motion",
+      "Contentful",
+      "Zod",
+      "Jotform"
+    ],
+    "notes": "Implemented the full public-facing frontend, including responsive event pages, Contentful content presentation, multi-step participation forms connected to Jotform, travel information, Nviti helpdesk integration, and consent-aware analytics.",
+    "cover": {
+      "src": "/images/projects/pawen-hero.webp",
+      "original": "/images/projects/originals/pawen-hero.png",
+      "width": 2880,
+      "height": 1800,
+      "alt": "PAWEN Awards and Summit homepage with purple and gold event branding",
+      "caption": "The live PAWEN homepage and its event navigation."
+    },
+    "gallery": [
+      {
+        "src": "/images/projects/pawen-hero.webp",
+        "original": "/images/projects/originals/pawen-hero.png",
+        "width": 2880,
+        "height": 1800,
+        "alt": "PAWEN Awards and Summit homepage with purple and gold event branding",
+        "caption": "The live PAWEN homepage and its event navigation."
+      },
+      {
+        "src": "/images/projects/pawen-experiences.webp",
+        "original": "/images/projects/originals/pawen-experiences.png",
+        "width": 2560,
+        "height": 1536,
+        "alt": "PAWEN Summit, Exhibition, and Awards Gala experience cards",
+        "caption": "Three connected event experiences presented through a shared frontend system."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "swiftlink",
+    "detailPath": "/work/swiftlink",
+    "name": "SwiftLink",
+    "title": "SwiftLink - Self-Initiated Fintech Product",
+    "description": "A self-initiated fintech product I built across the frontend and backend. SwiftLink connects bill purchases and bank-transfer wallet funding with provider reconciliation, customer support, and operational dashboards for administrators.",
+    "website": "https://www.switftlink.live/",
+    "location": "Self-initiated product",
+    "role": "Product ownership & full-stack engineering",
+    "categories": [
+      "Fintech",
+      "Full-stack product",
+      "Dashboards"
+    ],
+    "tech_stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "SWR",
+      "Zustand",
+      "Recharts",
+      "Zod",
+      "Monnify",
+      "Resend"
+    ],
+    "notes": "Built the Next.js frontend and Express backend for OTP onboarding, transaction PIN flows, service purchases, wallet funding, callbacks, and reconciliation. Added customer history, receipts, beneficiaries, support, and admin reporting with user, wallet, and administrator-management workflows.",
+    "galleryNote": "Interface previews using fictional demo data. Names, balances, transaction records, and business figures are illustrative and do not represent live accounts or product results.",
+    "cover": {
+      "src": "/images/projects/swiftlink-admin-cover.webp",
+      "original": "/images/projects/originals/swiftlink-admin-cover.png",
+      "width": 2880,
+      "height": 2000,
+      "alt": "SwiftLink admin overview with fictional sales metrics and performance chart",
+      "caption": "Admin overview using fictional demo data."
+    },
+    "gallery": [
+      {
+        "src": "/images/projects/swiftlink-admin.webp",
+        "original": "/images/projects/originals/swiftlink-admin.png",
+        "width": 2880,
+        "height": 2612,
+        "alt": "SwiftLink admin dashboard with fictional metrics, chart, and transaction rows",
+        "caption": "Desktop admin overview: business metrics, performance reporting, and operational activity. Fictional demo data."
+      },
+      {
+        "src": "/images/projects/swiftlink-customer.webp",
+        "original": "/images/projects/originals/swiftlink-customer.png",
+        "width": 780,
+        "height": 1688,
+        "alt": "SwiftLink mobile customer dashboard with a fictional wallet balance and service shortcuts",
+        "caption": "Mobile customer dashboard: wallet access, service shortcuts, and spending overview. Fictional demo data."
+      },
+      {
+        "src": "/images/projects/swiftlink-services.webp",
+        "original": "/images/projects/originals/swiftlink-services.png",
+        "width": 780,
+        "height": 1688,
+        "alt": "SwiftLink mobile service-selection interface for data, airtime, electricity, betting, and cable TV",
+        "caption": "Mobile service selection: a clear entry into each supported payment flow. Fictional demo data."
+      },
+      {
+        "src": "/images/projects/swiftlink-history.webp",
+        "original": "/images/projects/originals/swiftlink-history.png",
+        "width": 780,
+        "height": 1688,
+        "alt": "SwiftLink mobile transaction history showing fictional successful and pending payments",
+        "caption": "Mobile transaction history: searchable records and visible payment states. Fictional demo data."
+      }
+    ]
+  },
+  {
     "id": 0,
     "slug": "openrolehq",
     "detailPath": "/work/openrolehq",
     "name": "OpenRoleHQ",
     "title": "OpenRoleHQ - AI Job Search Workspace",
-    "description": "OpenRoleHQ helps candidates manage a faster, more focused job search. I worked on the frontend experience for role discovery, resume tailoring, onboarding, and dashboard flows, with AI features designed to support the user without getting in the way.",
+    "description": "A candidate-facing job-search workspace. I built frontend flows for authentication, guided onboarding, profile and résumé management, AI-assisted writing, application tracking, subscriptions, and browser-extension connection.",
     "website": "https://openrolehq.com",
-    "image": "/openrole-cover.png",
     "location": "Remote",
     "categories": [
       "AI Automation",
@@ -15,27 +196,40 @@
       "Recruitment Tech"
     ],
     "tech_stack": [
-      "NEXTJS",
-      "REST API",
-      "AI",
-      "SEO OPTIMIZATION",
-      "TAILWIND CSS",
-      "FRAMER MOTION",
-      "ZUSTAND",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "REST APIs",
+      "Tailwind CSS",
+      "Zustand",
       "SWR",
-      "RECHARTS",
-      "DRIVERJS",
-      "SHADCN UI"
+      "Zod",
+      "React Hook Form",
+      "Framer Motion",
+      "Recharts",
+      "Driver.js",
+      "shadcn/ui",
+      "Contentful",
+      "Dodo Payments"
     ],
-    "notes": "Built the core frontend around reliable auth state, guided onboarding, AI-assisted workflows, and a dashboard that keeps the application process easy to follow."
+    "notes": "Built API-backed candidate interfaces with Next.js, SWR, and Zustand, covering account state, onboarding, profile editing, application search and filtering, AI writing tools, billing, and extension setup. Also worked on public collection submissions and Contentful-backed product content.",
+    "role": "Frontend development",
+    "cover": {
+      "src": "/images/projects/openrolehq-dashboard.webp",
+      "original": "/images/projects/originals/openrolehq-dashboard.png",
+      "width": 1906,
+      "height": 908,
+      "alt": "OpenRoleHQ application dashboard with job cards, match scores, and application navigation",
+      "caption": "Original OpenRoleHQ dashboard capture showing application management."
+    }
   },
   {
     "id": 1,
     "slug": "hris",
     "name": "HRIS",
-    "title": "HRIS - Workforce Management Dashboard",
-    "description": "A practical HR platform for onboarding, document review, staff records, and admin reporting. The work focused on making dense workforce data easier to manage through clear dashboards, role-aware flows, and dependable state.",
-    "image": "/hris-cover.png",
+    "title": "HRIS - Employee & HR Operations",
+    "description": "An HR platform frontend connecting employee self-service with administrator workflows for onboarding, staff records, document review, leave approvals, offboarding, and workforce analytics.",
+    "detailPath": "/work/hris",
     "location": "Remote / Enterprise",
     "categories": [
       "Enterprise SaaS",
@@ -43,66 +237,28 @@
       "Workforce Automation"
     ],
     "tech_stack": [
-      "NEXTJS",
-      "REST API",
-      "TAILWIND CSS",
-      "ZUSTAND",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "REST APIs",
+      "Tailwind CSS",
+      "Zustand",
       "SWR",
-      "RECHARTS"
+      "Axios",
+      "React Hook Form",
+      "Zod",
+      "TanStack Table",
+      "Recharts"
     ],
-    "notes": "Improved the admin experience around authentication, workforce tables, document checks, and reporting views so the platform could support real operational use."
-  },
-  {
-    "id": 2,
-    "slug": "leban-street",
-    "name": "Leban Street",
-    "title": "Leban Street Restaurant - Fast Food Ordering Experience",
-    "description": "A restaurant ordering platform built around speed, clear product discovery, and a smoother checkout path. The project included cart logic, delivery-fee handling, and performance work that supported stronger conversion.",
-    "website": "https://lebanstreet.com",
-    "image": "/leban-street.jpg",
-    "location": "Remote",
-    "categories": [
-      "E-commerce",
-      "Fintech",
-      "Logistics"
-    ],
-    "tech_stack": [
-      "NEXTJS",
-      "REST API",
-      "SEO OPTIMIZATION",
-      "ZUSTAND",
-      "GOOGLE PLACES API",
-      "RECHARTS",
-      "SWR"
-    ],
-    "notes": "Refined the ordering and checkout flow with location-aware delivery pricing, clearer cart behavior, and performance-minded frontend decisions."
-  },
-  {
-    "id": 3,
-    "slug": "bukky-group",
-    "name": "Bukky Group",
-    "title": "Bukky Group - Multi-Brand Business Website",
-    "description": "A polished website for a group of beauty, fashion, food, and empowerment brands. I focused on service discovery, brand storytelling, responsive UI, SEO-friendly structure, and a frontend that could hold several business lines without feeling crowded.",
-    "website": "https://bukkygroup.com",
-    "image": "/bukkygroup-cover.png",
-    "location": "Centurion, South Africa",
-    "categories": [
-      "Lifestyle Conglomerate",
-      "Luxury Fashion",
-      "Beauty & EdTech",
-      "Social Impact"
-    ],
-    "tech_stack": [
-      "NEXTJS",
-      "TAILWIND CSS",
-      "FRAMER MOTION",
-      "ZUSTAND",
-      "SEO OPTIMIZATION",
-      "SWR",
-      "RADIX UI",
-      "RESEND",
-      "ZOD"
-    ],
-    "notes": "Created a premium frontend system for multiple brands, balancing motion, content structure, service navigation, and conversion-focused presentation."
+    "notes": "Built API-connected employee and administrator interfaces for account access, multi-step onboarding, staff records, document handling, leave review, and offboarding. Shared form validation, SWR data hooks, workforce tables, and reporting charts support these operational workflows.",
+    "role": "Frontend development",
+    "cover": {
+      "src": "/images/projects/hris-dashboard.webp",
+      "original": "/images/projects/originals/hris-dashboard.png",
+      "width": 876,
+      "height": 659,
+      "alt": "HRIS leave-management interface with balances, requests, a leave tracker, and history",
+      "caption": "Original HRIS leave-management interface, shown at its native resolution with the account toolbar omitted."
+    }
   }
 ]

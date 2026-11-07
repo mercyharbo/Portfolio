@@ -20,7 +20,7 @@ export default function Services() {
               <SectionHeading id='services-heading' text='Thoughtful work. Solid engineering.' />
               <p className='max-w-md text-base leading-relaxed text-gray-400'>From a new product to a frontend that needs a better foundation, I help teams turn the next step into something they can ship.</p>
             </div>
-            <a href='#contact' className='flex min-h-14 items-center justify-between gap-3 self-end border-b border-red-600 py-4 text-sm transition-colors hover:text-red-300'>Tell me what you’re building<ArrowUpRight aria-hidden='true' className='size-4 shrink-0' /></a>
+            <a href='/contact' className='flex min-h-14 items-center justify-between gap-3 self-end border-b border-red-600 py-4 text-sm transition-colors hover:text-red-300'>Tell me what you’re building<ArrowUpRight aria-hidden='true' className='size-4 shrink-0' /></a>
           </div>
           <AnimatedAccordion items={services.map(service => ({
             title: service.title,

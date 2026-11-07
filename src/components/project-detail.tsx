@@ -1,12 +1,13 @@
 import type { ProjectStory } from '@/data/project-stories'
 import type { Project } from '@/lib/projects'
+import { unavailableLinkLabel } from '@/lib/projects'
 import { ArrowDown, ArrowLeft, ArrowUpRight } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import CTA from './CTA'
 import { SectionHeading, SectionLabel } from './editorial'
 import HeroMotion from './hero-motion'
 import HomeMotion from './home-motion'
+import ProjectGallery, { ProjectFigure } from './project-media'
 
 export default function ProjectDetail({
   project,
@@ -88,28 +89,27 @@ export default function ProjectDetail({
                 Visit live website
                 <ArrowUpRight aria-hidden='true' className='size-4' />
               </a>
-            ) : null}
+            ) : <p className='text-sm text-gray-400'>{unavailableLinkLabel}</p>}
           </div>
         </div>
       </section>
 
-      <figure className='bg-gray-100 text-black'>
-        <div className='relative h-80 sm:h-[32rem] lg:h-[44rem]'>
-          <Image
-            src={project.image}
-            alt={`Interface preview of ${project.name}`}
-            fill
-            priority
-            sizes='100vw'
-            className='object-contain'
-          />
+      <div className='bg-gray-100 text-black'>
+        <div className='editorial-container flex flex-col gap-6 py-8 md:py-12'>
+          {project.galleryNote ? <p className='border-l-2 border-red-600 pl-4 text-sm leading-relaxed text-gray-600'>{project.galleryNote}</p> : null}
+          <ProjectFigure media={project.gallery?.[0] ?? project.cover} priority />
         </div>
-        <figcaption className='editorial-container border-t border-gray-200 py-5 text-xs text-gray-600'>
-          {story.screenshotCaption}
-        </figcaption>
-      </figure>
+      </div>
 
       <HomeMotion>
+        {project.gallery && project.gallery.length > 1 ? (
+          <section aria-labelledby='gallery-title' className='bg-white text-black'>
+            <div className='editorial-container flex flex-col gap-10 py-16 md:py-24'>
+              <div className='flex flex-col gap-5'><SectionLabel>Inside the product</SectionLabel><h2 id='gallery-title' className='text-3xl font-medium sm:text-4xl'>Built for the way people use it.</h2><p className='max-w-xl text-base leading-relaxed text-gray-600'>{story.galleryDescription ?? 'A closer look at the interfaces and workflows behind the project.'}</p></div>
+              <ProjectGallery project={project} includeCover={false} />
+            </div>
+          </section>
+        ) : null}
         <section
           id='project-story'
           aria-labelledby='problem-title'
@@ -213,7 +213,7 @@ export default function ProjectDetail({
               Back to all work
             </Link>
             <a
-              href='#contact'
+              href='/contact'
               className='flex min-h-12 items-center gap-3 text-sm hover:text-red-700'
             >
               Discuss a similar project
