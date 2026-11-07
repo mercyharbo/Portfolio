@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const siteConfig = {
-  name: 'CodeWithMercy',
+  name: 'Codewithmercy',
   title: 'Afolabi Ridwan Damilare | Frontend Engineer',
-  titleTemplate: '%s | CodeWithMercy',
+  titleTemplate: '%s | Codewithmercy',
   description:
     'Frontend Engineer with 4+ years of experience architecting fast, scalable, and highly functional web applications using Next.js and TypeScript. I turn complex problems into digital products that drive real business results.',
   shortDescription:

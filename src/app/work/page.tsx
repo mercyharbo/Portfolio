@@ -16,7 +16,7 @@ export default function WorkPage() {
   const collection = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Frontend engineering projects by CodeWithMercy',
+    name: 'Frontend engineering projects by Codewithmercy',
     itemListElement: workProjects.map((project, index) => ({
       '@type': 'ListItem', position: index + 1, name: project.name,
       url: `${siteUrl}${getProjectDetailHref(project) ?? `/work#${project.slug}`}`,

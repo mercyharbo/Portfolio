@@ -31,7 +31,7 @@ export function ProfileCard({ dark = false }: { dark?: boolean }) {
       <div className='relative aspect-[3/4] overflow-hidden bg-gray-200'>
         <Image src='/IMG-1.png' alt='Afolabi Ridwan Damilare, frontend engineer' fill sizes='(max-width: 767px) 80vw, 25vw' className='object-cover' />
       </div>
-      <a href={dark ? '/Afolabi%20Ridwan%20Damilare.pdf' : '#contact'} className='editorial-button group flex min-h-14 items-center justify-between bg-black text-sm text-white' {...(dark ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+      <a href={dark ? '/Afolabi%20Ridwan%20Damilare.pdf' : '/contact'} className='editorial-button group flex min-h-14 items-center justify-between bg-black text-sm text-white' {...(dark ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
         <span className='px-5'>{dark ? 'View résumé' : 'Let’s work together'}</span>
         <span className='flex min-h-14 w-14 items-center justify-center bg-red-600'><ArrowUpRight aria-hidden='true' className='size-5' /></span>
       </a>

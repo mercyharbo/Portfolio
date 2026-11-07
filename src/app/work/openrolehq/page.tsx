@@ -6,16 +6,18 @@ import { absoluteUrl, createMetadata, siteConfig } from '@/lib/seo'
 const project = workProjects.find(item => item.slug === 'openrolehq')!
 
 export const metadata = createMetadata({
-  title: 'OpenRoleHQ — Frontend project',
-  description: 'Frontend work on OpenRoleHQ: onboarding, résumé tooling, AI-assisted workflows, and dashboard interfaces by Afolabi Ridwan Damilare.',
+  title: 'OpenRoleHQ — Candidate platform frontend',
+  description: 'Frontend engineering for OpenRoleHQ by Afolabi Ridwan Damilare: candidate onboarding, profiles, AI writing tools, application dashboards, billing, and browser-extension connection.',
   path: '/work/openrolehq',
+  image: project.cover.src,
+  imageAlt: project.cover.alt,
 })
 
 export default function OpenRoleProjectPage() {
   const schema = {
     '@context': 'https://schema.org', '@type': 'CreativeWork',
     name: project.title, description: project.description,
-    url: absoluteUrl('/work/openrolehq'), image: absoluteUrl(project.image),
+    url: absoluteUrl('/work/openrolehq'), image: absoluteUrl(project.cover.src),
     contributor: { '@type': 'Person', name: siteConfig.author.name, url: siteConfig.url },
     about: project.categories,
   }

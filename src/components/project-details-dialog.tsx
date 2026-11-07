@@ -2,8 +2,8 @@
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { ArrowUpRight } from 'lucide-react'
-import Image from 'next/image'
 import { unavailableLinkLabel, type Project } from '@/lib/projects'
+import ProjectGallery from './project-media'
 
 interface ProjectDetailsDialogProps {
   project: Project | null
@@ -22,9 +22,7 @@ export function ProjectDetailsDialog({ project, isOpen, onClose }: ProjectDetail
           <DialogTitle className='pr-8 text-2xl leading-tight font-medium md:text-3xl'>{project.title}</DialogTitle>
           <DialogDescription className='text-sm leading-relaxed text-gray-400'>{project.description}</DialogDescription>
         </DialogHeader>
-        <div className='relative aspect-video overflow-hidden'>
-          <Image src={project.image} alt={`Interface preview of ${project.title}`} fill sizes='(max-width: 767px) 90vw, 700px' className='object-cover' />
-        </div>
+        <div className='bg-white p-4 text-black sm:p-6'><ProjectGallery project={project} /></div>
         <div className='grid gap-8 border-t border-white/10 py-6 md:grid-cols-3'>
           <div className='flex flex-col gap-4 md:col-span-2'>
             <h3 className='text-base font-medium'>My contribution</h3>

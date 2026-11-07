@@ -32,7 +32,7 @@ export default function Hero() {
           </ol>
         </div>
         <div className='flex flex-col gap-5'>
-          <h1 data-hero-reveal className='hero-wordmark font-medium'>CodeWithMercy<span className='sr-only'> — Afolabi Ridwan Damilare, frontend engineer</span></h1>
+          <h1 data-hero-reveal className='hero-wordmark font-medium'>Codewithmercy<span className='sr-only'> — Afolabi Ridwan Damilare, frontend engineer</span></h1>
           <div data-hero-reveal className='flex items-center justify-between gap-4 border-t border-white/20 py-5 text-xs md:text-sm'>
             <a className='hero-link flex items-center gap-3' href='#works'>Explore selected work<ArrowDown className='size-4' aria-hidden='true' /></a>
             <a className='hero-link flex items-center gap-2' href='/Afolabi%20Ridwan%20Damilare.pdf' target='_blank' rel='noopener noreferrer'>View résumé<ArrowUpRight className='size-4' aria-hidden='true' /></a>

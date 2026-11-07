@@ -1,5 +1,5 @@
 import { ArrowUpRight } from 'lucide-react'
-import { ContactDialog } from './ContactDialog'
+import Link from 'next/link'
 import { ProfileCard, SectionHeading, SectionLabel } from './editorial'
 
 export default function CTA({ number = '06' }: { number?: string }) {
@@ -11,7 +11,7 @@ export default function CTA({ number = '06' }: { number?: string }) {
           <SectionLabel number={number}>Let’s make it happen</SectionLabel>
           <SectionHeading id='contact-heading' text='Your next idea. Built with care.' />
           <p className='max-w-lg text-base leading-relaxed text-gray-400'>A new product, a frontend that needs a rethink, or a team that could use another pair of hands. Tell me where you want to go.</p>
-          <ContactDialog triggerText='Start a conversation' className='min-h-14 w-full justify-between rounded-none bg-red-600 px-6 text-white hover:scale-100 hover:bg-red-700 active:scale-100 sm:w-fit' />
+          <Link href='/contact' className='flex min-h-14 w-full items-center justify-between gap-8 bg-red-600 px-6 text-sm text-white hover:bg-red-700 sm:w-fit'>Start a conversation<ArrowUpRight aria-hidden='true' className='size-5' /></Link>
           <a href='mailto:damilare791@gmail.com' className='flex min-h-11 items-center gap-3 self-start text-sm hover:text-red-300'>damilare791@gmail.com<ArrowUpRight className='size-4' aria-hidden='true' /></a>
         </div>
       </div>

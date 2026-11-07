@@ -23,7 +23,7 @@ export default function Process() {
                 <div className='flex flex-col gap-5'><h3 className='text-2xl font-medium'>{step.title}</h3><p className='text-sm leading-relaxed text-gray-400'>{step.text}</p></div>
               </div>
             ))}
-            <a href='#contact' className='editorial-button flex flex-col justify-between gap-10 bg-red-600 p-6 text-white lg:p-8'><p className='text-3xl leading-tight font-medium'>Have something in mind?</p><span className='flex items-center justify-between gap-4 text-sm'>Let’s talk<ArrowUpRight aria-hidden='true' className='size-5' /></span></a>
+            <a href='/contact' className='editorial-button flex flex-col justify-between gap-10 bg-red-600 p-6 text-white lg:p-8'><p className='text-3xl leading-tight font-medium'>Have something in mind?</p><span className='flex items-center justify-between gap-4 text-sm'>Let’s talk<ArrowUpRight aria-hidden='true' className='size-5' /></span></a>
           </div>
         </div>
       </div>

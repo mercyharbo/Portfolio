@@ -1,17 +1,17 @@
 'use client'
 
-import { featuredProjects, workProjects, type Project } from '@/lib/projects'
+import { featuredProjects, type Project } from '@/lib/projects'
 import { ArrowUpRight } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { SectionHeading, SectionLabel } from './editorial'
 import { ProjectDetailsDialog } from './project-details-dialog'
 import ProjectDetailsAction from './project-details-action'
+import { ProjectPreview } from './project-media'
 
 const featured = featuredProjects.map(project => ({
   project, name: project.name,
-  type: project.title.split(' - ')[1], light: project.slug !== 'bukky-group',
+  type: project.title.split(' - ')[1],
 }))
 
 export default function ProjectSection() {
@@ -29,16 +29,17 @@ export default function ProjectSection() {
         </div>
       </div>
 
-      {featured.map(({ project, name, type, light }, index) => (
-        <article key={project.id} className={`project-panel relative isolate flex flex-col justify-between overflow-hidden ${light ? 'bg-gray-100 text-black' : 'bg-black text-white'}`}>
+      {featured.map(({ project, name, type }, index) => (
+        <article key={project.id} className={`project-panel relative isolate flex flex-col justify-between overflow-hidden ${index % 2 === 0 ? 'bg-gray-100 text-black' : 'bg-dark text-white'}`}>
           <div className='editorial-container grid w-full grid-cols-2 gap-6 py-8 text-xs md:grid-cols-4 md:py-10'>
             <p className='flex items-center gap-2'><span className='size-1.5 bg-red-600' />0{index + 1}</p>
-            <p className='hidden md:block'>Frontend development</p>
+            <p className='hidden md:block'>{project.role ?? 'Frontend development'}</p>
             <p>{name}</p>
             <p className='hidden md:block'>{type}</p>
           </div>
-          <div className='project-media relative w-full overflow-hidden'>
-            <Image src={project.image} alt={`Interface preview for ${name}`} fill sizes='100vw' className='object-cover' />
+          <div className='editorial-container py-4'>
+            <ProjectPreview media={project.cover} sizes='(max-width: 767px) 100vw, 90vw' />
+            {project.galleryNote ? <p className='border-t border-gray-300 py-3 text-xs leading-relaxed text-gray-600'>Interface previews using fictional demo data.</p> : null}
           </div>
           <div className='editorial-container grid w-full grid-cols-1 items-end gap-6 py-8 md:grid-cols-4 md:gap-0 md:py-10'>
             <ProjectDetailsAction project={project} variant='panel' onExplore={() => { setSelected(project); setOpen(true) }} />
@@ -50,8 +51,11 @@ export default function ProjectSection() {
         </article>
       ))}
       <div className='editorial-container flex flex-col justify-between gap-5 py-8 text-sm sm:flex-row sm:items-center'>
-        <p className='text-gray-600'>Also in the collection: a location-aware restaurant ordering experience.</p>
-        <button type='button' onClick={() => { setSelected(workProjects[3]); setOpen(true) }} className='flex min-h-11 shrink-0 items-center gap-3 hover:text-red-700'>Explore Leban Street<ArrowUpRight className='size-4' aria-hidden='true' /></button>
+        <p className='text-gray-600'>More engineering work: job-search tooling and workforce management.</p>
+        <div className='flex flex-wrap gap-x-6 gap-y-2'>
+          <Link href='/work#openrolehq' className='flex min-h-11 items-center gap-3 hover:text-red-700'>OpenRoleHQ<ArrowUpRight className='size-4' aria-hidden='true' /></Link>
+          <Link href='/work#hris' className='flex min-h-11 items-center gap-3 hover:text-red-700'>HRIS<ArrowUpRight className='size-4' aria-hidden='true' /></Link>
+        </div>
       </div>
       <ProjectDetailsDialog project={selected} isOpen={open} onClose={() => setOpen(false)} />
     </section>

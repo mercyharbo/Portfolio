@@ -5,6 +5,11 @@ import { getProjectDetailHref, workProjects } from '@/lib/projects'
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
+      url: `${siteUrl}/contact`,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: siteUrl,
       lastModified: new Date(),
       changeFrequency: 'monthly',
