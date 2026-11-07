@@ -19,7 +19,7 @@ export default function WorkPage() {
     name: 'Frontend engineering projects by Codewithmercy',
     itemListElement: workProjects.map((project, index) => ({
       '@type': 'ListItem', position: index + 1, name: project.name,
-      url: `${siteUrl}${getProjectDetailHref(project) ?? `/work#${project.slug}`}`,
+      url: `${siteUrl}${getProjectDetailHref(project)}`,
     })),
   }
 
