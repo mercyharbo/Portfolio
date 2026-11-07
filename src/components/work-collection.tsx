@@ -1,16 +1,9 @@
-'use client'
-
 import { ArrowUpRight } from 'lucide-react'
-import { useState } from 'react'
 import { unavailableLinkLabel, type Project } from '@/lib/projects'
-import { ProjectDetailsDialog } from './project-details-dialog'
 import ProjectDetailsAction from './project-details-action'
 import { ProjectPreview } from './project-media'
 
 export default function WorkCollection({ projects }: { projects: Project[] }) {
-  const [selected, setSelected] = useState<Project | null>(null)
-  const [open, setOpen] = useState(false)
-
   return (
     <>
       <section id='collection' aria-label='Project collection' className='bg-white text-black'>
@@ -39,7 +32,7 @@ export default function WorkCollection({ projects }: { projects: Project[] }) {
                 </ul>
                 <div className='flex flex-col gap-4 border-t border-gray-200 pt-6'>
                   <div className='flex flex-wrap gap-3'>
-                    <ProjectDetailsAction project={project} onExplore={() => { setSelected(project); setOpen(true) }} />
+                    <ProjectDetailsAction project={project} />
                     {project.website ? (
                       <a href={project.website} target='_blank' rel='noopener noreferrer' aria-label={`Visit ${project.name} live website`} className='flex min-h-12 items-center justify-between gap-6 bg-red-600 px-5 text-sm text-white transition-colors hover:bg-red-700'>
                         Live website<ArrowUpRight aria-hidden='true' className='size-4' />
@@ -58,7 +51,6 @@ export default function WorkCollection({ projects }: { projects: Project[] }) {
           </article>
         ))}
       </section>
-      <ProjectDetailsDialog project={selected} isOpen={open} onClose={() => setOpen(false)} />
     </>
   )
 }

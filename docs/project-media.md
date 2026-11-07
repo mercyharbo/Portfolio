@@ -29,6 +29,6 @@ The approved black, white, and red identity and scoped GSAP motion remain. Inter
 
 ## Local review
 
-Review `/`, `/work`, `/work/leban-street`, `/work/pawen`, `/work/swiftlink`, `/work/openrolehq`, `/work/hris`, and the preserved `/contact` page at `http://localhost:3001`. Stop for review of the HRIS page before the final cross-page release review and cleanup. No deployment is included.
+Review `/`, `/work`, `/work/leban-street`, `/work/pawen`, `/work/swiftlink`, `/work/openrolehq`, `/work/hris`, `/about`, and `/contact` at `http://localhost:3001`. All project actions now use completed routes; the legacy dialog fallback has been removed. See `release-review.md` for final cross-page checks. No deployment is included.
 
 Browser verification uses the existing Playwright installation because the Browser plugin skill is not available in this session. Production analytics are preserved; the external tracker is intercepted during isolated UI checks. Email submission checks use mocked success and failure responses.

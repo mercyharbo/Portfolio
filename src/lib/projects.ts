@@ -20,14 +20,14 @@ export interface Project {
   categories: string[]
   tech_stack: string[]
   website?: string
-  detailPath?: string
+  detailPath: string
   role?: string
   cover: ProjectMedia
   gallery?: ProjectMedia[]
   galleryNote?: string
 }
 
-// Shared by the homepage, collection, navigation, and project dialogs.
+// Shared by the homepage, collection, navigation, and project pages.
 // Media and live destinations have one source of truth in projects.json.
 const displayOrder = ['leban-street', 'pawen', 'swiftlink', 'openrolehq', 'hris']
 
@@ -45,7 +45,6 @@ export const featuredProjects = ['leban-street', 'pawen', 'swiftlink'].map(slug 
 
 export const unavailableLinkLabel = 'Public link unavailable'
 
-export function getProjectDetailHref(project: Project): string | undefined {
-  return 'detailPath' in project && typeof project.detailPath === 'string'
-    ? project.detailPath : undefined
+export function getProjectDetailHref(project: Project): string {
+  return project.detailPath
 }

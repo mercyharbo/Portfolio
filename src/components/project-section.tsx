@@ -1,11 +1,7 @@
-'use client'
-
-import { featuredProjects, type Project } from '@/lib/projects'
+import { featuredProjects } from '@/lib/projects'
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
-import { useState } from 'react'
 import { SectionHeading, SectionLabel } from './editorial'
-import { ProjectDetailsDialog } from './project-details-dialog'
 import ProjectDetailsAction from './project-details-action'
 import { ProjectPreview } from './project-media'
 
@@ -15,9 +11,6 @@ const featured = featuredProjects.map(project => ({
 }))
 
 export default function ProjectSection() {
-  const [selected, setSelected] = useState<Project | null>(null)
-  const [open, setOpen] = useState(false)
-
   return (
     <section id='works' aria-labelledby='work-heading' className='bg-white text-black'>
       <div className='editorial-container editorial-grid grid gap-8 py-20 md:grid-cols-4 md:gap-0 md:py-28'>
@@ -42,7 +35,7 @@ export default function ProjectSection() {
             {project.galleryNote ? <p className='border-t border-gray-300 py-3 text-xs leading-relaxed text-gray-600'>Interface previews using fictional demo data.</p> : null}
           </div>
           <div className='editorial-container grid w-full grid-cols-1 items-end gap-6 py-8 md:grid-cols-4 md:gap-0 md:py-10'>
-            <ProjectDetailsAction project={project} variant='panel' onExplore={() => { setSelected(project); setOpen(true) }} />
+            <ProjectDetailsAction project={project} variant='panel' />
             <div className='project-caption flex flex-col gap-2 md:col-span-2 md:col-start-3 md:px-8'>
               <h3 className='text-3xl font-medium md:text-4xl'>{name}</h3>
               <p className='text-sm'>{type}</p>
@@ -57,7 +50,6 @@ export default function ProjectSection() {
           <Link href='/work#hris' className='flex min-h-11 items-center gap-3 hover:text-red-700'>HRIS<ArrowUpRight className='size-4' aria-hidden='true' /></Link>
         </div>
       </div>
-      <ProjectDetailsDialog project={selected} isOpen={open} onClose={() => setOpen(false)} />
     </section>
   )
 }

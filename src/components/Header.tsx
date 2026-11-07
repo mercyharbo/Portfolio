@@ -81,7 +81,7 @@ export default function Header() {
               </div>
               <div className='hidden grid-rows-2 md:col-span-3 md:grid'>
                 {menuProjects.map(project => (
-                  <Link key={project.slug} href={getProjectDetailHref(project) ?? `/work#${project.slug}`} onClick={() => setOpen(false)} className='menu-project relative isolate flex min-h-56 items-end overflow-hidden p-6'>
+                  <Link key={project.slug} href={getProjectDetailHref(project)} onClick={() => setOpen(false)} className='menu-project relative isolate flex min-h-56 items-end overflow-hidden p-6'>
                     <Image src={project.cover.src} alt='' fill sizes='400px' className='-z-10 object-cover brightness-50' />
                     <span className='flex w-full items-center justify-between gap-4 text-sm font-medium'>
                       {project.name}<ArrowUpRight className='size-4' aria-hidden='true' />

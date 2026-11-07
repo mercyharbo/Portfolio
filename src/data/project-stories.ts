@@ -39,7 +39,7 @@ export const hrisStory: ProjectStory = {
 
 export const openRoleStory: ProjectStory = {
   introduction: 'A candidate-facing frontend connecting onboarding, profile and résumé management, AI-assisted writing, application tracking, billing, and browser-extension setup.',
-  role: 'Frontend development',
+  role: 'Lead Frontend Engineer',
   problemTitle: 'Bring the application journey together.',
   focusTitle: 'From first sign-in to the next application.',
   deliveryTitle: 'A connected candidate workspace.',

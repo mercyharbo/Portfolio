@@ -213,7 +213,7 @@
       "Dodo Payments"
     ],
     "notes": "Built API-backed candidate interfaces with Next.js, SWR, and Zustand, covering account state, onboarding, profile editing, application search and filtering, AI writing tools, billing, and extension setup. Also worked on public collection submissions and Contentful-backed product content.",
-    "role": "Frontend development",
+    "role": "Lead Frontend Engineer",
     "cover": {
       "src": "/images/projects/openrolehq-dashboard.webp",
       "original": "/images/projects/originals/openrolehq-dashboard.png",

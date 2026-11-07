@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "role": "Frontend Developer",
+    "role": "Lead Frontend Engineer",
     "company": "OpenRoleHQ",
     "type_of_job": "Contract",
-    "duration": "March 2026 - Present",
+    "duration": "November 2025 - Present",
     "description": "Built AI workflow screens, onboarding, resume tooling, and dashboard flows that help candidates move through applications with less friction."
   },
   {
@@ -12,15 +12,15 @@
     "role": "Lead Frontend Engineer",
     "company": "Adaptibles",
     "type_of_job": "Contract",
-    "duration": "December 2025 - Present",
-    "description": "Lead frontend delivery across product UI, implementation quality, and scalable interface patterns for a growing product team."
+    "duration": "November 2025 - Present",
+    "description": "Lead frontend delivery across the public website, learner and instructor dashboards, and a separate admin portal for an inclusive learning platform in development. Build course, checkout, subscription, and learning flows alongside admin review, moderation, reporting, role management, and accessibility preferences."
   },
   {
     "id": 3,
     "role": "Frontend Developer",
     "company": "HRIS",
     "type_of_job": "Contract",
-    "duration": "Oct 2025 - Jan 2026",
+    "duration": "September 2025 - March 2026",
     "description": "Shipped admin workflows for onboarding, document review, workforce data, and reporting so HR teams could manage operations with more confidence."
   },
   {
@@ -36,7 +36,7 @@
     "role": "Frontend Developer",
     "company": "BeautySpace",
     "type_of_job": "Full-time",
-    "duration": "Jan 2022 - Jan 2024",
+    "duration": "January 2022 - 2025",
     "description": "Improved marketplace speed, SEO, and responsive UI while helping move the product from legacy React patterns into a stronger Next.js experience."
   }
 ]

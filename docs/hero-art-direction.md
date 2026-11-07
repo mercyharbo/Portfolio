@@ -12,6 +12,6 @@ Use case: stylized-concept. Create an original premium abstract website hero bac
 
 - Original red artwork replaces Hanza's warm looping video.
 - A brief GSAP image-scale entrance replaces continuous background video motion.
-- The longer CodeWithMercy wordmark uses the full lower grid width.
+- The longer Codewithmercy wordmark uses the full lower grid width.
 - Natural sentence casing and engineering-specific copy replace demo labels.
-- Existing homepage sections remain temporary navigation destinations until later phases.
+- Navigation now connects the completed Home, Work, About, and Contact destinations.

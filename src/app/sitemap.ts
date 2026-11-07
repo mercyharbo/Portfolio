@@ -27,11 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
   ]
-  const blogRoutes: MetadataRoute.Sitemap = []
-  const projectRoutes: MetadataRoute.Sitemap = workProjects.flatMap(project => {
-    const path = getProjectDetailHref(project)
-    return path ? [{ url: `${siteUrl}${path}`, changeFrequency: 'monthly' as const, priority: 0.8 }] : []
-  })
+  const projectRoutes: MetadataRoute.Sitemap = workProjects.map(project => ({
+    url: `${siteUrl}${getProjectDetailHref(project)}`,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
 
-  return [...staticRoutes, ...blogRoutes, ...projectRoutes]
+  return [...staticRoutes, ...projectRoutes]
 }

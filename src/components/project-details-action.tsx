@@ -1,12 +1,9 @@
-'use client'
-
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { getProjectDetailHref, type Project } from '@/lib/projects'
 
-export default function ProjectDetailsAction({ project, onExplore, variant = 'outline' }: {
+export default function ProjectDetailsAction({ project, variant = 'outline' }: {
   project: Project
-  onExplore: () => void
   variant?: 'panel' | 'outline'
 }) {
   const href = getProjectDetailHref(project)
@@ -21,7 +18,5 @@ export default function ProjectDetailsAction({ project, onExplore, variant = 'ou
   </>
   const accessibleName = `${label}: ${project.name}`
 
-  return href
-    ? <Link href={href} className={className} aria-label={accessibleName}>{content}</Link>
-    : <button type='button' onClick={onExplore} className={className} aria-label={accessibleName}>{content}</button>
+  return <Link href={href} className={className} aria-label={accessibleName}>{content}</Link>
 }
